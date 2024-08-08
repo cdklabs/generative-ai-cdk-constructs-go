@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsec2"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/amazonaurora/internal"
 )
@@ -27,6 +28,9 @@ import (
 // Experimental.
 type AmazonAuroraDefaultVectorStore interface {
 	awscdk.Resource
+	// The Security Group attached to the Aurora DB Instances in the Cluster.
+	// Experimental.
+	AuroraSecurityGroup() awsec2.ISecurityGroup
 	// Cluster identifier of your Amazon Aurora DB cluster.
 	// Experimental.
 	ClusterIdentifier() *string
@@ -73,6 +77,9 @@ type AmazonAuroraDefaultVectorStore interface {
 	// The Table Name of your Amazon Aurora DB cluster.
 	// Experimental.
 	TableName() *string
+	// The VPC where the Aurora DB Cluster is deployed.
+	// Experimental.
+	Vpc() awsec2.IVpc
 	// Apply the given removal policy to this resource.
 	//
 	// The Removal Policy controls what happens to this resource when it stops
@@ -109,6 +116,16 @@ type AmazonAuroraDefaultVectorStore interface {
 // The jsii proxy struct for AmazonAuroraDefaultVectorStore
 type jsiiProxy_AmazonAuroraDefaultVectorStore struct {
 	internal.Type__awscdkResource
+}
+
+func (j *jsiiProxy_AmazonAuroraDefaultVectorStore) AuroraSecurityGroup() awsec2.ISecurityGroup {
+	var returns awsec2.ISecurityGroup
+	_jsii_.Get(
+		j,
+		"auroraSecurityGroup",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_AmazonAuroraDefaultVectorStore) ClusterIdentifier() *string {
@@ -216,6 +233,16 @@ func (j *jsiiProxy_AmazonAuroraDefaultVectorStore) TableName() *string {
 	_jsii_.Get(
 		j,
 		"tableName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmazonAuroraDefaultVectorStore) Vpc() awsec2.IVpc {
+	var returns awsec2.IVpc
+	_jsii_.Get(
+		j,
+		"vpc",
 		&returns,
 	)
 	return returns
