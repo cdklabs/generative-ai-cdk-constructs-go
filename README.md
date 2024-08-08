@@ -3,7 +3,7 @@
 This is the Go module repository for the Generative AI CDK Constructs
 
 *!!!! All issues, contributions, and communication are intented to be through the
-[Generative AI CDK Constructs](https://github.awslabs/generative-ai-cdk-constructs)
+[Generative AI CDK Constructs](https://github.com/awslabs/generative-ai-cdk-constructs)
 source repository !!!!*
 
 ## Background
