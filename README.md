@@ -8,7 +8,7 @@ source repository !!!!*
 
 ## Background
 
-The [Generative AI CDK Constructs](https://github.awslabs/generative-ai-cdk-constructs) library uses [projen](https://github.com/projen/projen) to generate packages for multiple languages through [JSII](https://github.com/aws/jsii). This repository is a dedicated target for the Go module distribution.
+The [Generative AI CDK Constructs](https://github.com/awslabs/generative-ai-cdk-constructs) library uses [projen](https://github.com/projen/projen) to generate packages for multiple languages through [JSII](https://github.com/aws/jsii). This repository is a dedicated target for the Go module distribution.
 
 ### For Go
 - Create or use an existing CDK application in Python
