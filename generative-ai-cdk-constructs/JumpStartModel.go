@@ -4849,6 +4849,17 @@ func JumpStartModel_HUGGINGFACE_LLM_ZEPHYR_7B_GEMMA_1_0_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_NER_DISTILBERT_BASE_CASED_FINETUNED_CONLL03_ENG_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_NER_DISTILBERT_BASE_CASED_FINETUNED_CONLL03_ENG_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_NER_DISTILBERT_BASE_CASED_FINETUNED_CONLL03_ENGLISH_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -4877,6 +4888,17 @@ func JumpStartModel_HUGGINGFACE_NER_DISTILBERT_BASE_CASED_FINETUNED_CONLL03_ENGL
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_NER_DISTILBERT_BASE_CASED_FINETUNED_CONLL03_ENGLISH_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_NER_DISTILBERT_BASE_UNCASED_FINETUNED_CONLL03_ENG_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_NER_DISTILBERT_BASE_UNCASED_FINETUNED_CONLL03_ENG_1_0_0",
 		&returns,
 	)
 	return returns
@@ -7313,6 +7335,17 @@ func JumpStartModel_HUGGINGFACE_SUMMARIZATION_BART_LARGE_CNN_SAMSUM_2_0_0() Jump
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_SUMMARIZATION_BERT_SMALL2BERT_CNN_DAILYMAIL_SUMM_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_SUMMARIZATION_BERT_SMALL2BERT_CNN_DAILYMAIL_SUMM_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_SUMMARIZATION_BERT_SMALL2BERT_SMALL_FINETUNED_CNN_DAILY_MAIL_SUMMARIZATION_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -8941,6 +8974,17 @@ func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_BASE_2_1_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_BASE_2_1_1() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_BASE_2_1_1",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_BASE_SAMSUM_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -9238,6 +9282,17 @@ func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_LARGE_2_1_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_LARGE_2_1_1() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_LARGE_2_1_1",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_SMALL_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -9409,6 +9464,17 @@ func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_SMALL_2_1_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_SMALL_2_1_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_SMALL_2_1_1() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_SMALL_2_1_1",
 		&returns,
 	)
 	return returns
@@ -9590,6 +9656,17 @@ func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_XL_2_1_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_XL_2_1_1() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_XL_2_1_1",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_XXL_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -9640,6 +9717,17 @@ func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_XXL_2_1_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_XXL_2_1_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TEXT2TEXT_FLAN_T5_XXL_2_1_1() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXT2TEXT_FLAN_T5_XXL_2_1_1",
 		&returns,
 	)
 	return returns
@@ -13352,6 +13440,17 @@ func JumpStartModel_HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_3B_V1_
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_3BV1FP16_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_3BV1FP16_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_7B_V1_FP16_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -13413,6 +13512,17 @@ func JumpStartModel_HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_7B_V1_
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_7B_V1_FP16_3_1_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_7B1FP16_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TEXTGENERATION1_REDPAJAMA_INCITE_INSTRUCT_7B1FP16_1_0_0",
 		&returns,
 	)
 	return returns
@@ -14562,6 +14672,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_FICTIVERSE_ELRISITAS_2_0_0() JumpStartMo
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_BALLOONART_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_BALLOONART_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_BALLOONART_MODEL_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -14590,6 +14711,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_BALLOONART_M
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_BALLOONART_MODEL_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_MICRO_MODEL_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_FICTIVERSE_STABLE_DIFFUSION_MICRO_MODEL_1_0_0",
 		&returns,
 	)
 	return returns
@@ -14755,6 +14887,28 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_HASSANBLEND_HASSANBLEND1_4_2_0_0() JumpS
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TXT2IMG_HASSANBLEND_HASSANBLEND1_4_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TXT2IMG_IDEA_CCNL_TAIYI_1B_CHINESE_EN_V01_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_IDEA_CCNL_TAIYI_1B_CHINESE_EN_V01_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TXT2IMG_IDEA_CCNL_TAIYI_1B_CHINESE_V0_1_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_IDEA_CCNL_TAIYI_1B_CHINESE_V0_1_1_0_0",
 		&returns,
 	)
 	return returns
@@ -15783,6 +15937,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_PROGAMERGOV_MIN_ILLUST_BACKGROUND_DIFFUS
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TXT2IMG_PROGAMERGOV_MIN_ILLUST_BACKGROUNDDIFFUSION_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_PROGAMERGOV_MIN_ILLUST_BACKGROUNDDIFFUSION_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TXT2IMG_PROMPTHERO_LINKEDIN_DIFFUSION_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -16014,6 +16179,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_S3NH_BEKSINSKI_STYLE_STABLE_DIFFUSION_2_
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_ORIGINAL_CHAR_CYCLPS_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_ORIGINAL_CHAR_CYCLPS_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_ORIGINAL_CHARACTER_CYCLPS_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -16042,6 +16218,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_ORIGINAL_CHARACTER
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_ORIGINAL_CHARACTER_CYCLPS_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_PERSONA_5_SHIGENORI_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMG_SD_DREAMBOOTH_LIBRARY_PERSONA_5_SHIGENORI_1_0_0",
 		&returns,
 	)
 	return returns
@@ -16465,6 +16652,17 @@ func JumpStartModel_HUGGINGFACE_ZSTC_CROSS_ENCODER_NLI_ROBERTA_BASE_2_0_0() Jump
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_ZSTC_DIGITALEPIDEMIOLOGYLAB_COVID_TWIT_BERT2_MNLI_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_DIGITALEPIDEMIOLOGYLAB_COVID_TWIT_BERT2_MNLI_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_ZSTC_DIGITALEPIDEMIOLOGYLAB_COVID_TWITTER_BERT_V2_MNLI_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -16641,6 +16839,61 @@ func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_BERT_BASE_TURKISH_CASED_SNLI_TR_2_0
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_BERTBASE_MLING_CASED_ALLNLI_TR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_BERTBASE_MLING_CASED_ALLNLI_TR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_BERTBASE_MLING_CASED_MULTINLI_TR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_BERTBASE_MLING_CASED_MULTINLI_TR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISH_MC4CASED_MULTINLITR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISH_MC4CASED_MULTINLITR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISH_MC4CASED_SNLITR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISH_MC4CASED_SNLITR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISHMC4_CASED_ALLNLITR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_CBERTBASE_TURKISHMC4_CASED_ALLNLITR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_CONVBERT_BASE_TURKISH_MC4_CASED_ALLNLI_TR_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -16702,6 +16955,28 @@ func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_CONVBERT_BASE_TURKISH_MC4_CASED_SNL
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_ZSTC_EMRECAN_CONVBERT_BASE_TURKISH_MC4_CASED_SNLI_TR_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_DBASE_TURKISH_CASED_ALLNLITR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_DBASE_TURKISH_CASED_ALLNLITR_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_EMRECAN_DBERTBASE_TURKISH_CASED_MULTINLI_TR_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_EMRECAN_DBERTBASE_TURKISH_CASED_MULTINLI_TR_1_0_0",
 		&returns,
 	)
 	return returns
@@ -16861,6 +17136,17 @@ func JumpStartModel_HUGGINGFACE_ZSTC_MORITZLAURER_DEBERTA_V3_LARGE_MNLI_FEVER_AN
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_ZSTC_MORITZLAURER_DEBERTA3LARGE_MNLI_FEVER_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_MORITZLAURER_DEBERTA3LARGE_MNLI_FEVER_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_ZSTC_MORITZLAURER_MDEBERTA_V3_BASE_XNLI_MULTILINGUAL_NLI_2MIL7_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -16878,6 +17164,17 @@ func JumpStartModel_HUGGINGFACE_ZSTC_MORITZLAURER_MDEBERTA_V3_BASE_XNLI_MULTILIN
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_ZSTC_MORITZLAURER_MDEBERTA_V3_BASE_XNLI_MULTILINGUAL_NLI_2MIL7_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_ZSTC_MORITZLAURER_MDEBERTA3BASE_XNLI_MLING_NLI_2M7_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_ZSTC_MORITZLAURER_MDEBERTA3BASE_XNLI_MLING_NLI_2M7_1_0_0",
 		&returns,
 	)
 	return returns
@@ -17010,6 +17307,17 @@ func JumpStartModel_HUGGINGFACE_ZSTC_RECOGNAI_ZEROSHOT_SELECTRA_SMALL_2_0_0() Ju
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_ZSTC_RECOGNAI_ZEROSHOT_SELECTRA_SMALL_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TC_LLAMA_PROMPT_GUARD_86M_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TC_LLAMA_PROMPT_GUARD_86M_1_0_0",
 		&returns,
 	)
 	return returns
@@ -21179,6 +21487,17 @@ func JumpStartModel_MODEL_INPAINTING_STABILITYAI_STABLE_DIFFUSION_2_INPAINTING_F
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"MODEL_INPAINTING_STABILITYAI_STABLE_DIFFUSION_2_INPAINTING_FP16_2_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_MODEL_INPAINTING_STABILITYAI_STABLE_DIFFUSION2_INPAINTING_FP16_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"MODEL_INPAINTING_STABILITYAI_STABLE_DIFFUSION2_INPAINTING_FP16_1_0_0",
 		&returns,
 	)
 	return returns
