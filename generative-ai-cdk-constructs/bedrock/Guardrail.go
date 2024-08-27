@@ -32,6 +32,8 @@ type Guardrail interface {
 	// Experimental.
 	Node() constructs.Node
 	// Experimental.
+	AddContextualGroundingPolicyConfig(props *[]*ContextualGroundingPolicyConfigProps)
+	// Experimental.
 	AddSensitiveInformationPolicyConfig(props *[]*SensitiveInformationPolicyConfigProps, guardrailRegexesConfig *awsbedrock.CfnGuardrail_RegexConfigProperty)
 	// Experimental.
 	AddTags(props *GuardrailProps)
@@ -178,6 +180,17 @@ func Guardrail_IsConstruct(x interface{}) *bool {
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_Guardrail) AddContextualGroundingPolicyConfig(props *[]*ContextualGroundingPolicyConfigProps) {
+	if err := g.validateAddContextualGroundingPolicyConfigParameters(props); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"addContextualGroundingPolicyConfig",
+		[]interface{}{props},
+	)
 }
 
 func (g *jsiiProxy_Guardrail) AddSensitiveInformationPolicyConfig(props *[]*SensitiveInformationPolicyConfigProps, guardrailRegexesConfig *awsbedrock.CfnGuardrail_RegexConfigProperty) {

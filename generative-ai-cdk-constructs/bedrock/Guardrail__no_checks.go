@@ -4,6 +4,10 @@ package bedrock
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_Guardrail) validateAddContextualGroundingPolicyConfigParameters(props *[]*ContextualGroundingPolicyConfigProps) error {
+	return nil
+}
+
 func (g *jsiiProxy_Guardrail) validateAddSensitiveInformationPolicyConfigParameters(props *[]*SensitiveInformationPolicyConfigProps, guardrailRegexesConfig *awsbedrock.CfnGuardrail_RegexConfigProperty) error {
 	return nil
 }

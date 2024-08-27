@@ -164,6 +164,18 @@ func init() {
 		reflect.TypeOf((*ContentPolicyConfigProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilterConfigType",
+		reflect.TypeOf((*ContextualGroundingFilterConfigType)(nil)).Elem(),
+		map[string]interface{}{
+			"GROUNDING": ContextualGroundingFilterConfigType_GROUNDING,
+			"RELEVANCE": ContextualGroundingFilterConfigType_RELEVANCE,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingPolicyConfigProps",
+		reflect.TypeOf((*ContextualGroundingPolicyConfigProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.FiltersConfigStrength",
 		reflect.TypeOf((*FiltersConfigStrength)(nil)).Elem(),
 		map[string]interface{}{
@@ -217,6 +229,7 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Guardrail",
 		reflect.TypeOf((*Guardrail)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addContextualGroundingPolicyConfig", GoMethod: "AddContextualGroundingPolicyConfig"},
 			_jsii_.MemberMethod{JsiiMethod: "addSensitiveInformationPolicyConfig", GoMethod: "AddSensitiveInformationPolicyConfig"},
 			_jsii_.MemberMethod{JsiiMethod: "addTags", GoMethod: "AddTags"},
 			_jsii_.MemberMethod{JsiiMethod: "addTopicPolicyConfig", GoMethod: "AddTopicPolicyConfig"},

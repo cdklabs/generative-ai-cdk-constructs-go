@@ -13,6 +13,9 @@ type GuardrailProps struct {
 	// The message to return when the guardrail blocks a model response.
 	// Experimental.
 	BlockedOutputsMessaging *string `field:"optional" json:"blockedOutputsMessaging" yaml:"blockedOutputsMessaging"`
+	// Contextual grounding policy config for a guardrail.
+	// Experimental.
+	ContextualGroundingfiltersConfig *[]*ContextualGroundingPolicyConfigProps `field:"optional" json:"contextualGroundingfiltersConfig" yaml:"contextualGroundingfiltersConfig"`
 	// The description of the guardrail.
 	// Experimental.
 	Description *string `field:"optional" json:"description" yaml:"description"`
