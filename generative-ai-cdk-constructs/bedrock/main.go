@@ -145,6 +145,10 @@ func init() {
 			"NONE": ChunkingStrategy_NONE,
 		},
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CommonPromptVariantProps",
+		reflect.TypeOf((*CommonPromptVariantProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfig",
 		reflect.TypeOf((*ContentPolicyConfig)(nil)).Elem(),
@@ -272,6 +276,17 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IPrompt",
+		reflect.TypeOf((*IPrompt)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "promptArn", GoGetter: "PromptArn"},
+			_jsii_.MemberProperty{JsiiProperty: "promptId", GoGetter: "PromptId"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IPrompt{}
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceConfiguration",
 		reflect.TypeOf((*InferenceConfiguration)(nil)).Elem(),
@@ -342,6 +357,27 @@ func init() {
 			"MASK": PiiEntitiesConfigAction_MASK,
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.Prompt",
+		reflect.TypeOf((*Prompt)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addVariant", GoMethod: "AddVariant"},
+			_jsii_.MemberMethod{JsiiMethod: "createVersion", GoMethod: "CreateVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "encryptionKey", GoGetter: "EncryptionKey"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "promptArn", GoGetter: "PromptArn"},
+			_jsii_.MemberProperty{JsiiProperty: "promptId", GoGetter: "PromptId"},
+			_jsii_.MemberProperty{JsiiProperty: "promptName", GoGetter: "PromptName"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "variants", GoGetter: "Variants"},
+		},
+		func() interface{} {
+			j := jsiiProxy_Prompt{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IPrompt)
+			return &j
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptConfiguration",
 		reflect.TypeOf((*PromptConfiguration)(nil)).Elem(),
@@ -358,12 +394,23 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptOverrideConfiguration",
 		reflect.TypeOf((*PromptOverrideConfiguration)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptProps",
+		reflect.TypeOf((*PromptProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptState",
 		reflect.TypeOf((*PromptState)(nil)).Elem(),
 		map[string]interface{}{
 			"ENABLED": PromptState_ENABLED,
 			"DISABLED": PromptState_DISABLED,
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptTemplateType",
+		reflect.TypeOf((*PromptTemplateType)(nil)).Elem(),
+		map[string]interface{}{
+			"TEXT": PromptTemplateType_TEXT,
 		},
 	)
 	_jsii_.RegisterEnum(
@@ -375,6 +422,40 @@ func init() {
 			"POST_PROCESSING": PromptType_POST_PROCESSING,
 			"KNOWLEDGE_BASE_RESPONSE_GENERATION": PromptType_KNOWLEDGE_BASE_RESPONSE_GENERATION,
 		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVariant",
+		reflect.TypeOf((*PromptVariant)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "inferenceConfiguration", GoGetter: "InferenceConfiguration"},
+			_jsii_.MemberProperty{JsiiProperty: "modelId", GoGetter: "ModelId"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "templateConfiguration", GoGetter: "TemplateConfiguration"},
+			_jsii_.MemberProperty{JsiiProperty: "templateType", GoGetter: "TemplateType"},
+		},
+		func() interface{} {
+			return &jsiiProxy_PromptVariant{}
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVersion",
+		reflect.TypeOf((*PromptVersion)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "prompt", GoGetter: "Prompt"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "version", GoGetter: "Version"},
+			_jsii_.MemberProperty{JsiiProperty: "versionArn", GoGetter: "VersionArn"},
+		},
+		func() interface{} {
+			j := jsiiProxy_PromptVersion{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVersionProps",
+		reflect.TypeOf((*PromptVersionProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
@@ -428,6 +509,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.SensitiveInformationPolicyConfigProps",
 		reflect.TypeOf((*SensitiveInformationPolicyConfigProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.TextPromptVariantProps",
+		reflect.TypeOf((*TextPromptVariantProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Topic",
