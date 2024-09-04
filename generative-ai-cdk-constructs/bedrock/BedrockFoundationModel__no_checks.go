@@ -8,6 +8,10 @@ func (b *jsiiProxy_BedrockFoundationModel) validateAsArnParameters(construct con
 	return nil
 }
 
+func (b *jsiiProxy_BedrockFoundationModel) validateAsIModelParameters(construct constructs.IConstruct) error {
+	return nil
+}
+
 func validateNewBedrockFoundationModelParameters(value *string, props *BedrockFoundationModelProps) error {
 	return nil
 }

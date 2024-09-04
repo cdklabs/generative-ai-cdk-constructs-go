@@ -11,10 +11,22 @@ import (
 // Experimental.
 type AgentAlias interface {
 	constructs.Construct
+	IAgentAlias
+	// The unique identifier of the agent.
+	// Experimental.
+	AgentId() *string
 	// The ARN of the agent alias.
+	//
+	// Example:
+	//   `arn:aws:bedrock:us-east-1:123456789012:agent-alias/DNCJJYQKSU/TCLCITFZTN`
+	//
 	// Experimental.
 	AliasArn() *string
 	// The unique identifier of the agent alias.
+	//
+	// Example:
+	//   `TCLCITFZTN`
+	//
 	// Experimental.
 	AliasId() *string
 	// The name for the agent alias.
@@ -31,6 +43,17 @@ type AgentAlias interface {
 // The jsii proxy struct for AgentAlias
 type jsiiProxy_AgentAlias struct {
 	internal.Type__constructsConstruct
+	jsiiProxy_IAgentAlias
+}
+
+func (j *jsiiProxy_AgentAlias) AgentId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentId",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_AgentAlias) AliasArn() *string {
@@ -101,6 +124,26 @@ func NewAgentAlias_Override(a AgentAlias, scope constructs.Construct, id *string
 		[]interface{}{scope, id, props},
 		a,
 	)
+}
+
+// Brings an Agent Alias from an existing one created outside of CDK.
+// Experimental.
+func AgentAlias_FromAliasArn(scope constructs.Construct, id *string, aliasArn *string) IAgentAlias {
+	_init_.Initialize()
+
+	if err := validateAgentAlias_FromAliasArnParameters(scope, id, aliasArn); err != nil {
+		panic(err)
+	}
+	var returns IAgentAlias
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentAlias",
+		"fromAliasArn",
+		[]interface{}{scope, id, aliasArn},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

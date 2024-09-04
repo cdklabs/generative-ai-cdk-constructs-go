@@ -18,6 +18,14 @@ func (b *jsiiProxy_BedrockFoundationModel) validateAsArnParameters(construct con
 	return nil
 }
 
+func (b *jsiiProxy_BedrockFoundationModel) validateAsIModelParameters(construct constructs.IConstruct) error {
+	if construct == nil {
+		return fmt.Errorf("parameter construct is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateNewBedrockFoundationModelParameters(value *string, props *BedrockFoundationModelProps) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

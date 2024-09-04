@@ -4,6 +4,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
@@ -21,8 +22,11 @@ type BedrockFoundationModel interface {
 	SupportsKnowledgeBase() *bool
 	// Experimental.
 	VectorDimensions() *float64
+	// Returns the ARN of the foundation model in the following format: `arn:${Partition}:bedrock:${Region}::foundation-model/${ResourceId}`.
 	// Experimental.
 	AsArn(construct constructs.IConstruct) *string
+	// Experimental.
+	AsIModel(construct constructs.IConstruct) awsbedrock.IModel
 	// Experimental.
 	ToString() *string
 }
@@ -223,6 +227,28 @@ func BedrockFoundationModel_TITAN_EMBED_TEXT_V2_1024() BedrockFoundationModel {
 	return returns
 }
 
+func BedrockFoundationModel_TITAN_EMBED_TEXT_V2_256() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"TITAN_EMBED_TEXT_V2_256",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_TITAN_EMBED_TEXT_V2_512() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"TITAN_EMBED_TEXT_V2_512",
+		&returns,
+	)
+	return returns
+}
+
 func (b *jsiiProxy_BedrockFoundationModel) AsArn(construct constructs.IConstruct) *string {
 	if err := b.validateAsArnParameters(construct); err != nil {
 		panic(err)
@@ -232,6 +258,22 @@ func (b *jsiiProxy_BedrockFoundationModel) AsArn(construct constructs.IConstruct
 	_jsii_.Invoke(
 		b,
 		"asArn",
+		[]interface{}{construct},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BedrockFoundationModel) AsIModel(construct constructs.IConstruct) awsbedrock.IModel {
+	if err := b.validateAsIModelParameters(construct); err != nil {
+		panic(err)
+	}
+	var returns awsbedrock.IModel
+
+	_jsii_.Invoke(
+		b,
+		"asIModel",
 		[]interface{}{construct},
 		&returns,
 	)

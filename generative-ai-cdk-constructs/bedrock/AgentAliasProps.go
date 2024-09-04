@@ -1,6 +1,7 @@
 package bedrock
 
 
+// Interface to create a new Agent Alias.
 // Experimental.
 type AgentAliasProps struct {
 	// The unique identifier of the agent.

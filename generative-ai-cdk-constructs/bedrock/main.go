@@ -75,6 +75,7 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentAlias",
 		reflect.TypeOf((*AgentAlias)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "agentId", GoGetter: "AgentId"},
 			_jsii_.MemberProperty{JsiiProperty: "aliasArn", GoGetter: "AliasArn"},
 			_jsii_.MemberProperty{JsiiProperty: "aliasId", GoGetter: "AliasId"},
 			_jsii_.MemberProperty{JsiiProperty: "aliasName", GoGetter: "AliasName"},
@@ -84,6 +85,7 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_AgentAlias{}
 			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IAgentAlias)
 			return &j
 		},
 	)
@@ -114,6 +116,7 @@ func init() {
 		reflect.TypeOf((*BedrockFoundationModel)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "asArn", GoMethod: "AsArn"},
+			_jsii_.MemberMethod{JsiiMethod: "asIModel", GoMethod: "AsIModel"},
 			_jsii_.MemberProperty{JsiiProperty: "modelId", GoGetter: "ModelId"},
 			_jsii_.MemberProperty{JsiiProperty: "supportsAgents", GoGetter: "SupportsAgents"},
 			_jsii_.MemberProperty{JsiiProperty: "supportsKnowledgeBase", GoGetter: "SupportsKnowledgeBase"},
@@ -274,6 +277,18 @@ func init() {
 			j := jsiiProxy_GuardrailVersion{}
 			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
 			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IAgentAlias",
+		reflect.TypeOf((*IAgentAlias)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "agentId", GoGetter: "AgentId"},
+			_jsii_.MemberProperty{JsiiProperty: "aliasArn", GoGetter: "AliasArn"},
+			_jsii_.MemberProperty{JsiiProperty: "aliasId", GoGetter: "AliasId"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IAgentAlias{}
 		},
 	)
 	_jsii_.RegisterInterface(
