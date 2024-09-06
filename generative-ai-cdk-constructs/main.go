@@ -72,6 +72,7 @@ func init() {
 			"AWSCONTENTGENAPPSYNCLAMBDA": ConstructName_AWSCONTENTGENAPPSYNCLAMBDA,
 			"AWSRAGAPPSYNCSTEPFNKENDRA": ConstructName_AWSRAGAPPSYNCSTEPFNKENDRA,
 			"AWSWEBCRAWLER": ConstructName_AWSWEBCRAWLER,
+			"AWSTEXTTOSQL": ConstructName_AWSTEXTTOSQL,
 		},
 	)
 	_jsii_.RegisterClass(
@@ -175,6 +176,14 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.CustomSageMakerEndpointProps",
 		reflect.TypeOf((*CustomSageMakerEndpointProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.DbName",
+		reflect.TypeOf((*DbName)(nil)).Elem(),
+		map[string]interface{}{
+			"MYSQL": DbName_MYSQL,
+			"POSTGRESQL": DbName_POSTGRESQL,
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
@@ -344,6 +353,14 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.LangchainProps",
 		reflect.TypeOf((*LangchainProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.MetatdataSource",
+		reflect.TypeOf((*MetatdataSource)(nil)).Elem(),
+		map[string]interface{}{
+			"CONFIG_FILE": MetatdataSource_CONFIG_FILE,
+			"KNOWLEDGE_BASE": MetatdataSource_KNOWLEDGE_BASE,
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.ModelMonitoringProps",
 		reflect.TypeOf((*ModelMonitoringProps)(nil)).Elem(),
@@ -489,6 +506,42 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.SummarizationAppsyncStepfnProps",
 		reflect.TypeOf((*SummarizationAppsyncStepfnProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.TextToSql",
+		reflect.TypeOf((*TextToSql)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
+			_jsii_.MemberProperty{JsiiProperty: "configAssetBucket", GoGetter: "ConfigAssetBucket"},
+			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
+			_jsii_.MemberProperty{JsiiProperty: "dbSecurityGroup", GoGetter: "DbSecurityGroup"},
+			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
+			_jsii_.MemberProperty{JsiiProperty: "eventBus", GoGetter: "EventBus"},
+			_jsii_.MemberProperty{JsiiProperty: "eventsRule", GoGetter: "EventsRule"},
+			_jsii_.MemberProperty{JsiiProperty: "feedbackQueue", GoGetter: "FeedbackQueue"},
+			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
+			_jsii_.MemberProperty{JsiiProperty: "lambdaSecurityGroup", GoGetter: "LambdaSecurityGroup"},
+			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "outputQueue", GoGetter: "OutputQueue"},
+			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
+			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
+			_jsii_.MemberProperty{JsiiProperty: "stepFunction", GoGetter: "StepFunction"},
+			_jsii_.MemberProperty{JsiiProperty: "subnetGroup", GoGetter: "SubnetGroup"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
+			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
+			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TextToSql{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.TextToSqlProps",
+		reflect.TypeOf((*TextToSqlProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.WebCrawler",

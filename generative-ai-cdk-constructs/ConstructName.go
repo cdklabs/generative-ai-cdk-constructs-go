@@ -35,5 +35,7 @@ const (
 	ConstructName_AWSRAGAPPSYNCSTEPFNKENDRA ConstructName = "AWSRAGAPPSYNCSTEPFNKENDRA"
 	// Experimental.
 	ConstructName_AWSWEBCRAWLER ConstructName = "AWSWEBCRAWLER"
+	// Experimental.
+	ConstructName_AWSTEXTTOSQL ConstructName = "AWSTEXTTOSQL"
 )
 
