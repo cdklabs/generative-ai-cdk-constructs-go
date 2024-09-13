@@ -24,6 +24,10 @@ type CustomSageMakerEndpointProps struct {
 	// Experimental.
 	InstanceCount *float64 `field:"optional" json:"instanceCount" yaml:"instanceCount"`
 	// Experimental.
+	MaxCapacity *float64 `field:"optional" json:"maxCapacity" yaml:"maxCapacity"`
+	// Experimental.
+	MinCapacity *float64 `field:"optional" json:"minCapacity" yaml:"minCapacity"`
+	// Experimental.
 	ModelDataDownloadTimeoutInSeconds *float64 `field:"optional" json:"modelDataDownloadTimeoutInSeconds" yaml:"modelDataDownloadTimeoutInSeconds"`
 	// Experimental.
 	Role awsiam.Role `field:"optional" json:"role" yaml:"role"`

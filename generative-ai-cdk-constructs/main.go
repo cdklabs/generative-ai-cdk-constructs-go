@@ -160,6 +160,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
 			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "scalingPolicy", GoGetter: "ScalingPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
 			_jsii_.MemberProperty{JsiiProperty: "successTopic", GoGetter: "SuccessTopic"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},

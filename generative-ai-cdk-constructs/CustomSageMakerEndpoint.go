@@ -4,6 +4,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsapplicationautoscaling"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsappsync"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awslambda"
@@ -73,6 +74,8 @@ type CustomSageMakerEndpoint interface {
 	SetRetention(val awslogs.RetentionDays)
 	// Experimental.
 	Role() awsiam.Role
+	// Experimental.
+	ScalingPolicy() awsapplicationautoscaling.StepScalingPolicy
 	// Value will be appended to resources name.
 	// Default: - _dev.
 	//
@@ -280,6 +283,16 @@ func (j *jsiiProxy_CustomSageMakerEndpoint) Role() awsiam.Role {
 	_jsii_.Get(
 		j,
 		"role",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomSageMakerEndpoint) ScalingPolicy() awsapplicationautoscaling.StepScalingPolicy {
+	var returns awsapplicationautoscaling.StepScalingPolicy
+	_jsii_.Get(
+		j,
+		"scalingPolicy",
 		&returns,
 	)
 	return returns
