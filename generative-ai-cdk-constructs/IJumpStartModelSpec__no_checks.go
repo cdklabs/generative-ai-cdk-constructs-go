@@ -12,6 +12,10 @@ func (j *jsiiProxy_IJumpStartModelSpec) validateSetEnvironmentParameters(val *ma
 	return nil
 }
 
+func (j *jsiiProxy_IJumpStartModelSpec) validateSetGatedBucketParameters(val *bool) error {
+	return nil
+}
+
 func (j *jsiiProxy_IJumpStartModelSpec) validateSetInstanceTypesParameters(val *[]*string) error {
 	return nil
 }

@@ -19,6 +19,10 @@ type IJumpStartModelSpec interface {
 	// Experimental.
 	SetEnvironment(e *map[string]interface{})
 	// Experimental.
+	GatedBucket() *bool
+	// Experimental.
+	SetGatedBucket(g *bool)
+	// Experimental.
 	InstanceAliases() *[]IInstanceAliase
 	// Experimental.
 	SetInstanceAliases(i *[]IInstanceAliase)
@@ -113,6 +117,27 @@ func (j *jsiiProxy_IJumpStartModelSpec)SetEnvironment(val *map[string]interface{
 	_jsii_.Set(
 		j,
 		"environment",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IJumpStartModelSpec) GatedBucket() *bool {
+	var returns *bool
+	_jsii_.Get(
+		j,
+		"gatedBucket",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IJumpStartModelSpec)SetGatedBucket(val *bool) {
+	if err := j.validateSetGatedBucketParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"gatedBucket",
 		val,
 	)
 }

@@ -80,6 +80,14 @@ func (j *jsiiProxy_IJumpStartModelSpec) validateSetEnvironmentParameters(val *ma
 	return nil
 }
 
+func (j *jsiiProxy_IJumpStartModelSpec) validateSetGatedBucketParameters(val *bool) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_IJumpStartModelSpec) validateSetInstanceTypesParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

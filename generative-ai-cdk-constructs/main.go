@@ -296,6 +296,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "artifactKey", GoGetter: "ArtifactKey"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultInstanceType", GoGetter: "DefaultInstanceType"},
 			_jsii_.MemberProperty{JsiiProperty: "environment", GoGetter: "Environment"},
+			_jsii_.MemberProperty{JsiiProperty: "gatedBucket", GoGetter: "GatedBucket"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceAliases", GoGetter: "InstanceAliases"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceTypes", GoGetter: "InstanceTypes"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceVariants", GoGetter: "InstanceVariants"},
