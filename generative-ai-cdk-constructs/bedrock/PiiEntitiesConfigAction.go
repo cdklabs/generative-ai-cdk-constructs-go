@@ -8,6 +8,6 @@ const (
 	// Experimental.
 	PiiEntitiesConfigAction_BLOCK PiiEntitiesConfigAction = "BLOCK"
 	// Experimental.
-	PiiEntitiesConfigAction_MASK PiiEntitiesConfigAction = "MASK"
+	PiiEntitiesConfigAction_ANONYMIZE PiiEntitiesConfigAction = "ANONYMIZE"
 )
 

@@ -28,7 +28,7 @@ type GuardrailProps struct {
 	// The name of the guardrail.
 	// Experimental.
 	Name *string `field:"optional" json:"name" yaml:"name"`
-	// PII fields which needs to be masked.
+	// PII fields which needs to be anonymized.
 	// Experimental.
 	PiiConfig *[]*SensitiveInformationPolicyConfigProps `field:"optional" json:"piiConfig" yaml:"piiConfig"`
 	// Metadata that you can assign to a guardrail as key-value pairs.

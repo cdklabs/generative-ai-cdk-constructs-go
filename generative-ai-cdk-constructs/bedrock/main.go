@@ -369,7 +369,7 @@ func init() {
 		reflect.TypeOf((*PiiEntitiesConfigAction)(nil)).Elem(),
 		map[string]interface{}{
 			"BLOCK": PiiEntitiesConfigAction_BLOCK,
-			"MASK": PiiEntitiesConfigAction_MASK,
+			"ANONYMIZE": PiiEntitiesConfigAction_ANONYMIZE,
 		},
 	)
 	_jsii_.RegisterClass(
