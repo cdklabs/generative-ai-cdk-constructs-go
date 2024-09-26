@@ -139,18 +139,79 @@ func init() {
 			"CA_SOCIAL_INSURANCE_NUMBER": CanadaSpecific_CA_SOCIAL_INSURANCE_NUMBER,
 		},
 	)
-	_jsii_.RegisterEnum(
+	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
 		reflect.TypeOf((*ChunkingStrategy)(nil)).Elem(),
-		map[string]interface{}{
-			"FIXED_SIZE": ChunkingStrategy_FIXED_SIZE,
-			"DEFAULT": ChunkingStrategy_DEFAULT,
-			"NONE": ChunkingStrategy_NONE,
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "configuration", GoGetter: "Configuration"},
+		},
+		func() interface{} {
+			return &jsiiProxy_ChunkingStrategy{}
 		},
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.CommonPromptVariantProps",
 		reflect.TypeOf((*CommonPromptVariantProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceCrawlingFilters",
+		reflect.TypeOf((*ConfluenceCrawlingFilters)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceDataSource",
+		reflect.TypeOf((*ConfluenceDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "authSecret", GoGetter: "AuthSecret"},
+			_jsii_.MemberProperty{JsiiProperty: "confluenceUrl", GoGetter: "ConfluenceUrl"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ConfluenceDataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceDataSourceAssociationProps",
+		reflect.TypeOf((*ConfluenceDataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceDataSourceAuthType",
+		reflect.TypeOf((*ConfluenceDataSourceAuthType)(nil)).Elem(),
+		map[string]interface{}{
+			"OAUTH2_CLIENT_CREDENTIALS": ConfluenceDataSourceAuthType_OAUTH2_CLIENT_CREDENTIALS,
+			"BASIC": ConfluenceDataSourceAuthType_BASIC,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceDataSourceProps",
+		reflect.TypeOf((*ConfluenceDataSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ConfluenceObjectType",
+		reflect.TypeOf((*ConfluenceObjectType)(nil)).Elem(),
+		map[string]interface{}{
+			"SPACE": ConfluenceObjectType_SPACE,
+			"PAGE": ConfluenceObjectType_PAGE,
+			"BLOG": ConfluenceObjectType_BLOG,
+			"COMMENT": ConfluenceObjectType_COMMENT,
+			"ATTACHMENT": ConfluenceObjectType_ATTACHMENT,
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfig",
@@ -181,6 +242,123 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingPolicyConfigProps",
 		reflect.TypeOf((*ContextualGroundingPolicyConfigProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrawlingFilters",
+		reflect.TypeOf((*CrawlingFilters)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrawlingScope",
+		reflect.TypeOf((*CrawlingScope)(nil)).Elem(),
+		map[string]interface{}{
+			"HOST_ONLY": CrawlingScope_HOST_ONLY,
+			"SUBDOMAINS": CrawlingScope_SUBDOMAINS,
+			"DEFAULT": CrawlingScope_DEFAULT,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomTransformation",
+		reflect.TypeOf((*CustomTransformation)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "configuration", GoGetter: "Configuration"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePolicyStatements", GoMethod: "GeneratePolicyStatements"},
+		},
+		func() interface{} {
+			return &jsiiProxy_CustomTransformation{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataDeletionPolicy",
+		reflect.TypeOf((*DataDeletionPolicy)(nil)).Elem(),
+		map[string]interface{}{
+			"DELETE": DataDeletionPolicy_DELETE,
+			"RETAIN": DataDeletionPolicy_RETAIN,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSource",
+		reflect.TypeOf((*DataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceAssociationProps",
+		reflect.TypeOf((*DataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceBase",
+		reflect.TypeOf((*DataSourceBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataSourceBase{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IDataSource)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceNew",
+		reflect.TypeOf((*DataSourceNew)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataSourceNew{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceType",
+		reflect.TypeOf((*DataSourceType)(nil)).Elem(),
+		map[string]interface{}{
+			"S3": DataSourceType_S3,
+			"CONFLUENCE": DataSourceType_CONFLUENCE,
+			"SALESFORCE": DataSourceType_SALESFORCE,
+			"SHAREPOINT": DataSourceType_SHAREPOINT,
+			"WEB_CRAWLER": DataSourceType_WEB_CRAWLER,
+		},
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.FiltersConfigStrength",
@@ -215,6 +393,10 @@ func init() {
 			"SWIFT_CODE": Finance_SWIFT_CODE,
 			"INTERNATIONAL_BANK_ACCOUNT_NUMBER": Finance_INTERNATIONAL_BANK_ACCOUNT_NUMBER,
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStategyProps",
+		reflect.TypeOf((*FoundationModelParsingStategyProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.General",
@@ -279,6 +461,10 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.HierarchicalChunkingProps",
+		reflect.TypeOf((*HierarchicalChunkingProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterInterface(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.IAgentAlias",
 		reflect.TypeOf((*IAgentAlias)(nil)).Elem(),
@@ -289,6 +475,45 @@ func init() {
 		},
 		func() interface{} {
 			return &jsiiProxy_IAgentAlias{}
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IDataSource",
+		reflect.TypeOf((*IDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IDataSource{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IKnowledgeBase",
+		reflect.TypeOf((*IKnowledgeBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addWebCrawlerDataSource", GoMethod: "AddWebCrawlerDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IKnowledgeBase{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
+			return &j
 		},
 	)
 	_jsii_.RegisterInterface(
@@ -333,8 +558,18 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.KnowledgeBase",
 		reflect.TypeOf((*KnowledgeBase)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addWebCrawlerDataSource", GoMethod: "AddWebCrawlerDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "associateToAgent", GoMethod: "AssociateToAgent"},
 			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "instruction", GoGetter: "Instruction"},
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
@@ -342,19 +577,30 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseState", GoGetter: "KnowledgeBaseState"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
 			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "vectorStore", GoGetter: "VectorStore"},
 		},
 		func() interface{} {
 			j := jsiiProxy_KnowledgeBase{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.Type__awscdkResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IKnowledgeBase)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.KnowledgeBaseAttributes",
+		reflect.TypeOf((*KnowledgeBaseAttributes)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.KnowledgeBaseProps",
 		reflect.TypeOf((*KnowledgeBaseProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.LambdaCustomTransformationProps",
+		reflect.TypeOf((*LambdaCustomTransformationProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParserMode",
@@ -362,6 +608,17 @@ func init() {
 		map[string]interface{}{
 			"DEFAULT": ParserMode_DEFAULT,
 			"OVERRIDDEN": ParserMode_OVERRIDDEN,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStategy",
+		reflect.TypeOf((*ParsingStategy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "configuration", GoGetter: "Configuration"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePolicyStatements", GoMethod: "GeneratePolicyStatements"},
+		},
+		func() interface{} {
+			return &jsiiProxy_ParsingStategy{}
 		},
 	)
 	_jsii_.RegisterEnum(
@@ -488,16 +745,33 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
 		reflect.TypeOf((*S3DataSource)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "dataSource", GoGetter: "DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "bucket", GoGetter: "Bucket"},
 			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 		},
 		func() interface{} {
 			j := jsiiProxy_S3DataSource{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
 			return &j
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSourceAssociationProps",
+		reflect.TypeOf((*S3DataSourceAssociationProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSourceProps",
@@ -506,6 +780,81 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3Identifier",
 		reflect.TypeOf((*S3Identifier)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceCrawlingFilters",
+		reflect.TypeOf((*SalesforceCrawlingFilters)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceDataSource",
+		reflect.TypeOf((*SalesforceDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "authSecret", GoGetter: "AuthSecret"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "endpoint", GoGetter: "Endpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SalesforceDataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceDataSourceAssociationProps",
+		reflect.TypeOf((*SalesforceDataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceDataSourceAuthType",
+		reflect.TypeOf((*SalesforceDataSourceAuthType)(nil)).Elem(),
+		map[string]interface{}{
+			"OAUTH2_CLIENT_CREDENTIALS": SalesforceDataSourceAuthType_OAUTH2_CLIENT_CREDENTIALS,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceDataSourceProps",
+		reflect.TypeOf((*SalesforceDataSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SalesforceObjectType",
+		reflect.TypeOf((*SalesforceObjectType)(nil)).Elem(),
+		map[string]interface{}{
+			"ACCOUNT": SalesforceObjectType_ACCOUNT,
+			"ATTACHMENT": SalesforceObjectType_ATTACHMENT,
+			"CAMPAIGN": SalesforceObjectType_CAMPAIGN,
+			"CONTENT_VERSION": SalesforceObjectType_CONTENT_VERSION,
+			"PARTNER": SalesforceObjectType_PARTNER,
+			"PRICEBOOK_2": SalesforceObjectType_PRICEBOOK_2,
+			"CASE": SalesforceObjectType_CASE,
+			"CONTACT": SalesforceObjectType_CONTACT,
+			"CONTRACT": SalesforceObjectType_CONTRACT,
+			"DOCUMENT": SalesforceObjectType_DOCUMENT,
+			"IDEA": SalesforceObjectType_IDEA,
+			"LEAD": SalesforceObjectType_LEAD,
+			"OPPORTUNITY": SalesforceObjectType_OPPORTUNITY,
+			"PRODUCT_2": SalesforceObjectType_PRODUCT_2,
+			"SOLUTION": SalesforceObjectType_SOLUTION,
+			"TASK": SalesforceObjectType_TASK,
+			"FEED_ITEM": SalesforceObjectType_FEED_ITEM,
+			"FEED_COMMENT": SalesforceObjectType_FEED_COMMENT,
+			"KNOWLEDGE_KAV": SalesforceObjectType_KNOWLEDGE_KAV,
+			"USER": SalesforceObjectType_USER,
+			"COLLABORATION_GROUP": SalesforceObjectType_COLLABORATION_GROUP,
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.SensitiveInformationPolicyConfig",
@@ -524,6 +873,64 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.SensitiveInformationPolicyConfigProps",
 		reflect.TypeOf((*SensitiveInformationPolicyConfigProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointCrawlingFilters",
+		reflect.TypeOf((*SharePointCrawlingFilters)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
+		reflect.TypeOf((*SharePointDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "authSecret", GoGetter: "AuthSecret"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "domain", GoGetter: "Domain"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "siteUrls", GoGetter: "SiteUrls"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SharePointDataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSourceAssociationProps",
+		reflect.TypeOf((*SharePointDataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSourceAuthType",
+		reflect.TypeOf((*SharePointDataSourceAuthType)(nil)).Elem(),
+		map[string]interface{}{
+			"OAUTH2_CLIENT_CREDENTIALS": SharePointDataSourceAuthType_OAUTH2_CLIENT_CREDENTIALS,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSourceProps",
+		reflect.TypeOf((*SharePointDataSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointObjectType",
+		reflect.TypeOf((*SharePointObjectType)(nil)).Elem(),
+		map[string]interface{}{
+			"PAGE": SharePointObjectType_PAGE,
+			"EVENT": SharePointObjectType_EVENT,
+			"FILE": SharePointObjectType_FILE,
+		},
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.TextPromptVariantProps",
@@ -554,6 +961,13 @@ func init() {
 		reflect.TypeOf((*TopicProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.TransformationStep",
+		reflect.TypeOf((*TransformationStep)(nil)).Elem(),
+		map[string]interface{}{
+			"POST_CHUNKING": TransformationStep_POST_CHUNKING,
+		},
+	)
+	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.UKSpecific",
 		reflect.TypeOf((*UKSpecific)(nil)).Elem(),
 		map[string]interface{}{
@@ -572,5 +986,42 @@ func init() {
 			"US_PASSPORT_NUMBER": USASpecific_US_PASSPORT_NUMBER,
 			"US_SOCIAL_SECURITY_NUMBER": USASpecific_US_SOCIAL_SECURITY_NUMBER,
 		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.WebCrawlerDataSource",
+		reflect.TypeOf((*WebCrawlerDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "crawlingRate", GoGetter: "CrawlingRate"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "siteUrls", GoGetter: "SiteUrls"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_WebCrawlerDataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.WebCrawlerDataSourceAssociationProps",
+		reflect.TypeOf((*WebCrawlerDataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.WebCrawlerDataSourceProps",
+		reflect.TypeOf((*WebCrawlerDataSourceProps)(nil)).Elem(),
 	)
 }

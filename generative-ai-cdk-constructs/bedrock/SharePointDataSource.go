@@ -7,17 +7,17 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awssecretsmanager"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// Sets up an S3 Data Source to be added to a knowledge base.
+// Sets up an data source to be added to a knowledge base.
 // Experimental.
-type S3DataSource interface {
+type SharePointDataSource interface {
 	DataSourceNew
-	// The bucket associated with the data source.
+	// The AWS Secrets Manager secret that stores your authentication credentials.
 	// Experimental.
-	Bucket() awss3.IBucket
+	AuthSecret() awssecretsmanager.ISecret
 	// The unique identifier of the data source.
 	//
 	// Example:
@@ -31,6 +31,9 @@ type S3DataSource interface {
 	// The type of data source.
 	// Experimental.
 	DataSourceType() DataSourceType
+	// The domain name of your SharePoint instance.
+	// Experimental.
+	Domain() *string
 	// The environment this resource belongs to.
 	//
 	// For resources that are created and managed by the CDK
@@ -59,6 +62,9 @@ type S3DataSource interface {
 	//   cross-environment scenarios.
 	// Experimental.
 	PhysicalName() *string
+	// The SharePoint site URL/URLs.
+	// Experimental.
+	SiteUrls() *[]*string
 	// The stack in which this resource is defined.
 	// Experimental.
 	Stack() awscdk.Stack
@@ -101,22 +107,22 @@ type S3DataSource interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for S3DataSource
-type jsiiProxy_S3DataSource struct {
+// The jsii proxy struct for SharePointDataSource
+type jsiiProxy_SharePointDataSource struct {
 	jsiiProxy_DataSourceNew
 }
 
-func (j *jsiiProxy_S3DataSource) Bucket() awss3.IBucket {
-	var returns awss3.IBucket
+func (j *jsiiProxy_SharePointDataSource) AuthSecret() awssecretsmanager.ISecret {
+	var returns awssecretsmanager.ISecret
 	_jsii_.Get(
 		j,
-		"bucket",
+		"authSecret",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) DataSourceId() *string {
+func (j *jsiiProxy_SharePointDataSource) DataSourceId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -126,7 +132,7 @@ func (j *jsiiProxy_S3DataSource) DataSourceId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) DataSourceName() *string {
+func (j *jsiiProxy_SharePointDataSource) DataSourceName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -136,7 +142,7 @@ func (j *jsiiProxy_S3DataSource) DataSourceName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) DataSourceType() DataSourceType {
+func (j *jsiiProxy_SharePointDataSource) DataSourceType() DataSourceType {
 	var returns DataSourceType
 	_jsii_.Get(
 		j,
@@ -146,7 +152,17 @@ func (j *jsiiProxy_S3DataSource) DataSourceType() DataSourceType {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Env() *awscdk.ResourceEnvironment {
+func (j *jsiiProxy_SharePointDataSource) Domain() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domain",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SharePointDataSource) Env() *awscdk.ResourceEnvironment {
 	var returns *awscdk.ResourceEnvironment
 	_jsii_.Get(
 		j,
@@ -156,7 +172,7 @@ func (j *jsiiProxy_S3DataSource) Env() *awscdk.ResourceEnvironment {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) KmsKey() awskms.IKey {
+func (j *jsiiProxy_SharePointDataSource) KmsKey() awskms.IKey {
 	var returns awskms.IKey
 	_jsii_.Get(
 		j,
@@ -166,7 +182,7 @@ func (j *jsiiProxy_S3DataSource) KmsKey() awskms.IKey {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) KnowledgeBase() IKnowledgeBase {
+func (j *jsiiProxy_SharePointDataSource) KnowledgeBase() IKnowledgeBase {
 	var returns IKnowledgeBase
 	_jsii_.Get(
 		j,
@@ -176,7 +192,7 @@ func (j *jsiiProxy_S3DataSource) KnowledgeBase() IKnowledgeBase {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Node() constructs.Node {
+func (j *jsiiProxy_SharePointDataSource) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -186,7 +202,7 @@ func (j *jsiiProxy_S3DataSource) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) PhysicalName() *string {
+func (j *jsiiProxy_SharePointDataSource) PhysicalName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -196,7 +212,17 @@ func (j *jsiiProxy_S3DataSource) PhysicalName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Stack() awscdk.Stack {
+func (j *jsiiProxy_SharePointDataSource) SiteUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"siteUrls",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SharePointDataSource) Stack() awscdk.Stack {
 	var returns awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -208,16 +234,16 @@ func (j *jsiiProxy_S3DataSource) Stack() awscdk.Stack {
 
 
 // Experimental.
-func NewS3DataSource(scope constructs.Construct, id *string, props *S3DataSourceProps) S3DataSource {
+func NewSharePointDataSource(scope constructs.Construct, id *string, props *SharePointDataSourceProps) SharePointDataSource {
 	_init_.Initialize()
 
-	if err := validateNewS3DataSourceParameters(scope, id, props); err != nil {
+	if err := validateNewSharePointDataSourceParameters(scope, id, props); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_S3DataSource{}
+	j := jsiiProxy_SharePointDataSource{}
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -226,11 +252,11 @@ func NewS3DataSource(scope constructs.Construct, id *string, props *S3DataSource
 }
 
 // Experimental.
-func NewS3DataSource_Override(s S3DataSource, scope constructs.Construct, id *string, props *S3DataSourceProps) {
+func NewSharePointDataSource_Override(s SharePointDataSource, scope constructs.Construct, id *string, props *SharePointDataSourceProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
 		[]interface{}{scope, id, props},
 		s,
 	)
@@ -254,16 +280,16 @@ func NewS3DataSource_Override(s S3DataSource, scope constructs.Construct, id *st
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Experimental.
-func S3DataSource_IsConstruct(x interface{}) *bool {
+func SharePointDataSource_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsConstructParameters(x); err != nil {
+	if err := validateSharePointDataSource_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -274,16 +300,16 @@ func S3DataSource_IsConstruct(x interface{}) *bool {
 
 // Returns true if the construct was created by CDK, and false otherwise.
 // Experimental.
-func S3DataSource_IsOwnedResource(construct constructs.IConstruct) *bool {
+func SharePointDataSource_IsOwnedResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsOwnedResourceParameters(construct); err != nil {
+	if err := validateSharePointDataSource_IsOwnedResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
 		"isOwnedResource",
 		[]interface{}{construct},
 		&returns,
@@ -294,16 +320,16 @@ func S3DataSource_IsOwnedResource(construct constructs.IConstruct) *bool {
 
 // Check whether the given construct is a Resource.
 // Experimental.
-func S3DataSource_IsResource(construct constructs.IConstruct) *bool {
+func SharePointDataSource_IsResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsResourceParameters(construct); err != nil {
+	if err := validateSharePointDataSource_IsResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointDataSource",
 		"isResource",
 		[]interface{}{construct},
 		&returns,
@@ -312,7 +338,7 @@ func S3DataSource_IsResource(construct constructs.IConstruct) *bool {
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
+func (s *jsiiProxy_SharePointDataSource) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
 	if err := s.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)
 	}
@@ -323,7 +349,7 @@ func (s *jsiiProxy_S3DataSource) ApplyRemovalPolicy(policy awscdk.RemovalPolicy)
 	)
 }
 
-func (s *jsiiProxy_S3DataSource) FormatAsCfnProps(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) *awsbedrock.CfnDataSourceProps {
+func (s *jsiiProxy_SharePointDataSource) FormatAsCfnProps(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) *awsbedrock.CfnDataSourceProps {
 	if err := s.validateFormatAsCfnPropsParameters(props, dataSourceConfiguration); err != nil {
 		panic(err)
 	}
@@ -339,7 +365,7 @@ func (s *jsiiProxy_S3DataSource) FormatAsCfnProps(props *DataSourceAssociationPr
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GeneratePhysicalName() *string {
+func (s *jsiiProxy_SharePointDataSource) GeneratePhysicalName() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -352,7 +378,7 @@ func (s *jsiiProxy_S3DataSource) GeneratePhysicalName() *string {
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
+func (s *jsiiProxy_SharePointDataSource) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
 	if err := s.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
 		panic(err)
 	}
@@ -368,7 +394,7 @@ func (s *jsiiProxy_S3DataSource) GetResourceArnAttribute(arnAttr *string, arnCom
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GetResourceNameAttribute(nameAttr *string) *string {
+func (s *jsiiProxy_SharePointDataSource) GetResourceNameAttribute(nameAttr *string) *string {
 	if err := s.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
 		panic(err)
 	}
@@ -384,7 +410,7 @@ func (s *jsiiProxy_S3DataSource) GetResourceNameAttribute(nameAttr *string) *str
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) HandleCommonPermissions(props *DataSourceAssociationProps) {
+func (s *jsiiProxy_SharePointDataSource) HandleCommonPermissions(props *DataSourceAssociationProps) {
 	if err := s.validateHandleCommonPermissionsParameters(props); err != nil {
 		panic(err)
 	}
@@ -395,7 +421,7 @@ func (s *jsiiProxy_S3DataSource) HandleCommonPermissions(props *DataSourceAssoci
 	)
 }
 
-func (s *jsiiProxy_S3DataSource) ToString() *string {
+func (s *jsiiProxy_SharePointDataSource) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(

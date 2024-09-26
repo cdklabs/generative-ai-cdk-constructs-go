@@ -22,7 +22,7 @@ type KnowledgeBaseProps struct {
 	// this role will be able to invoke or use the
 	// specified embeddings model within the Bedrock service.
 	// Experimental.
-	ExistingRole awsiam.Role `field:"optional" json:"existingRole" yaml:"existingRole"`
+	ExistingRole awsiam.IRole `field:"optional" json:"existingRole" yaml:"existingRole"`
 	// The name of the vector index.
 	//
 	// If vectorStore is not of type `VectorCollection`,

@@ -7,17 +7,13 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// Sets up an S3 Data Source to be added to a knowledge base.
+// Specifies the base class for all NEW data source resources of ANY type.
 // Experimental.
-type S3DataSource interface {
-	DataSourceNew
-	// The bucket associated with the data source.
-	// Experimental.
-	Bucket() awss3.IBucket
+type DataSourceNew interface {
+	DataSourceBase
 	// The unique identifier of the data source.
 	//
 	// Example:
@@ -101,22 +97,12 @@ type S3DataSource interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for S3DataSource
-type jsiiProxy_S3DataSource struct {
-	jsiiProxy_DataSourceNew
+// The jsii proxy struct for DataSourceNew
+type jsiiProxy_DataSourceNew struct {
+	jsiiProxy_DataSourceBase
 }
 
-func (j *jsiiProxy_S3DataSource) Bucket() awss3.IBucket {
-	var returns awss3.IBucket
-	_jsii_.Get(
-		j,
-		"bucket",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_S3DataSource) DataSourceId() *string {
+func (j *jsiiProxy_DataSourceNew) DataSourceId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -126,7 +112,7 @@ func (j *jsiiProxy_S3DataSource) DataSourceId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) DataSourceName() *string {
+func (j *jsiiProxy_DataSourceNew) DataSourceName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -136,7 +122,7 @@ func (j *jsiiProxy_S3DataSource) DataSourceName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) DataSourceType() DataSourceType {
+func (j *jsiiProxy_DataSourceNew) DataSourceType() DataSourceType {
 	var returns DataSourceType
 	_jsii_.Get(
 		j,
@@ -146,7 +132,7 @@ func (j *jsiiProxy_S3DataSource) DataSourceType() DataSourceType {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Env() *awscdk.ResourceEnvironment {
+func (j *jsiiProxy_DataSourceNew) Env() *awscdk.ResourceEnvironment {
 	var returns *awscdk.ResourceEnvironment
 	_jsii_.Get(
 		j,
@@ -156,7 +142,7 @@ func (j *jsiiProxy_S3DataSource) Env() *awscdk.ResourceEnvironment {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) KmsKey() awskms.IKey {
+func (j *jsiiProxy_DataSourceNew) KmsKey() awskms.IKey {
 	var returns awskms.IKey
 	_jsii_.Get(
 		j,
@@ -166,7 +152,7 @@ func (j *jsiiProxy_S3DataSource) KmsKey() awskms.IKey {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) KnowledgeBase() IKnowledgeBase {
+func (j *jsiiProxy_DataSourceNew) KnowledgeBase() IKnowledgeBase {
 	var returns IKnowledgeBase
 	_jsii_.Get(
 		j,
@@ -176,7 +162,7 @@ func (j *jsiiProxy_S3DataSource) KnowledgeBase() IKnowledgeBase {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Node() constructs.Node {
+func (j *jsiiProxy_DataSourceNew) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -186,7 +172,7 @@ func (j *jsiiProxy_S3DataSource) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) PhysicalName() *string {
+func (j *jsiiProxy_DataSourceNew) PhysicalName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -196,7 +182,7 @@ func (j *jsiiProxy_S3DataSource) PhysicalName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_S3DataSource) Stack() awscdk.Stack {
+func (j *jsiiProxy_DataSourceNew) Stack() awscdk.Stack {
 	var returns awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -208,31 +194,13 @@ func (j *jsiiProxy_S3DataSource) Stack() awscdk.Stack {
 
 
 // Experimental.
-func NewS3DataSource(scope constructs.Construct, id *string, props *S3DataSourceProps) S3DataSource {
-	_init_.Initialize()
-
-	if err := validateNewS3DataSourceParameters(scope, id, props); err != nil {
-		panic(err)
-	}
-	j := jsiiProxy_S3DataSource{}
-
-	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
-		[]interface{}{scope, id, props},
-		&j,
-	)
-
-	return &j
-}
-
-// Experimental.
-func NewS3DataSource_Override(s S3DataSource, scope constructs.Construct, id *string, props *S3DataSourceProps) {
+func NewDataSourceNew_Override(d DataSourceNew, scope constructs.Construct, id *string, props *awscdk.ResourceProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceNew",
 		[]interface{}{scope, id, props},
-		s,
+		d,
 	)
 }
 
@@ -254,16 +222,16 @@ func NewS3DataSource_Override(s S3DataSource, scope constructs.Construct, id *st
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Experimental.
-func S3DataSource_IsConstruct(x interface{}) *bool {
+func DataSourceNew_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsConstructParameters(x); err != nil {
+	if err := validateDataSourceNew_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceNew",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -274,16 +242,16 @@ func S3DataSource_IsConstruct(x interface{}) *bool {
 
 // Returns true if the construct was created by CDK, and false otherwise.
 // Experimental.
-func S3DataSource_IsOwnedResource(construct constructs.IConstruct) *bool {
+func DataSourceNew_IsOwnedResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsOwnedResourceParameters(construct); err != nil {
+	if err := validateDataSourceNew_IsOwnedResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceNew",
 		"isOwnedResource",
 		[]interface{}{construct},
 		&returns,
@@ -294,16 +262,16 @@ func S3DataSource_IsOwnedResource(construct constructs.IConstruct) *bool {
 
 // Check whether the given construct is a Resource.
 // Experimental.
-func S3DataSource_IsResource(construct constructs.IConstruct) *bool {
+func DataSourceNew_IsResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateS3DataSource_IsResourceParameters(construct); err != nil {
+	if err := validateDataSourceNew_IsResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3DataSource",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DataSourceNew",
 		"isResource",
 		[]interface{}{construct},
 		&returns,
@@ -312,25 +280,25 @@ func S3DataSource_IsResource(construct constructs.IConstruct) *bool {
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
-	if err := s.validateApplyRemovalPolicyParameters(policy); err != nil {
+func (d *jsiiProxy_DataSourceNew) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
+	if err := d.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		s,
+		d,
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
 }
 
-func (s *jsiiProxy_S3DataSource) FormatAsCfnProps(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) *awsbedrock.CfnDataSourceProps {
-	if err := s.validateFormatAsCfnPropsParameters(props, dataSourceConfiguration); err != nil {
+func (d *jsiiProxy_DataSourceNew) FormatAsCfnProps(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) *awsbedrock.CfnDataSourceProps {
+	if err := d.validateFormatAsCfnPropsParameters(props, dataSourceConfiguration); err != nil {
 		panic(err)
 	}
 	var returns *awsbedrock.CfnDataSourceProps
 
 	_jsii_.Invoke(
-		s,
+		d,
 		"formatAsCfnProps",
 		[]interface{}{props, dataSourceConfiguration},
 		&returns,
@@ -339,11 +307,11 @@ func (s *jsiiProxy_S3DataSource) FormatAsCfnProps(props *DataSourceAssociationPr
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GeneratePhysicalName() *string {
+func (d *jsiiProxy_DataSourceNew) GeneratePhysicalName() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		d,
 		"generatePhysicalName",
 		nil, // no parameters
 		&returns,
@@ -352,14 +320,14 @@ func (s *jsiiProxy_S3DataSource) GeneratePhysicalName() *string {
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
-	if err := s.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
+func (d *jsiiProxy_DataSourceNew) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
+	if err := d.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		d,
 		"getResourceArnAttribute",
 		[]interface{}{arnAttr, arnComponents},
 		&returns,
@@ -368,14 +336,14 @@ func (s *jsiiProxy_S3DataSource) GetResourceArnAttribute(arnAttr *string, arnCom
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) GetResourceNameAttribute(nameAttr *string) *string {
-	if err := s.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
+func (d *jsiiProxy_DataSourceNew) GetResourceNameAttribute(nameAttr *string) *string {
+	if err := d.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		d,
 		"getResourceNameAttribute",
 		[]interface{}{nameAttr},
 		&returns,
@@ -384,22 +352,22 @@ func (s *jsiiProxy_S3DataSource) GetResourceNameAttribute(nameAttr *string) *str
 	return returns
 }
 
-func (s *jsiiProxy_S3DataSource) HandleCommonPermissions(props *DataSourceAssociationProps) {
-	if err := s.validateHandleCommonPermissionsParameters(props); err != nil {
+func (d *jsiiProxy_DataSourceNew) HandleCommonPermissions(props *DataSourceAssociationProps) {
+	if err := d.validateHandleCommonPermissionsParameters(props); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		s,
+		d,
 		"handleCommonPermissions",
 		[]interface{}{props},
 	)
 }
 
-func (s *jsiiProxy_S3DataSource) ToString() *string {
+func (d *jsiiProxy_DataSourceNew) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		d,
 		"toString",
 		nil, // no parameters
 		&returns,

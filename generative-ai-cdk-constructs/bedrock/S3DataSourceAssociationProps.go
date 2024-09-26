@@ -5,9 +5,9 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
 )
 
-// Interface to create a new S3 Data Source object.
+// Interface to add a new S3DataSource to an existing KB.
 // Experimental.
-type S3DataSourceProps struct {
+type S3DataSourceAssociationProps struct {
 	// The chunking stategy to use for splitting your documents or content.
 	//
 	// The chunks are then converted to embeddings and written to the vector
@@ -54,8 +54,5 @@ type S3DataSourceProps struct {
 	//
 	// Experimental.
 	InclusionPrefixes *[]*string `field:"optional" json:"inclusionPrefixes" yaml:"inclusionPrefixes"`
-	// The knowledge base to associate with the data source.
-	// Experimental.
-	KnowledgeBase IKnowledgeBase `field:"required" json:"knowledgeBase" yaml:"knowledgeBase"`
 }
 

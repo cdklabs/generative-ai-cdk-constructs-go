@@ -1,32 +1,179 @@
 package bedrock
 
+import (
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
-// Knowledge base can split your source data into chunks.
-//
-// A chunk refers to an
-// excerpt from a data source that is returned when the knowledge base that it
-// belongs to is queried. You have the following options for chunking your
-// data. If you opt for NONE, then you may want to pre-process your files by
-// splitting them up such that each file corresponds to a chunk.
-// Experimental.
-type ChunkingStrategy string
-
-const (
-	// Amazon Bedrock splits your source data into chunks of the approximate size that you set in the `fixedSizeChunkingConfiguration`.
-	// Experimental.
-	ChunkingStrategy_FIXED_SIZE ChunkingStrategy = "FIXED_SIZE"
-	// `FIXED_SIZE` with the default chunk size of 300 tokens and 20% overlap.
-	//
-	// If default is selected, chunk size and overlap set by the user will be
-	// ignored.
-	// Experimental.
-	ChunkingStrategy_DEFAULT ChunkingStrategy = "DEFAULT"
-	// Amazon Bedrock treats each file as one chunk.
-	//
-	// If you choose this option,
-	// you may want to pre-process your documents by splitting them into separate
-	// files.
-	// Experimental.
-	ChunkingStrategy_NONE ChunkingStrategy = "NONE"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 )
+
+// Experimental.
+type ChunkingStrategy interface {
+	// The CloudFormation property representation of this configuration.
+	// Experimental.
+	Configuration() *awsbedrock.CfnDataSource_ChunkingConfigurationProperty
+	// Experimental.
+	SetConfiguration(val *awsbedrock.CfnDataSource_ChunkingConfigurationProperty)
+}
+
+// The jsii proxy struct for ChunkingStrategy
+type jsiiProxy_ChunkingStrategy struct {
+	_ byte // padding
+}
+
+func (j *jsiiProxy_ChunkingStrategy) Configuration() *awsbedrock.CfnDataSource_ChunkingConfigurationProperty {
+	var returns *awsbedrock.CfnDataSource_ChunkingConfigurationProperty
+	_jsii_.Get(
+		j,
+		"configuration",
+		&returns,
+	)
+	return returns
+}
+
+
+func (j *jsiiProxy_ChunkingStrategy)SetConfiguration(val *awsbedrock.CfnDataSource_ChunkingConfigurationProperty) {
+	if err := j.validateSetConfigurationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"configuration",
+		val,
+	)
+}
+
+// Method for customizing a fixed sized chunking strategy.
+// Experimental.
+func ChunkingStrategy_FixedSize(props *awsbedrock.CfnDataSource_FixedSizeChunkingConfigurationProperty) ChunkingStrategy {
+	_init_.Initialize()
+
+	if err := validateChunkingStrategy_FixedSizeParameters(props); err != nil {
+		panic(err)
+	}
+	var returns ChunkingStrategy
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"fixedSize",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Method for customizing a hierarchical chunking strategy.
+//
+// For custom chunking, the maximum token chunk size depends on the model.
+// - Amazon Titan Text Embeddings: 8192
+// - Cohere Embed models: 512.
+// Experimental.
+func ChunkingStrategy_Hierarchical(props *HierarchicalChunkingProps) ChunkingStrategy {
+	_init_.Initialize()
+
+	if err := validateChunkingStrategy_HierarchicalParameters(props); err != nil {
+		panic(err)
+	}
+	var returns ChunkingStrategy
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"hierarchical",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Method for customizing a semantic chunking strategy.
+//
+// For custom chunking, the maximum token chunk size depends on the model.
+// - Amazon Titan Text Embeddings: 8192
+// - Cohere Embed models: 512.
+// Experimental.
+func ChunkingStrategy_Semantic(props *awsbedrock.CfnDataSource_SemanticChunkingConfigurationProperty) ChunkingStrategy {
+	_init_.Initialize()
+
+	if err := validateChunkingStrategy_SemanticParameters(props); err != nil {
+		panic(err)
+	}
+	var returns ChunkingStrategy
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"semantic",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func ChunkingStrategy_DEFAULT() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"DEFAULT",
+		&returns,
+	)
+	return returns
+}
+
+func ChunkingStrategy_FIXED_SIZE() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"FIXED_SIZE",
+		&returns,
+	)
+	return returns
+}
+
+func ChunkingStrategy_HIERARCHICAL_COHERE() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"HIERARCHICAL_COHERE",
+		&returns,
+	)
+	return returns
+}
+
+func ChunkingStrategy_HIERARCHICAL_TITAN() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"HIERARCHICAL_TITAN",
+		&returns,
+	)
+	return returns
+}
+
+func ChunkingStrategy_NONE() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"NONE",
+		&returns,
+	)
+	return returns
+}
+
+func ChunkingStrategy_SEMANTIC() ChunkingStrategy {
+	_init_.Initialize()
+	var returns ChunkingStrategy
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
+		"SEMANTIC",
+		&returns,
+	)
+	return returns
+}
 

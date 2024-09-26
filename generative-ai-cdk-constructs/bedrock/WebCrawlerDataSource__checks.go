@@ -12,7 +12,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (s *jsiiProxy_S3DataSource) validateApplyRemovalPolicyParameters(policy awscdk.RemovalPolicy) error {
+func (w *jsiiProxy_WebCrawlerDataSource) validateApplyRemovalPolicyParameters(policy awscdk.RemovalPolicy) error {
 	if policy == "" {
 		return fmt.Errorf("parameter policy is required, but nil was provided")
 	}
@@ -20,7 +20,7 @@ func (s *jsiiProxy_S3DataSource) validateApplyRemovalPolicyParameters(policy aws
 	return nil
 }
 
-func (s *jsiiProxy_S3DataSource) validateFormatAsCfnPropsParameters(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) error {
+func (w *jsiiProxy_WebCrawlerDataSource) validateFormatAsCfnPropsParameters(props *DataSourceAssociationProps, dataSourceConfiguration *awsbedrock.CfnDataSource_DataSourceConfigurationProperty) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -38,7 +38,7 @@ func (s *jsiiProxy_S3DataSource) validateFormatAsCfnPropsParameters(props *DataS
 	return nil
 }
 
-func (s *jsiiProxy_S3DataSource) validateGetResourceArnAttributeParameters(arnAttr *string, arnComponents *awscdk.ArnComponents) error {
+func (w *jsiiProxy_WebCrawlerDataSource) validateGetResourceArnAttributeParameters(arnAttr *string, arnComponents *awscdk.ArnComponents) error {
 	if arnAttr == nil {
 		return fmt.Errorf("parameter arnAttr is required, but nil was provided")
 	}
@@ -53,7 +53,7 @@ func (s *jsiiProxy_S3DataSource) validateGetResourceArnAttributeParameters(arnAt
 	return nil
 }
 
-func (s *jsiiProxy_S3DataSource) validateGetResourceNameAttributeParameters(nameAttr *string) error {
+func (w *jsiiProxy_WebCrawlerDataSource) validateGetResourceNameAttributeParameters(nameAttr *string) error {
 	if nameAttr == nil {
 		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
 	}
@@ -61,7 +61,7 @@ func (s *jsiiProxy_S3DataSource) validateGetResourceNameAttributeParameters(name
 	return nil
 }
 
-func (s *jsiiProxy_S3DataSource) validateHandleCommonPermissionsParameters(props *DataSourceAssociationProps) error {
+func (w *jsiiProxy_WebCrawlerDataSource) validateHandleCommonPermissionsParameters(props *DataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -72,7 +72,7 @@ func (s *jsiiProxy_S3DataSource) validateHandleCommonPermissionsParameters(props
 	return nil
 }
 
-func validateS3DataSource_IsConstructParameters(x interface{}) error {
+func validateWebCrawlerDataSource_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -80,7 +80,7 @@ func validateS3DataSource_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateS3DataSource_IsOwnedResourceParameters(construct constructs.IConstruct) error {
+func validateWebCrawlerDataSource_IsOwnedResourceParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
@@ -88,7 +88,7 @@ func validateS3DataSource_IsOwnedResourceParameters(construct constructs.IConstr
 	return nil
 }
 
-func validateS3DataSource_IsResourceParameters(construct constructs.IConstruct) error {
+func validateWebCrawlerDataSource_IsResourceParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
@@ -96,7 +96,7 @@ func validateS3DataSource_IsResourceParameters(construct constructs.IConstruct) 
 	return nil
 }
 
-func validateNewS3DataSourceParameters(scope constructs.Construct, id *string, props *S3DataSourceProps) error {
+func validateNewWebCrawlerDataSourceParameters(scope constructs.Construct, id *string, props *WebCrawlerDataSourceProps) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

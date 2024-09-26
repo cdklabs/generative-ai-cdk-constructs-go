@@ -2,12 +2,12 @@ package bedrock
 
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awssecretsmanager"
 )
 
-// Interface to create a new S3 Data Source object.
+// Interface to create a new standalone data source object.
 // Experimental.
-type S3DataSourceProps struct {
+type SalesforceDataSourceProps struct {
 	// The chunking stategy to use for splitting your documents or content.
 	//
 	// The chunks are then converted to embeddings and written to the vector
@@ -46,14 +46,25 @@ type S3DataSourceProps struct {
 	//
 	// Experimental.
 	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
-	// The bucket that contains the data source.
+	// The AWS Secrets Manager secret that stores your authentication credentials for your Salesforce instance URL.
+	//
+	// Secret must start with "AmazonBedrock-".
 	// Experimental.
-	Bucket awss3.IBucket `field:"required" json:"bucket" yaml:"bucket"`
-	// The prefixes of the objects in the bucket that should be included in the data source.
-	// Default: - All objects in the bucket.
+	AuthSecret awssecretsmanager.ISecret `field:"required" json:"authSecret" yaml:"authSecret"`
+	// The Salesforce host URL or instance URL.
+	//
+	// Example:
+	//   "https://company.salesforce.com/"
 	//
 	// Experimental.
-	InclusionPrefixes *[]*string `field:"optional" json:"inclusionPrefixes" yaml:"inclusionPrefixes"`
+	Endpoint *string `field:"required" json:"endpoint" yaml:"endpoint"`
+	// The filters (regular expression patterns) for the crawling.
+	//
+	// If there's a conflict, the exclude pattern takes precedence.
+	// Default: None - all your content is crawled.
+	//
+	// Experimental.
+	Filters *[]*SalesforceCrawlingFilters `field:"optional" json:"filters" yaml:"filters"`
 	// The knowledge base to associate with the data source.
 	// Experimental.
 	KnowledgeBase IKnowledgeBase `field:"required" json:"knowledgeBase" yaml:"knowledgeBase"`

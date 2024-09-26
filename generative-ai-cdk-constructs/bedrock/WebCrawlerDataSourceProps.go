@@ -2,12 +2,11 @@ package bedrock
 
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
 )
 
-// Interface to create a new S3 Data Source object.
+// Interface to create a new standalone data source object.
 // Experimental.
-type S3DataSourceProps struct {
+type WebCrawlerDataSourceProps struct {
 	// The chunking stategy to use for splitting your documents or content.
 	//
 	// The chunks are then converted to embeddings and written to the vector
@@ -46,14 +45,28 @@ type S3DataSourceProps struct {
 	//
 	// Experimental.
 	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
-	// The bucket that contains the data source.
+	// The source urls in the format `https://www.sitename.com`. Maximum of 100 URLs.
 	// Experimental.
-	Bucket awss3.IBucket `field:"required" json:"bucket" yaml:"bucket"`
-	// The prefixes of the objects in the bucket that should be included in the data source.
-	// Default: - All objects in the bucket.
+	SourceUrls *[]*string `field:"required" json:"sourceUrls" yaml:"sourceUrls"`
+	// The max rate at which pages are crawled, up to 300 per minute per host.
+	//
+	// Higher values will decrease sync time but increase the load on the host.
+	// Default: 300.
 	//
 	// Experimental.
-	InclusionPrefixes *[]*string `field:"optional" json:"inclusionPrefixes" yaml:"inclusionPrefixes"`
+	CrawlingRate *float64 `field:"optional" json:"crawlingRate" yaml:"crawlingRate"`
+	// The scope of the crawling.
+	// Default: - CrawlingScope.DEFAULT
+	//
+	// Experimental.
+	CrawlingScope CrawlingScope `field:"optional" json:"crawlingScope" yaml:"crawlingScope"`
+	// The filters (regular expression patterns) for the crawling.
+	//
+	// If there's a conflict, the exclude pattern takes precedence.
+	// Default: None.
+	//
+	// Experimental.
+	Filters *CrawlingFilters `field:"optional" json:"filters" yaml:"filters"`
 	// The knowledge base to associate with the data source.
 	// Experimental.
 	KnowledgeBase IKnowledgeBase `field:"required" json:"knowledgeBase" yaml:"knowledgeBase"`
