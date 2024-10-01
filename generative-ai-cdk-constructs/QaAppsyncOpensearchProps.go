@@ -59,7 +59,7 @@ type QaAppsyncOpensearchProps struct {
 	//
 	// Experimental.
 	ExistingOpensearchDomain awsopensearchservice.IDomain `field:"optional" json:"existingOpensearchDomain" yaml:"existingOpensearchDomain"`
-	// Existing Amazon Amazon OpenSearch Serverless collection.
+	// Existing Amazon OpenSearch Serverless collection.
 	// Default: - None.
 	//
 	// Experimental.

@@ -3221,6 +3221,17 @@ func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_2_10_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_2_11_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_MISTRAL_7B_2_11_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_2_2_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -3485,6 +3496,17 @@ func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_INSTRUCT_3_7_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_INSTRUCT_3_8_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_MISTRAL_7B_INSTRUCT_3_8_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_LLM_MISTRAL_7B_INSTRUCT_V3_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -3661,6 +3683,17 @@ func JumpStartModel_HUGGINGFACE_LLM_MISTRALAI_MIXTRAL_8X22B_INSTRUCT_V0_1_1_4_0(
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_LLM_MISTRALAI_MIXTRAL_8X22B_INSTRUCT_V0_1_1_5_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_MISTRALAI_MIXTRAL_8X22B_INSTRUCT_V0_1_1_5_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_LLM_MIXTRAL_8X22B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -3733,6 +3766,17 @@ func JumpStartModel_HUGGINGFACE_LLM_MIXTRAL_8X7B_1_11_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_LLM_MIXTRAL_8X7B_1_11_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_LLM_MIXTRAL_8X7B_1_12_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_MIXTRAL_8X7B_1_12_0",
 		&returns,
 	)
 	return returns
@@ -3920,6 +3964,17 @@ func JumpStartModel_HUGGINGFACE_LLM_MIXTRAL_8X7B_INSTRUCT_1_11_0() JumpStartMode
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_LLM_MIXTRAL_8X7B_INSTRUCT_1_11_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_LLM_MIXTRAL_8X7B_INSTRUCT_1_12_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_MIXTRAL_8X7B_INSTRUCT_1_12_0",
 		&returns,
 	)
 	return returns
@@ -18170,6 +18225,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_13B_4_7_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_13B_4_8_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_13B_4_8_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_2_13B_F_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -18440,6 +18506,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_13B_F_4_6_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_2_13B_F_4_6_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_13B_F_4_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_13B_F_4_7_0",
 		&returns,
 	)
 	return returns
@@ -18753,6 +18830,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_70B_4_7_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_70B_4_8_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_70B_4_8_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_2_70B_F_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -19023,6 +19111,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_70B_F_4_6_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_2_70B_F_4_6_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_70B_F_4_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_70B_F_4_7_0",
 		&returns,
 	)
 	return returns
@@ -19336,6 +19435,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_7B_4_7_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_7B_4_8_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_7B_4_8_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_2_7B_F_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -19606,6 +19716,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_2_7B_F_4_6_0() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_2_7B_F_4_6_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_2_7B_F_4_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_2_7B_F_4_7_0",
 		&returns,
 	)
 	return returns
@@ -19919,6 +20040,50 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_3_1_8B_INSTRUCT_2_2_1() JumpStartM
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_2_1B_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_2_1B_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_2_1B_INSTRUCT_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_2_1B_INSTRUCT_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_2_3B_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_2_3B_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_2_3B_INSTRUCT_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_2_3B_INSTRUCT_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -20040,6 +20205,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_2_6_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_2_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_70B_2_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -20145,6 +20321,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_INSTRUCT_2_5_0() JumpStartMo
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_3_70B_INSTRUCT_2_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_70B_INSTRUCT_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_70B_INSTRUCT_2_6_0",
 		&returns,
 	)
 	return returns
@@ -20260,6 +20447,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_3_8B_2_5_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_8B_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_8B_2_6_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_3_8B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -20365,6 +20563,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_3_8B_INSTRUCT_2_5_0() JumpStartMod
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_3_8B_INSTRUCT_2_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_3_8B_INSTRUCT_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_3_8B_INSTRUCT_2_6_0",
 		&returns,
 	)
 	return returns
@@ -20557,6 +20766,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_3_6_0() JumpStartMod
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_13B_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -20662,6 +20882,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_INSTRUCT_2_5_0() Jum
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_CODELLAMA_13B_INSTRUCT_2_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_INSTRUCT_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_13B_INSTRUCT_2_6_0",
 		&returns,
 	)
 	return returns
@@ -20854,6 +21085,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_PYTHON_3_6_0() JumpS
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_13B_PYTHON_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_13B_PYTHON_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -21041,6 +21283,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_3_6_0() JumpStartMod
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_34B_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -21146,6 +21399,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_INSTRUCT_2_5_0() Jum
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_CODELLAMA_34B_INSTRUCT_2_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_INSTRUCT_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_34B_INSTRUCT_2_6_0",
 		&returns,
 	)
 	return returns
@@ -21338,6 +21602,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_PYTHON_3_6_0() JumpS
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_34B_PYTHON_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_34B_PYTHON_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -21492,6 +21767,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_2_6_0() JumpStartMod
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_2_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_70B_2_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -21564,6 +21850,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_INSTRUCT_1_5_0() Jum
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_CODELLAMA_70B_INSTRUCT_1_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_INSTRUCT_1_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_70B_INSTRUCT_1_6_0",
 		&returns,
 	)
 	return returns
@@ -21718,6 +22015,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_PYTHON_2_6_0() JumpS
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_CODELLAMA_70B_PYTHON_2_6_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_70B_PYTHON_2_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_70B_PYTHON_2_7_0",
 		&returns,
 	)
 	return returns
@@ -21910,6 +22218,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_3_6_0() JumpStartMode
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_7B_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_INSTRUCT_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -22015,6 +22334,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_INSTRUCT_2_5_0() Jump
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_CODELLAMA_7B_INSTRUCT_2_5_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_INSTRUCT_2_6_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_7B_INSTRUCT_2_6_0",
 		&returns,
 	)
 	return returns
@@ -22207,6 +22537,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_PYTHON_3_6_0() JumpSt
 	return returns
 }
 
+func JumpStartModel_META_TEXTGENERATION_LLAMA_CODELLAMA_7B_PYTHON_3_7_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_CODELLAMA_7B_PYTHON_3_7_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_META_TEXTGENERATION_LLAMA_GUARD_3_8B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -22268,6 +22609,61 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_GUARD_7B_1_2_1() JumpStartModel {
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_GUARD_7B_1_2_1",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_VLM_LLAMA_3_2_11B_VISION_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_VLM_LLAMA_3_2_11B_VISION_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_VLM_LLAMA_3_2_11B_VISION_INSTRUCT_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_VLM_LLAMA_3_2_11B_VISION_INSTRUCT_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_VLM_LLAMA_3_2_90B_VISION_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_VLM_LLAMA_3_2_90B_VISION_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_VLM_LLAMA_3_2_90B_VISION_INSTRUCT_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_VLM_LLAMA_3_2_90B_VISION_INSTRUCT_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_VLM_LLAMA_GUARD_3_11B_VISION_1_0_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_VLM_LLAMA_GUARD_3_11B_VISION_1_0_0",
 		&returns,
 	)
 	return returns
