@@ -2,12 +2,16 @@ package amazonaurora
 
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsec2"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsrds"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awssecretsmanager"
 )
 
-// Properties for configuring an Amazon Aurora Vector Store.
+// Properties for an existing Aurora Vector Store.
+//
+// You database must have TCP/IP port that the
+// database will use for application connections
+// set up for `5432`.
 // Experimental.
-type AmazonAuroraVectorStoreProps struct {
+type ExistingAmazonAuroraVectorStoreProps struct {
 	// The embeddings model dimension used for the Aurora Vector Store.
 	//
 	// The vector dimensions of the model must match the dimensions
@@ -32,16 +36,26 @@ type AmazonAuroraVectorStoreProps struct {
 	// The field name for the vector column in the Aurora Vector Store.
 	// Experimental.
 	VectorField *string `field:"optional" json:"vectorField" yaml:"vectorField"`
+	// The id of the security group associated with the RDS Aurora instance.
+	//
+	// This security group allows access to the Aurora Vector Store from Lambda's
+	// custom resource running pgVector SQL commands.
+	// Experimental.
+	AuroraSecurityGroupId *string `field:"required" json:"auroraSecurityGroupId" yaml:"auroraSecurityGroupId"`
+	// The unique cluster identifier of your Aurora RDS cluster.
+	// Experimental.
+	ClusterIdentifier *string `field:"required" json:"clusterIdentifier" yaml:"clusterIdentifier"`
 	// The name of the database for the Aurora Vector Store.
 	// Experimental.
-	DatabaseName *string `field:"optional" json:"databaseName" yaml:"databaseName"`
-	// The version of PostgreSQL to use for the Aurora Vector Store.
+	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
+	// The secret containing the database credentials.
 	//
-	// By default, the latest supported version will be used.
+	// The secret must contain `host`, `port`, `username`,
+	// `password` and `dbname` values.
 	// Experimental.
-	PostgreSQLVersion awsrds.AuroraPostgresEngineVersion `field:"optional" json:"postgreSQLVersion" yaml:"postgreSQLVersion"`
-	// User's VPC in which they want to deploy Aurora Database.
+	Secret awssecretsmanager.ISecret `field:"required" json:"secret" yaml:"secret"`
+	// The VPC in which the existing Aurora Vector Store is located.
 	// Experimental.
-	Vpc awsec2.IVpc `field:"optional" json:"vpc" yaml:"vpc"`
+	Vpc awsec2.IVpc `field:"required" json:"vpc" yaml:"vpc"`
 }
 

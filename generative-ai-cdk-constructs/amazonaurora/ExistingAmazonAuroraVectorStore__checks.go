@@ -13,7 +13,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) error {
 	if lambdaSecurityGroup == nil {
 		return fmt.Errorf("parameter lambdaSecurityGroup is required, but nil was provided")
 	}
@@ -25,7 +25,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecuri
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateCreateAuroraPgCRPolicyParameters(clusterIdentifier *string) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateCreateAuroraPgCRPolicyParameters(clusterIdentifier *string) error {
 	if clusterIdentifier == nil {
 		return fmt.Errorf("parameter clusterIdentifier is required, but nil was provided")
 	}
@@ -33,7 +33,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateCreateAuroraPgCRPolicyParame
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateCreateLambdaSecurityGroupParameters(vpc awsec2.IVpc) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateCreateLambdaSecurityGroupParameters(vpc awsec2.IVpc) error {
 	if vpc == nil {
 		return fmt.Errorf("parameter vpc is required, but nil was provided")
 	}
@@ -41,7 +41,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateCreateLambdaSecurityGroupPar
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateGenerateResourceArnParameters(clusterIdentifier *string) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateGenerateResourceArnParameters(clusterIdentifier *string) error {
 	if clusterIdentifier == nil {
 		return fmt.Errorf("parameter clusterIdentifier is required, but nil was provided")
 	}
@@ -49,7 +49,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateGenerateResourceArnParameter
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupCustomResourceParameters(databaseClusterResources *DatabaseClusterResources, lambdaSecurityGroup awsec2.SecurityGroup, auroraPgCRPolicy awsiam.ManagedPolicy) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateSetupCustomResourceParameters(databaseClusterResources *DatabaseClusterResources, lambdaSecurityGroup awsec2.SecurityGroup, auroraPgCRPolicy awsiam.ManagedPolicy) error {
 	if databaseClusterResources == nil {
 		return fmt.Errorf("parameter databaseClusterResources is required, but nil was provided")
 	}
@@ -68,7 +68,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupCustomResourceParameter
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) error {
 	if vpc == nil {
 		return fmt.Errorf("parameter vpc is required, but nil was provided")
 	}
@@ -88,26 +88,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupDatabaseClusterResource
 	return nil
 }
 
-func validateAmazonAuroraVectorStore_FromExistingAuroraVectorStoreParameters(scope constructs.Construct, id *string, props *ExistingAmazonAuroraVectorStoreProps) error {
-	if scope == nil {
-		return fmt.Errorf("parameter scope is required, but nil was provided")
-	}
-
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
-	}
-
-	if props == nil {
-		return fmt.Errorf("parameter props is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func validateAmazonAuroraVectorStore_IsConstructParameters(x interface{}) error {
+func validateExistingAmazonAuroraVectorStore_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -115,7 +96,7 @@ func validateAmazonAuroraVectorStore_IsConstructParameters(x interface{}) error 
 	return nil
 }
 
-func validateNewAmazonAuroraVectorStoreParameters(scope constructs.Construct, id *string, props *AmazonAuroraVectorStoreProps) error {
+func validateNewExistingAmazonAuroraVectorStoreParameters(scope constructs.Construct, id *string, props *ExistingAmazonAuroraVectorStoreProps) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

@@ -1153,28 +1153,6 @@ func JumpStartModel_HUGGINGFACE_LLM_AYA_101_1_0_0() JumpStartModel {
 	return returns
 }
 
-func JumpStartModel_HUGGINGFACE_LLM_BAICHUAN2_7B_BASE_FP16_1_0_0() JumpStartModel {
-	_init_.Initialize()
-	var returns JumpStartModel
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_LLM_BAICHUAN2_7B_BASE_FP16_1_0_0",
-		&returns,
-	)
-	return returns
-}
-
-func JumpStartModel_HUGGINGFACE_LLM_BAICHUAN2_7B_BASE_FP16_1_0_1() JumpStartModel {
-	_init_.Initialize()
-	var returns JumpStartModel
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_LLM_BAICHUAN2_7B_BASE_FP16_1_0_1",
-		&returns,
-	)
-	return returns
-}
-
 func JumpStartModel_HUGGINGFACE_LLM_BERKELEY_NEST_STARLING_LM_7B_ALPHA_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel

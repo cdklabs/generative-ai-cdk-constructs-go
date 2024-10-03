@@ -1,13 +1,9 @@
 package amazonaurora
 
-import (
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsec2"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsrds"
-)
 
-// Properties for configuring an Amazon Aurora Vector Store.
+// Base properties for an Aurora Vector Store.
 // Experimental.
-type AmazonAuroraVectorStoreProps struct {
+type BaseAuroraVectorStoreProps struct {
 	// The embeddings model dimension used for the Aurora Vector Store.
 	//
 	// The vector dimensions of the model must match the dimensions
@@ -32,16 +28,5 @@ type AmazonAuroraVectorStoreProps struct {
 	// The field name for the vector column in the Aurora Vector Store.
 	// Experimental.
 	VectorField *string `field:"optional" json:"vectorField" yaml:"vectorField"`
-	// The name of the database for the Aurora Vector Store.
-	// Experimental.
-	DatabaseName *string `field:"optional" json:"databaseName" yaml:"databaseName"`
-	// The version of PostgreSQL to use for the Aurora Vector Store.
-	//
-	// By default, the latest supported version will be used.
-	// Experimental.
-	PostgreSQLVersion awsrds.AuroraPostgresEngineVersion `field:"optional" json:"postgreSQLVersion" yaml:"postgreSQLVersion"`
-	// User's VPC in which they want to deploy Aurora Database.
-	// Experimental.
-	Vpc awsec2.IVpc `field:"optional" json:"vpc" yaml:"vpc"`
 }
 

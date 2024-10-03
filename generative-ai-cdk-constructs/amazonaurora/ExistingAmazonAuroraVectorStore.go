@@ -13,7 +13,7 @@ import (
 )
 
 // Experimental.
-type AmazonAuroraVectorStore interface {
+type ExistingAmazonAuroraVectorStore interface {
 	constructs.Construct
 	// The Secret ARN of your Amazon Aurora DB cluster.
 	// Experimental.
@@ -71,12 +71,12 @@ type AmazonAuroraVectorStore interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for AmazonAuroraVectorStore
-type jsiiProxy_AmazonAuroraVectorStore struct {
+// The jsii proxy struct for ExistingAmazonAuroraVectorStore
+type jsiiProxy_ExistingAmazonAuroraVectorStore struct {
 	internal.Type__constructsConstruct
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) CredentialsSecretArn() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) CredentialsSecretArn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -86,7 +86,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) CredentialsSecretArn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) DatabaseName() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) DatabaseName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -96,7 +96,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) DatabaseName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) EmbeddingsModelVectorDimension() *float64 {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) EmbeddingsModelVectorDimension() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -106,7 +106,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) EmbeddingsModelVectorDimension() *fl
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) MetadataField() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) MetadataField() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -116,7 +116,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) MetadataField() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) Node() constructs.Node {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -126,7 +126,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) PrimaryKeyField() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) PrimaryKeyField() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -136,7 +136,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) PrimaryKeyField() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) ResourceArn() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) ResourceArn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -146,7 +146,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) ResourceArn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) SchemaName() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) SchemaName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -156,7 +156,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) SchemaName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) TableName() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) TableName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -166,7 +166,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) TableName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) TextField() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) TextField() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -176,7 +176,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) TextField() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) VectorField() *string {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) VectorField() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -186,7 +186,7 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) VectorField() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AmazonAuroraVectorStore) Vpc() awsec2.IVpc {
+func (j *jsiiProxy_ExistingAmazonAuroraVectorStore) Vpc() awsec2.IVpc {
 	var returns awsec2.IVpc
 	_jsii_.Get(
 		j,
@@ -198,16 +198,16 @@ func (j *jsiiProxy_AmazonAuroraVectorStore) Vpc() awsec2.IVpc {
 
 
 // Experimental.
-func NewAmazonAuroraVectorStore(scope constructs.Construct, id *string, props *AmazonAuroraVectorStoreProps) AmazonAuroraVectorStore {
+func NewExistingAmazonAuroraVectorStore(scope constructs.Construct, id *string, props *ExistingAmazonAuroraVectorStoreProps) ExistingAmazonAuroraVectorStore {
 	_init_.Initialize()
 
-	if err := validateNewAmazonAuroraVectorStoreParameters(scope, id, props); err != nil {
+	if err := validateNewExistingAmazonAuroraVectorStoreParameters(scope, id, props); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_AmazonAuroraVectorStore{}
+	j := jsiiProxy_ExistingAmazonAuroraVectorStore{}
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.AmazonAuroraVectorStore",
+		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.ExistingAmazonAuroraVectorStore",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -216,42 +216,14 @@ func NewAmazonAuroraVectorStore(scope constructs.Construct, id *string, props *A
 }
 
 // Experimental.
-func NewAmazonAuroraVectorStore_Override(a AmazonAuroraVectorStore, scope constructs.Construct, id *string, props *AmazonAuroraVectorStoreProps) {
+func NewExistingAmazonAuroraVectorStore_Override(e ExistingAmazonAuroraVectorStore, scope constructs.Construct, id *string, props *ExistingAmazonAuroraVectorStoreProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.AmazonAuroraVectorStore",
+		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.ExistingAmazonAuroraVectorStore",
 		[]interface{}{scope, id, props},
-		a,
+		e,
 	)
-}
-
-// Creates an instance of AmazonAuroraVectorStore using existing Aurora Vector Store properties.
-//
-// You need to provide your existing Aurora Vector Store properties
-// such as `databaseName`, `clusterIdentifier`, `vpc` where database is deployed,
-// `secret` containing username and password for authentication to database,
-// and `auroraSecurityGroupId` with the value of a security group id that was
-// used for the database.
-//
-// Returns: An instance of AmazonAuroraVectorStore.
-// Experimental.
-func AmazonAuroraVectorStore_FromExistingAuroraVectorStore(scope constructs.Construct, id *string, props *ExistingAmazonAuroraVectorStoreProps) ExistingAmazonAuroraVectorStore {
-	_init_.Initialize()
-
-	if err := validateAmazonAuroraVectorStore_FromExistingAuroraVectorStoreParameters(scope, id, props); err != nil {
-		panic(err)
-	}
-	var returns ExistingAmazonAuroraVectorStore
-
-	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.AmazonAuroraVectorStore",
-		"fromExistingAuroraVectorStore",
-		[]interface{}{scope, id, props},
-		&returns,
-	)
-
-	return returns
 }
 
 // Checks if `x` is a construct.
@@ -272,16 +244,16 @@ func AmazonAuroraVectorStore_FromExistingAuroraVectorStore(scope constructs.Cons
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Experimental.
-func AmazonAuroraVectorStore_IsConstruct(x interface{}) *bool {
+func ExistingAmazonAuroraVectorStore_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateAmazonAuroraVectorStore_IsConstructParameters(x); err != nil {
+	if err := validateExistingAmazonAuroraVectorStore_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.AmazonAuroraVectorStore",
+		"@cdklabs/generative-ai-cdk-constructs.amazonaurora.ExistingAmazonAuroraVectorStore",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -290,25 +262,25 @@ func AmazonAuroraVectorStore_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) {
-	if err := a.validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup, auroraSecurityGroup); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) {
+	if err := e.validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup, auroraSecurityGroup); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		a,
+		e,
 		"addIngressRuleToAuroraSecurityGroup",
 		[]interface{}{lambdaSecurityGroup, auroraSecurityGroup},
 	)
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) CreateAuroraPgCRPolicy(clusterIdentifier *string) awsiam.ManagedPolicy {
-	if err := a.validateCreateAuroraPgCRPolicyParameters(clusterIdentifier); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) CreateAuroraPgCRPolicy(clusterIdentifier *string) awsiam.ManagedPolicy {
+	if err := e.validateCreateAuroraPgCRPolicyParameters(clusterIdentifier); err != nil {
 		panic(err)
 	}
 	var returns awsiam.ManagedPolicy
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"createAuroraPgCRPolicy",
 		[]interface{}{clusterIdentifier},
 		&returns,
@@ -317,14 +289,14 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) CreateAuroraPgCRPolicy(clusterIdenti
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) CreateLambdaSecurityGroup(vpc awsec2.IVpc) awsec2.SecurityGroup {
-	if err := a.validateCreateLambdaSecurityGroupParameters(vpc); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) CreateLambdaSecurityGroup(vpc awsec2.IVpc) awsec2.SecurityGroup {
+	if err := e.validateCreateLambdaSecurityGroupParameters(vpc); err != nil {
 		panic(err)
 	}
 	var returns awsec2.SecurityGroup
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"createLambdaSecurityGroup",
 		[]interface{}{vpc},
 		&returns,
@@ -333,14 +305,14 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) CreateLambdaSecurityGroup(vpc awsec2
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) GenerateResourceArn(clusterIdentifier *string) *string {
-	if err := a.validateGenerateResourceArnParameters(clusterIdentifier); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) GenerateResourceArn(clusterIdentifier *string) *string {
+	if err := e.validateGenerateResourceArnParameters(clusterIdentifier); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"generateResourceArn",
 		[]interface{}{clusterIdentifier},
 		&returns,
@@ -349,14 +321,14 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) GenerateResourceArn(clusterIdentifie
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) SetupCustomResource(databaseClusterResources *DatabaseClusterResources, lambdaSecurityGroup awsec2.SecurityGroup, auroraPgCRPolicy awsiam.ManagedPolicy) awscdk.CustomResource {
-	if err := a.validateSetupCustomResourceParameters(databaseClusterResources, lambdaSecurityGroup, auroraPgCRPolicy); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) SetupCustomResource(databaseClusterResources *DatabaseClusterResources, lambdaSecurityGroup awsec2.SecurityGroup, auroraPgCRPolicy awsiam.ManagedPolicy) awscdk.CustomResource {
+	if err := e.validateSetupCustomResourceParameters(databaseClusterResources, lambdaSecurityGroup, auroraPgCRPolicy); err != nil {
 		panic(err)
 	}
 	var returns awscdk.CustomResource
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"setupCustomResource",
 		[]interface{}{databaseClusterResources, lambdaSecurityGroup, auroraPgCRPolicy},
 		&returns,
@@ -365,14 +337,14 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) SetupCustomResource(databaseClusterR
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) *DatabaseClusterResources {
-	if err := a.validateSetupDatabaseClusterResourcesParameters(vpc, secret, clusterIdentifier, auroraSecurityGroupId); err != nil {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) *DatabaseClusterResources {
+	if err := e.validateSetupDatabaseClusterResourcesParameters(vpc, secret, clusterIdentifier, auroraSecurityGroupId); err != nil {
 		panic(err)
 	}
 	var returns *DatabaseClusterResources
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"setupDatabaseClusterResources",
 		[]interface{}{vpc, secret, clusterIdentifier, auroraSecurityGroupId},
 		&returns,
@@ -381,11 +353,11 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc aw
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) ToString() *string {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		a,
+		e,
 		"toString",
 		nil, // no parameters
 		&returns,

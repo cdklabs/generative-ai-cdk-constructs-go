@@ -71,8 +71,7 @@ type KnowledgeBaseProps struct {
 	//
 	// Must be either of
 	// type `VectorCollection`, `RedisEnterpriseVectorStore`,
-	// `PineconeVectorStore`, `AmazonAuroraVectorStore` or
-	// `AmazonAuroraDefaultVectorStore`.
+	// `PineconeVectorStore` or `AmazonAuroraVectorStore`.
 	// Default: - A new OpenSearch Serverless vector collection is created.
 	//
 	// Experimental.
