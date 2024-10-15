@@ -37,5 +37,7 @@ const (
 	ConstructName_AWSWEBCRAWLER ConstructName = "AWSWEBCRAWLER"
 	// Experimental.
 	ConstructName_AWSTEXTTOSQL ConstructName = "AWSTEXTTOSQL"
+	// Experimental.
+	ConstructName_AWSLLAMAINDEXDATALOADER ConstructName = "AWSLLAMAINDEXDATALOADER"
 )
 

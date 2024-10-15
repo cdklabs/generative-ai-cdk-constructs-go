@@ -98,6 +98,7 @@ func init() {
 			"AWSRAGAPPSYNCSTEPFNKENDRA": ConstructName_AWSRAGAPPSYNCSTEPFNKENDRA,
 			"AWSWEBCRAWLER": ConstructName_AWSWEBCRAWLER,
 			"AWSTEXTTOSQL": ConstructName_AWSTEXTTOSQL,
+			"AWSLLAMAINDEXDATALOADER": ConstructName_AWSLLAMAINDEXDATALOADER,
 		},
 	)
 	_jsii_.RegisterClass(
@@ -383,6 +384,34 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.LangchainProps",
 		reflect.TypeOf((*LangchainProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.LlamaIndexDataLoader",
+		reflect.TypeOf((*LlamaIndexDataLoader)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
+			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
+			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
+			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
+			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "outputBucket", GoGetter: "OutputBucket"},
+			_jsii_.MemberProperty{JsiiProperty: "queueProcessingFargateService", GoGetter: "QueueProcessingFargateService"},
+			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
+			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
+			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
+		},
+		func() interface{} {
+			j := jsiiProxy_LlamaIndexDataLoader{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.LlamaIndexDataLoaderProps",
+		reflect.TypeOf((*LlamaIndexDataLoaderProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.MetatdataSource",
