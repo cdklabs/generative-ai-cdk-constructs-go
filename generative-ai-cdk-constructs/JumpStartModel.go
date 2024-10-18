@@ -1395,6 +1395,17 @@ func JumpStartModel_HUGGINGFACE_LLM_AMAZON_FALCONLITE_1_1_1() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_LLM_AMAZON_FALCONLITE_1_2_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_AMAZON_FALCONLITE_1_2_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_LLM_AMAZON_FALCONLITE2_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -3205,6 +3216,28 @@ func JumpStartModel_HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_1_1() JumpStartMod
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_1_1",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_2_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_2_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_3_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_LLM_FALCON_7B_INSTRUCT_BF16_4_3_0",
 		&returns,
 	)
 	return returns
@@ -27097,6 +27130,17 @@ func JumpStartModel_META_TEXTGENERATION_LLAMA_GUARD_3_8B_1_0_2() JumpStartModel 
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"META_TEXTGENERATION_LLAMA_GUARD_3_8B_1_0_2",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_META_TEXTGENERATION_LLAMA_GUARD_3_8B_1_0_3() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"META_TEXTGENERATION_LLAMA_GUARD_3_8B_1_0_3",
 		&returns,
 	)
 	return returns
