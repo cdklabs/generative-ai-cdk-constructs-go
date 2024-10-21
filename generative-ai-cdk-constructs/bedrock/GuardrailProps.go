@@ -1,38 +1,55 @@
 package bedrock
 
 import (
-	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
 )
 
-// Bedrock guardrail props.
+// Properties for creating a Guardrail.
 // Experimental.
 type GuardrailProps struct {
+	// The name of the guardrail.
+	// Experimental.
+	Name *string `field:"required" json:"name" yaml:"name"`
 	// The message to return when the guardrail blocks a prompt.
+	// Default: "Sorry, your query violates our usage policy."
+	//
 	// Experimental.
 	BlockedInputMessaging *string `field:"optional" json:"blockedInputMessaging" yaml:"blockedInputMessaging"`
 	// The message to return when the guardrail blocks a model response.
+	// Default: "Sorry, I am unable to answer your question because of our usage policy."
+	//
 	// Experimental.
 	BlockedOutputsMessaging *string `field:"optional" json:"blockedOutputsMessaging" yaml:"blockedOutputsMessaging"`
-	// Contextual grounding policy config for a guardrail.
+	// The content filters to apply to the guardrail.
+	//
+	// Note, if one of.
 	// Experimental.
-	ContextualGroundingfiltersConfig *[]*ContextualGroundingPolicyConfigProps `field:"optional" json:"contextualGroundingfiltersConfig" yaml:"contextualGroundingfiltersConfig"`
+	ContentFilters *[]*ContentFilter `field:"optional" json:"contentFilters" yaml:"contentFilters"`
+	// The contextual grounding filters to apply to the guardrail.
+	// Experimental.
+	ContextualGroundingFilters *[]*ContextualGroundingFilter `field:"optional" json:"contextualGroundingFilters" yaml:"contextualGroundingFilters"`
+	// Up to 30 denied topics to block user inputs or model responses associated with the topic.
+	// Experimental.
+	DeniedTopics *[]Topic `field:"optional" json:"deniedTopics" yaml:"deniedTopics"`
 	// The description of the guardrail.
 	// Experimental.
 	Description *string `field:"optional" json:"description" yaml:"description"`
-	// List of content filter configs in content policy.
+	// A custom KMS key to use for encrypting data.
+	// Default: "Your data is encrypted by default with a key that AWS owns and manages for you."
+	//
 	// Experimental.
-	FiltersConfig *[]*ContentPolicyConfigProps `field:"optional" json:"filtersConfig" yaml:"filtersConfig"`
-	// The ARN of the AWS KMS key used to encrypt the guardrail.
+	KmsKey awskms.IKey `field:"optional" json:"kmsKey" yaml:"kmsKey"`
+	// The managed word filters to apply to the guardrail.
 	// Experimental.
-	KmsKeyArn *string `field:"optional" json:"kmsKeyArn" yaml:"kmsKeyArn"`
-	// The name of the guardrail.
+	ManagedWordListFilters *[]ManagedWordFilterType `field:"optional" json:"managedWordListFilters" yaml:"managedWordListFilters"`
+	// The PII filters to apply to the guardrail.
 	// Experimental.
-	Name *string `field:"optional" json:"name" yaml:"name"`
-	// PII fields which needs to be anonymized.
+	PiiFilters *[]*PIIFilter `field:"optional" json:"piiFilters" yaml:"piiFilters"`
+	// The regular expression (regex) filters to apply to the guardrail.
 	// Experimental.
-	PiiConfig *[]*SensitiveInformationPolicyConfigProps `field:"optional" json:"piiConfig" yaml:"piiConfig"`
-	// Metadata that you can assign to a guardrail as key-value pairs.
+	RegexFilters *[]*RegexFilter `field:"optional" json:"regexFilters" yaml:"regexFilters"`
+	// The word filters to apply to the guardrail.
 	// Experimental.
-	Tags *[]*awscdk.CfnTag `field:"optional" json:"tags" yaml:"tags"`
+	WordFilters *[]*string `field:"optional" json:"wordFilters" yaml:"wordFilters"`
 }
 

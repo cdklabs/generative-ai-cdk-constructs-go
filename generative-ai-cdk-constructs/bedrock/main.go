@@ -131,14 +131,6 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModelProps",
 		reflect.TypeOf((*BedrockFoundationModelProps)(nil)).Elem(),
 	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.CanadaSpecific",
-		reflect.TypeOf((*CanadaSpecific)(nil)).Elem(),
-		map[string]interface{}{
-			"CA_HEALTH_NUMBER": CanadaSpecific_CA_HEALTH_NUMBER,
-			"CA_SOCIAL_INSURANCE_NUMBER": CanadaSpecific_CA_SOCIAL_INSURANCE_NUMBER,
-		},
-	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
 		reflect.TypeOf((*ChunkingStrategy)(nil)).Elem(),
@@ -213,6 +205,32 @@ func init() {
 			"ATTACHMENT": ConfluenceObjectType_ATTACHMENT,
 		},
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentFilter",
+		reflect.TypeOf((*ContentFilter)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentFilterStrength",
+		reflect.TypeOf((*ContentFilterStrength)(nil)).Elem(),
+		map[string]interface{}{
+			"NONE": ContentFilterStrength_NONE,
+			"LOW": ContentFilterStrength_LOW,
+			"MEDIUM": ContentFilterStrength_MEDIUM,
+			"HIGH": ContentFilterStrength_HIGH,
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentFilterType",
+		reflect.TypeOf((*ContentFilterType)(nil)).Elem(),
+		map[string]interface{}{
+			"SEXUAL": ContentFilterType_SEXUAL,
+			"VIOLENCE": ContentFilterType_VIOLENCE,
+			"HATE": ContentFilterType_HATE,
+			"INSULTS": ContentFilterType_INSULTS,
+			"MISCONDUCT": ContentFilterType_MISCONDUCT,
+			"PROMPT_ATTACK": ContentFilterType_PROMPT_ATTACK,
+		},
+	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfig",
 		reflect.TypeOf((*ContentPolicyConfig)(nil)).Elem(),
@@ -231,12 +249,24 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfigProps",
 		reflect.TypeOf((*ContentPolicyConfigProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilter",
+		reflect.TypeOf((*ContextualGroundingFilter)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilterConfigType",
 		reflect.TypeOf((*ContextualGroundingFilterConfigType)(nil)).Elem(),
 		map[string]interface{}{
 			"GROUNDING": ContextualGroundingFilterConfigType_GROUNDING,
 			"RELEVANCE": ContextualGroundingFilterConfigType_RELEVANCE,
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilterType",
+		reflect.TypeOf((*ContextualGroundingFilterType)(nil)).Elem(),
+		map[string]interface{}{
+			"GROUNDING": ContextualGroundingFilterType_GROUNDING,
+			"RELEVANCE": ContextualGroundingFilterType_RELEVANCE,
 		},
 	)
 	_jsii_.RegisterStruct(
@@ -255,6 +285,10 @@ func init() {
 			"SUBDOMAINS": CrawlingScope_SUBDOMAINS,
 			"DEFAULT": CrawlingScope_DEFAULT,
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomTopicProps",
+		reflect.TypeOf((*CustomTopicProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomTransformation",
@@ -382,60 +416,88 @@ func init() {
 			"SEXUAL": FiltersConfigType_SEXUAL,
 		},
 	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.Finance",
-		reflect.TypeOf((*Finance)(nil)).Elem(),
-		map[string]interface{}{
-			"CREDIT_DEBIT_CARD_CVV": Finance_CREDIT_DEBIT_CARD_CVV,
-			"CREDIT_DEBIT_CARD_EXPIRY": Finance_CREDIT_DEBIT_CARD_EXPIRY,
-			"CREDIT_DEBIT_CARD_NUMBER": Finance_CREDIT_DEBIT_CARD_NUMBER,
-			"PIN": Finance_PIN,
-			"SWIFT_CODE": Finance_SWIFT_CODE,
-			"INTERNATIONAL_BANK_ACCOUNT_NUMBER": Finance_INTERNATIONAL_BANK_ACCOUNT_NUMBER,
-		},
-	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStategyProps",
 		reflect.TypeOf((*FoundationModelParsingStategyProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.General",
-		reflect.TypeOf((*General)(nil)).Elem(),
-		map[string]interface{}{
-			"ADDRESS": General_ADDRESS,
-			"AGE": General_AGE,
-			"DRIVER_ID": General_DRIVER_ID,
-			"EMAIL": General_EMAIL,
-			"LICENSE_PLATE": General_LICENSE_PLATE,
-			"NAME": General_NAME,
-			"PASSWORD": General_PASSWORD,
-			"PHONE": General_PHONE,
-			"USERNAME": General_USERNAME,
-			"VEHICLE_IDENTIFICATION_NUMBER": General_VEHICLE_IDENTIFICATION_NUMBER,
-		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Guardrail",
 		reflect.TypeOf((*Guardrail)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addContextualGroundingPolicyConfig", GoMethod: "AddContextualGroundingPolicyConfig"},
-			_jsii_.MemberMethod{JsiiMethod: "addSensitiveInformationPolicyConfig", GoMethod: "AddSensitiveInformationPolicyConfig"},
-			_jsii_.MemberMethod{JsiiMethod: "addTags", GoMethod: "AddTags"},
-			_jsii_.MemberMethod{JsiiMethod: "addTopicPolicyConfig", GoMethod: "AddTopicPolicyConfig"},
-			_jsii_.MemberMethod{JsiiMethod: "addVersion", GoMethod: "AddVersion"},
-			_jsii_.MemberMethod{JsiiMethod: "addWordPolicyConfig", GoMethod: "AddWordPolicyConfig"},
+			_jsii_.MemberMethod{JsiiMethod: "addContentFilter", GoMethod: "AddContentFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addContextualGroundingFilter", GoMethod: "AddContextualGroundingFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeniedTopicFilter", GoMethod: "AddDeniedTopicFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addManagedWordListFilter", GoMethod: "AddManagedWordListFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addPIIFilter", GoMethod: "AddPIIFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addRegexFilter", GoMethod: "AddRegexFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addWordFilter", GoMethod: "AddWordFilter"},
+			_jsii_.MemberMethod{JsiiMethod: "addWordFilterFromFile", GoMethod: "AddWordFilterFromFile"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "contentFilters", GoGetter: "ContentFilters"},
+			_jsii_.MemberProperty{JsiiProperty: "contextualGroundingFilters", GoGetter: "ContextualGroundingFilters"},
+			_jsii_.MemberMethod{JsiiMethod: "createVersion", GoMethod: "CreateVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "deniedTopics", GoGetter: "DeniedTopics"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grantApply", GoMethod: "GrantApply"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailArn", GoGetter: "GuardrailArn"},
 			_jsii_.MemberProperty{JsiiProperty: "guardrailId", GoGetter: "GuardrailId"},
-			_jsii_.MemberProperty{JsiiProperty: "guardrailInstance", GoGetter: "GuardrailInstance"},
 			_jsii_.MemberProperty{JsiiProperty: "guardrailVersion", GoGetter: "GuardrailVersion"},
-			_jsii_.MemberProperty{JsiiProperty: "kmsKeyArn", GoGetter: "KmsKeyArn"},
+			_jsii_.MemberProperty{JsiiProperty: "hash", GoGetter: "Hash"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "managedWordListFilters", GoGetter: "ManagedWordListFilters"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "piiFilters", GoGetter: "PiiFilters"},
+			_jsii_.MemberProperty{JsiiProperty: "regexFilters", GoGetter: "RegexFilters"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "uploadWordPolicyFromFile", GoMethod: "UploadWordPolicyFromFile"},
+			_jsii_.MemberProperty{JsiiProperty: "wordFilters", GoGetter: "WordFilters"},
 		},
 		func() interface{} {
 			j := jsiiProxy_Guardrail{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_GuardrailBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailAction",
+		reflect.TypeOf((*GuardrailAction)(nil)).Elem(),
+		map[string]interface{}{
+			"BLOCK": GuardrailAction_BLOCK,
+			"ANONYMIZE": GuardrailAction_ANONYMIZE,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailAttributes",
+		reflect.TypeOf((*GuardrailAttributes)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		reflect.TypeOf((*GuardrailBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grantApply", GoMethod: "GrantApply"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailArn", GoGetter: "GuardrailArn"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailId", GoGetter: "GuardrailId"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailVersion", GoGetter: "GuardrailVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GuardrailBase{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IGuardrail)
 			return &j
 		},
 	)
@@ -446,20 +508,6 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailProps",
 		reflect.TypeOf((*GuardrailProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailVersion",
-		reflect.TypeOf((*GuardrailVersion)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "guardrailVersionInstance", GoGetter: "GuardrailVersionInstance"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-		},
-		func() interface{} {
-			j := jsiiProxy_GuardrailVersion{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
-			return &j
-		},
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.HierarchicalChunkingProps",
@@ -489,6 +537,26 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_IDataSource{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IGuardrail",
+		reflect.TypeOf((*IGuardrail)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "grantApply", GoMethod: "GrantApply"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailArn", GoGetter: "GuardrailArn"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailId", GoGetter: "GuardrailId"},
+			_jsii_.MemberProperty{JsiiProperty: "guardrailVersion", GoGetter: "GuardrailVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IGuardrail{}
 			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
 			return &j
 		},
@@ -530,17 +598,6 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceConfiguration",
 		reflect.TypeOf((*InferenceConfiguration)(nil)).Elem(),
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.InformationTechnology",
-		reflect.TypeOf((*InformationTechnology)(nil)).Elem(),
-		map[string]interface{}{
-			"URL": InformationTechnology_URL,
-			"IP_ADDRESS": InformationTechnology_IP_ADDRESS,
-			"MAC_ADDRESS": InformationTechnology_MAC_ADDRESS,
-			"AWS_ACCESS_KEY": InformationTechnology_AWS_ACCESS_KEY,
-			"AWS_SECRET_KEY": InformationTechnology_AWS_SECRET_KEY,
-		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InlineApiSchema",
@@ -603,6 +660,17 @@ func init() {
 		reflect.TypeOf((*LambdaCustomTransformationProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ManagedWordFilterType",
+		reflect.TypeOf((*ManagedWordFilterType)(nil)).Elem(),
+		map[string]interface{}{
+			"PROFANITY": ManagedWordFilterType_PROFANITY,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PIIFilter",
+		reflect.TypeOf((*PIIFilter)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParserMode",
 		reflect.TypeOf((*ParserMode)(nil)).Elem(),
 		map[string]interface{}{
@@ -619,14 +687,6 @@ func init() {
 		},
 		func() interface{} {
 			return &jsiiProxy_ParsingStategy{}
-		},
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.PiiEntitiesConfigAction",
-		reflect.TypeOf((*PiiEntitiesConfigAction)(nil)).Elem(),
-		map[string]interface{}{
-			"BLOCK": PiiEntitiesConfigAction_BLOCK,
-			"ANONYMIZE": PiiEntitiesConfigAction_ANONYMIZE,
 		},
 	)
 	_jsii_.RegisterClass(
@@ -728,6 +788,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVersionProps",
 		reflect.TypeOf((*PromptVersionProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.RegexFilter",
+		reflect.TypeOf((*RegexFilter)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
@@ -856,24 +920,6 @@ func init() {
 			"COLLABORATION_GROUP": SalesforceObjectType_COLLABORATION_GROUP,
 		},
 	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.SensitiveInformationPolicyConfig",
-		reflect.TypeOf((*SensitiveInformationPolicyConfig)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "piiConfigList", GoGetter: "PiiConfigList"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-		},
-		func() interface{} {
-			j := jsiiProxy_SensitiveInformationPolicyConfig{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.SensitiveInformationPolicyConfigProps",
-		reflect.TypeOf((*SensitiveInformationPolicyConfigProps)(nil)).Elem(),
-	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointCrawlingFilters",
 		reflect.TypeOf((*SharePointCrawlingFilters)(nil)).Elem(),
@@ -940,51 +986,19 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Topic",
 		reflect.TypeOf((*Topic)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "createTopic", GoMethod: "CreateTopic"},
-			_jsii_.MemberMethod{JsiiMethod: "financialAdviceTopic", GoMethod: "FinancialAdviceTopic"},
-			_jsii_.MemberMethod{JsiiMethod: "inappropriateContent", GoMethod: "InappropriateContent"},
-			_jsii_.MemberMethod{JsiiMethod: "legalAdvice", GoMethod: "LegalAdvice"},
-			_jsii_.MemberMethod{JsiiMethod: "medicalAdvice", GoMethod: "MedicalAdvice"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberMethod{JsiiMethod: "politicalAdviceTopic", GoMethod: "PoliticalAdviceTopic"},
-			_jsii_.MemberMethod{JsiiMethod: "topicConfigPropertyList", GoMethod: "TopicConfigPropertyList"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "definition", GoGetter: "Definition"},
+			_jsii_.MemberProperty{JsiiProperty: "examples", GoGetter: "Examples"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 		},
 		func() interface{} {
-			j := jsiiProxy_Topic{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
-			return &j
+			return &jsiiProxy_Topic{}
 		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.TopicProps",
-		reflect.TypeOf((*TopicProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.TransformationStep",
 		reflect.TypeOf((*TransformationStep)(nil)).Elem(),
 		map[string]interface{}{
 			"POST_CHUNKING": TransformationStep_POST_CHUNKING,
-		},
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.UKSpecific",
-		reflect.TypeOf((*UKSpecific)(nil)).Elem(),
-		map[string]interface{}{
-			"UK_NATIONAL_HEALTH_SERVICE_NUMBER": UKSpecific_UK_NATIONAL_HEALTH_SERVICE_NUMBER,
-			"UK_NATIONAL_INSURANCE_NUMBER": UKSpecific_UK_NATIONAL_INSURANCE_NUMBER,
-			"UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER": UKSpecific_UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER,
-		},
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.USASpecific",
-		reflect.TypeOf((*USASpecific)(nil)).Elem(),
-		map[string]interface{}{
-			"US_BANK_ACCOUNT_NUMBER": USASpecific_US_BANK_ACCOUNT_NUMBER,
-			"US_BANK_ROUTING_NUMBER": USASpecific_US_BANK_ROUTING_NUMBER,
-			"US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER": USASpecific_US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER,
-			"US_PASSPORT_NUMBER": USASpecific_US_PASSPORT_NUMBER,
-			"US_SOCIAL_SECURITY_NUMBER": USASpecific_US_SOCIAL_SECURITY_NUMBER,
 		},
 	)
 	_jsii_.RegisterClass(

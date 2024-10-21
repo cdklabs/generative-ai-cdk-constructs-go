@@ -67,7 +67,7 @@ type Agent interface {
 	AddAlias(props *AddAgentAliasProps) AgentAlias
 	// Add guardrail to the agent.
 	// Experimental.
-	AddGuardrail(guardrail Guardrail)
+	AddGuardrail(guardrail IGuardrail)
 	// Add knowledge base to the agent.
 	// Experimental.
 	AddKnowledgeBase(knowledgeBase KnowledgeBase)
@@ -330,7 +330,7 @@ func (a *jsiiProxy_Agent) AddAlias(props *AddAgentAliasProps) AgentAlias {
 	return returns
 }
 
-func (a *jsiiProxy_Agent) AddGuardrail(guardrail Guardrail) {
+func (a *jsiiProxy_Agent) AddGuardrail(guardrail IGuardrail) {
 	if err := a.validateAddGuardrailParameters(guardrail); err != nil {
 		panic(err)
 	}

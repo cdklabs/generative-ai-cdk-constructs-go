@@ -16,7 +16,7 @@ func (a *jsiiProxy_Agent) validateAddAliasParameters(props *AddAgentAliasProps) 
 	return nil
 }
 
-func (a *jsiiProxy_Agent) validateAddGuardrailParameters(guardrail Guardrail) error {
+func (a *jsiiProxy_Agent) validateAddGuardrailParameters(guardrail IGuardrail) error {
 	return nil
 }
 
