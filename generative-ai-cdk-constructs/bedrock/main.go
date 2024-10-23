@@ -231,35 +231,9 @@ func init() {
 			"PROMPT_ATTACK": ContentFilterType_PROMPT_ATTACK,
 		},
 	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfig",
-		reflect.TypeOf((*ContentPolicyConfig)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "contentPolicyConfigList", GoGetter: "ContentPolicyConfigList"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-		},
-		func() interface{} {
-			j := jsiiProxy_ContentPolicyConfig{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContentPolicyConfigProps",
-		reflect.TypeOf((*ContentPolicyConfigProps)(nil)).Elem(),
-	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilter",
 		reflect.TypeOf((*ContextualGroundingFilter)(nil)).Elem(),
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilterConfigType",
-		reflect.TypeOf((*ContextualGroundingFilterConfigType)(nil)).Elem(),
-		map[string]interface{}{
-			"GROUNDING": ContextualGroundingFilterConfigType_GROUNDING,
-			"RELEVANCE": ContextualGroundingFilterConfigType_RELEVANCE,
-		},
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilterType",
@@ -268,10 +242,6 @@ func init() {
 			"GROUNDING": ContextualGroundingFilterType_GROUNDING,
 			"RELEVANCE": ContextualGroundingFilterType_RELEVANCE,
 		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingPolicyConfigProps",
-		reflect.TypeOf((*ContextualGroundingPolicyConfigProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrawlingFilters",
@@ -392,28 +362,6 @@ func init() {
 			"SALESFORCE": DataSourceType_SALESFORCE,
 			"SHAREPOINT": DataSourceType_SHAREPOINT,
 			"WEB_CRAWLER": DataSourceType_WEB_CRAWLER,
-		},
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.FiltersConfigStrength",
-		reflect.TypeOf((*FiltersConfigStrength)(nil)).Elem(),
-		map[string]interface{}{
-			"NONE": FiltersConfigStrength_NONE,
-			"LOW": FiltersConfigStrength_LOW,
-			"MEDIUM": FiltersConfigStrength_MEDIUM,
-			"HIGH": FiltersConfigStrength_HIGH,
-		},
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.FiltersConfigType",
-		reflect.TypeOf((*FiltersConfigType)(nil)).Elem(),
-		map[string]interface{}{
-			"VIOLENCE": FiltersConfigType_VIOLENCE,
-			"HATE": FiltersConfigType_HATE,
-			"INSULTS": FiltersConfigType_INSULTS,
-			"MISCONDUCT": FiltersConfigType_MISCONDUCT,
-			"PROMPT_ATTACK": FiltersConfigType_PROMPT_ATTACK,
-			"SEXUAL": FiltersConfigType_SEXUAL,
 		},
 	)
 	_jsii_.RegisterStruct(
