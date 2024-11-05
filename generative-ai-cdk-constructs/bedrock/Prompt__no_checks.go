@@ -8,11 +8,15 @@ func (p *jsiiProxy_Prompt) validateAddVariantParameters(variant PromptVariant) e
 	return nil
 }
 
-func validatePrompt_FromPromptArnParameters(promptArn *string) error {
+func validatePrompt_FromPromptAttributesParameters(scope constructs.Construct, id *string, attrs *PromptAttributes) error {
 	return nil
 }
 
 func validatePrompt_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Prompt) validateSetPromptVersionParameters(val *string) error {
 	return nil
 }
 

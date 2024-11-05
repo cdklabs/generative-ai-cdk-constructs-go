@@ -18,9 +18,20 @@ func (p *jsiiProxy_Prompt) validateAddVariantParameters(variant PromptVariant) e
 	return nil
 }
 
-func validatePrompt_FromPromptArnParameters(promptArn *string) error {
-	if promptArn == nil {
-		return fmt.Errorf("parameter promptArn is required, but nil was provided")
+func validatePrompt_FromPromptAttributesParameters(scope constructs.Construct, id *string, attrs *PromptAttributes) error {
+	if scope == nil {
+		return fmt.Errorf("parameter scope is required, but nil was provided")
+	}
+
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	if attrs == nil {
+		return fmt.Errorf("parameter attrs is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(attrs, func() string { return "parameter attrs" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -29,6 +40,14 @@ func validatePrompt_FromPromptArnParameters(promptArn *string) error {
 func validatePrompt_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Prompt) validateSetPromptVersionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

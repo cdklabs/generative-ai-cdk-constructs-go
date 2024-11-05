@@ -20,7 +20,7 @@ type Prompt interface {
 	IPrompt
 	// The KMS key that the prompt is encrypted with.
 	// Experimental.
-	EncryptionKey() awskms.IKey
+	KmsKey() awskms.IKey
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
@@ -41,6 +41,11 @@ type Prompt interface {
 	// The name of the prompt.
 	// Experimental.
 	PromptName() *string
+	// The version of the prompt.
+	// Experimental.
+	PromptVersion() *string
+	// Experimental.
+	SetPromptVersion(val *string)
 	// The variants of the prompt.
 	// Experimental.
 	Variants() *[]PromptVariant
@@ -49,7 +54,7 @@ type Prompt interface {
 	AddVariant(variant PromptVariant)
 	// Creates a prompt version, a static snapshot of your prompt that can be deployed to production.
 	// Experimental.
-	CreateVersion(description *string)
+	CreateVersion(description *string) *string
 	// Returns a string representation of this construct.
 	// Experimental.
 	ToString() *string
@@ -61,11 +66,11 @@ type jsiiProxy_Prompt struct {
 	jsiiProxy_IPrompt
 }
 
-func (j *jsiiProxy_Prompt) EncryptionKey() awskms.IKey {
+func (j *jsiiProxy_Prompt) KmsKey() awskms.IKey {
 	var returns awskms.IKey
 	_jsii_.Get(
 		j,
-		"encryptionKey",
+		"kmsKey",
 		&returns,
 	)
 	return returns
@@ -111,6 +116,16 @@ func (j *jsiiProxy_Prompt) PromptName() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Prompt) PromptVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"promptVersion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Prompt) Variants() *[]PromptVariant {
 	var returns *[]PromptVariant
 	_jsii_.Get(
@@ -151,19 +166,30 @@ func NewPrompt_Override(p Prompt, scope constructs.Construct, id *string, props 
 	)
 }
 
+func (j *jsiiProxy_Prompt)SetPromptVersion(val *string) {
+	if err := j.validateSetPromptVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"promptVersion",
+		val,
+	)
+}
+
 // Experimental.
-func Prompt_FromPromptArn(promptArn *string) IPrompt {
+func Prompt_FromPromptAttributes(scope constructs.Construct, id *string, attrs *PromptAttributes) IPrompt {
 	_init_.Initialize()
 
-	if err := validatePrompt_FromPromptArnParameters(promptArn); err != nil {
+	if err := validatePrompt_FromPromptAttributesParameters(scope, id, attrs); err != nil {
 		panic(err)
 	}
 	var returns IPrompt
 
 	_jsii_.StaticInvoke(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Prompt",
-		"fromPromptArn",
-		[]interface{}{promptArn},
+		"fromPromptAttributes",
+		[]interface{}{scope, id, attrs},
 		&returns,
 	)
 
@@ -217,12 +243,17 @@ func (p *jsiiProxy_Prompt) AddVariant(variant PromptVariant) {
 	)
 }
 
-func (p *jsiiProxy_Prompt) CreateVersion(description *string) {
-	_jsii_.InvokeVoid(
+func (p *jsiiProxy_Prompt) CreateVersion(description *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
 		p,
 		"createVersion",
 		[]interface{}{description},
+		&returns,
 	)
+
+	return returns
 }
 
 func (p *jsiiProxy_Prompt) ToString() *string {

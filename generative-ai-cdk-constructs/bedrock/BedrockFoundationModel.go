@@ -128,6 +128,17 @@ func BedrockFoundationModel_AMAZON_TITAN_TEXT_EXPRESS_V1() BedrockFoundationMode
 	return returns
 }
 
+func BedrockFoundationModel_ANTHROPIC_CLAUDE_3_5_HAIKU_V1_0() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"ANTHROPIC_CLAUDE_3_5_HAIKU_V1_0",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_ANTHROPIC_CLAUDE_3_5_SONNET_V1_0() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel

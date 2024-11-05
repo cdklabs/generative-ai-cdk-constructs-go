@@ -4,6 +4,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
 )
 
+// ****************************************************************************                       PROPS FOR NEW CONSTRUCT ***************************************************************************.
 // Experimental.
 type PromptProps struct {
 	// The name of the prompt.
@@ -23,7 +24,7 @@ type PromptProps struct {
 	// Default: - AWS owned and managed key.
 	//
 	// Experimental.
-	EncryptionKey awskms.IKey `field:"optional" json:"encryptionKey" yaml:"encryptionKey"`
+	KmsKey awskms.IKey `field:"optional" json:"kmsKey" yaml:"kmsKey"`
 	// The variants of your prompt.
 	//
 	// Variants can use different messages, models,

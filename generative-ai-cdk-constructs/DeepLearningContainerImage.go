@@ -647,6 +647,17 @@ func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_NEURONX_2_1_2_TRAN
 	return returns
 }
 
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_NEURONX_2_1_2_TRANSFORMERS4_43_2_NEURONX_PY310_SDK2_20_0_UBUNTU20_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_INFERENCE_NEURONX_2_1_2_TRANSFORMERS4_43_2_NEURONX_PY310_SDK2_20_0_UBUNTU20_04",
+		&returns,
+	)
+	return returns
+}
+
 func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_0_0_TGI0_6_0_GPU_PY39_CU118_UBUNTU20_04() ContainerImage {
 	_init_.Initialize()
 	var returns ContainerImage
@@ -829,6 +840,17 @@ func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_4_0_TGI2_3_1
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
 		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_4_0_TGI2_3_1_GPU_PY311_CU124_UBUNTU22_04",
+		&returns,
+	)
+	return returns
+}
+
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_4_0_TGI2_4_0_GPU_PY311_CU124_UBUNTU22_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_4_0_TGI2_4_0_GPU_PY311_CU124_UBUNTU22_04",
 		&returns,
 	)
 	return returns
