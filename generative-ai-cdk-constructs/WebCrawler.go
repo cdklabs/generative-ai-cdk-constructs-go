@@ -260,7 +260,8 @@ func (j *jsiiProxy_WebCrawler) WebCrawlerJobDefinition() awsbatch.IJobDefinition
 
 
 // Constructs a new instance of the WebCrawler class.
-// Experimental.
+// Deprecated: This construct is deprecated and will be removed in a future major version.
+// It will not receive security updates.
 func NewWebCrawler(scope constructs.Construct, id *string, props *WebCrawlerProps) WebCrawler {
 	_init_.Initialize()
 
@@ -279,7 +280,8 @@ func NewWebCrawler(scope constructs.Construct, id *string, props *WebCrawlerProp
 }
 
 // Constructs a new instance of the WebCrawler class.
-// Experimental.
+// Deprecated: This construct is deprecated and will be removed in a future major version.
+// It will not receive security updates.
 func NewWebCrawler_Override(w WebCrawler, scope constructs.Construct, id *string, props *WebCrawlerProps) {
 	_init_.Initialize()
 
