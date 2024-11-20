@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/aws/jsii-runtime-go v1.105.0
-	github.com/aws/aws-cdk-go/awscdk/v2 v2.162.1
+	github.com/aws/aws-cdk-go/awscdk/v2 v2.166.0
 	github.com/cdklabs/cdk-nag-go/cdknag/v2 v2.34.2
 	github.com/aws/constructs-go/constructs/v10 v10.3.0
 	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.211 // indirect

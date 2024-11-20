@@ -38,6 +38,9 @@ func (j *jsiiProxy_PromptVariant) validateSetNameParameters(val *string) error {
 }
 
 func (j *jsiiProxy_PromptVariant) validateSetTemplateConfigurationParameters(val *awsbedrock.CfnPrompt_PromptTemplateConfigurationProperty) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}

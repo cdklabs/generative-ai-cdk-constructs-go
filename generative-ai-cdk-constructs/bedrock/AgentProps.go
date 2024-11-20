@@ -11,7 +11,7 @@ import (
 type AgentProps struct {
 	// The Bedrock text foundation model for the agent to use.
 	// Experimental.
-	FoundationModel BedrockFoundationModel `field:"required" json:"foundationModel" yaml:"foundationModel"`
+	FoundationModel IInvokable `field:"required" json:"foundationModel" yaml:"foundationModel"`
 	// A narrative instruction to provide the agent as context.
 	// Experimental.
 	Instruction *string `field:"required" json:"instruction" yaml:"instruction"`

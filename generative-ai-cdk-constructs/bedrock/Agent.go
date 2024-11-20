@@ -40,6 +40,9 @@ type Agent interface {
 	// The name for the agent alias.
 	// Experimental.
 	AliasName() *string
+	// The model used by the agent.
+	// Experimental.
+	FoundationModel() IInvokable
 	// A list of KnowledgeBases associated with the agent.
 	// Default: - No knowledge base is used.
 	//
@@ -159,6 +162,16 @@ func (j *jsiiProxy_Agent) AliasName() *string {
 	_jsii_.Get(
 		j,
 		"aliasName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Agent) FoundationModel() IInvokable {
+	var returns IInvokable
+	_jsii_.Get(
+		j,
+		"foundationModel",
 		&returns,
 	)
 	return returns

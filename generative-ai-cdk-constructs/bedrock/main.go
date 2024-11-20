@@ -33,6 +33,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "aliasArn", GoGetter: "AliasArn"},
 			_jsii_.MemberProperty{JsiiProperty: "aliasId", GoGetter: "AliasId"},
 			_jsii_.MemberProperty{JsiiProperty: "aliasName", GoGetter: "AliasName"},
+			_jsii_.MemberProperty{JsiiProperty: "foundationModel", GoGetter: "FoundationModel"},
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBases", GoGetter: "KnowledgeBases"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -112,19 +113,66 @@ func init() {
 		reflect.TypeOf((*ApiSchemaConfig)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ApplicationInferenceProfile",
+		reflect.TypeOf((*ApplicationInferenceProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "createdAt", GoGetter: "CreatedAt"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
+			_jsii_.MemberMethod{JsiiMethod: "grantProfileUsage", GoMethod: "GrantProfileUsage"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileArn", GoGetter: "InferenceProfileArn"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileId", GoGetter: "InferenceProfileId"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileModel", GoGetter: "InferenceProfileModel"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileName", GoGetter: "InferenceProfileName"},
+			_jsii_.MemberProperty{JsiiProperty: "invokableArn", GoGetter: "InvokableArn"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberProperty{JsiiProperty: "status", GoGetter: "Status"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedAt", GoGetter: "UpdatedAt"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ApplicationInferenceProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_InferenceProfileBase)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInvokable)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ApplicationInferenceProfileAttributes",
+		reflect.TypeOf((*ApplicationInferenceProfileAttributes)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ApplicationInferenceProfileProps",
+		reflect.TypeOf((*ApplicationInferenceProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
 		reflect.TypeOf((*BedrockFoundationModel)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "asArn", GoMethod: "AsArn"},
 			_jsii_.MemberMethod{JsiiMethod: "asIModel", GoMethod: "AsIModel"},
+			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
+			_jsii_.MemberMethod{JsiiMethod: "grantInvokeAllRegions", GoMethod: "GrantInvokeAllRegions"},
+			_jsii_.MemberProperty{JsiiProperty: "invokableArn", GoGetter: "InvokableArn"},
+			_jsii_.MemberProperty{JsiiProperty: "modelArn", GoGetter: "ModelArn"},
 			_jsii_.MemberProperty{JsiiProperty: "modelId", GoGetter: "ModelId"},
 			_jsii_.MemberProperty{JsiiProperty: "supportsAgents", GoGetter: "SupportsAgents"},
+			_jsii_.MemberProperty{JsiiProperty: "supportsCrossRegion", GoGetter: "SupportsCrossRegion"},
 			_jsii_.MemberProperty{JsiiProperty: "supportsKnowledgeBase", GoGetter: "SupportsKnowledgeBase"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "vectorDimensions", GoGetter: "VectorDimensions"},
 		},
 		func() interface{} {
-			return &jsiiProxy_BedrockFoundationModel{}
+			j := jsiiProxy_BedrockFoundationModel{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInvokable)
+			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
@@ -254,6 +302,38 @@ func init() {
 			"HOST_ONLY": CrawlingScope_HOST_ONLY,
 			"SUBDOMAINS": CrawlingScope_SUBDOMAINS,
 			"DEFAULT": CrawlingScope_DEFAULT,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrossRegionInferenceProfile",
+		reflect.TypeOf((*CrossRegionInferenceProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
+			_jsii_.MemberMethod{JsiiMethod: "grantProfileUsage", GoMethod: "GrantProfileUsage"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileArn", GoGetter: "InferenceProfileArn"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileId", GoGetter: "InferenceProfileId"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileModel", GoGetter: "InferenceProfileModel"},
+			_jsii_.MemberProperty{JsiiProperty: "invokableArn", GoGetter: "InvokableArn"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+		},
+		func() interface{} {
+			j := jsiiProxy_CrossRegionInferenceProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInferenceProfile)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInvokable)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrossRegionInferenceProfileProps",
+		reflect.TypeOf((*CrossRegionInferenceProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CrossRegionInferenceProfileRegion",
+		reflect.TypeOf((*CrossRegionInferenceProfileRegion)(nil)).Elem(),
+		map[string]interface{}{
+			"EU": CrossRegionInferenceProfileRegion_EU,
+			"US": CrossRegionInferenceProfileRegion_US,
+			"APAC": CrossRegionInferenceProfileRegion_APAC,
 		},
 	)
 	_jsii_.RegisterStruct(
@@ -510,6 +590,30 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IInferenceProfile",
+		reflect.TypeOf((*IInferenceProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "grantProfileUsage", GoMethod: "GrantProfileUsage"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileArn", GoGetter: "InferenceProfileArn"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileId", GoGetter: "InferenceProfileId"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IInferenceProfile{}
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IInvokable",
+		reflect.TypeOf((*IInvokable)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
+			_jsii_.MemberProperty{JsiiProperty: "invokableArn", GoGetter: "InvokableArn"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IInvokable{}
+		},
+	)
+	_jsii_.RegisterInterface(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.IKnowledgeBase",
 		reflect.TypeOf((*IKnowledgeBase)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -548,6 +652,40 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceConfiguration",
 		reflect.TypeOf((*InferenceConfiguration)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceProfileBase",
+		reflect.TypeOf((*InferenceProfileBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grantProfileUsage", GoMethod: "GrantProfileUsage"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileArn", GoGetter: "InferenceProfileArn"},
+			_jsii_.MemberProperty{JsiiProperty: "inferenceProfileId", GoGetter: "InferenceProfileId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+		},
+		func() interface{} {
+			j := jsiiProxy_InferenceProfileBase{}
+			_jsii_.InitJsiiProxy(&j.Type__awscdkResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInferenceProfile)
+			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceProfileType",
+		reflect.TypeOf((*InferenceProfileType)(nil)).Elem(),
+		map[string]interface{}{
+			"SYSTEM_DEFINED": InferenceProfileType_SYSTEM_DEFINED,
+			"APPLICATION": InferenceProfileType_APPLICATION,
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InlineApiSchema",

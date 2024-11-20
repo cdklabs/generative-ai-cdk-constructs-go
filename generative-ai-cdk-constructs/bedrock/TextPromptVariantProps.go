@@ -11,7 +11,7 @@ type TextPromptVariantProps struct {
 	// The model could be a foundation
 	// model, a custom model, or a provisioned model.
 	// Experimental.
-	Model awsbedrock.IModel `field:"required" json:"model" yaml:"model"`
+	Model IInvokable `field:"required" json:"model" yaml:"model"`
 	// The name of the prompt variant.
 	// Experimental.
 	VariantName *string `field:"required" json:"variantName" yaml:"variantName"`

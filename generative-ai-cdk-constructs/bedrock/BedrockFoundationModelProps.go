@@ -8,6 +8,11 @@ type BedrockFoundationModelProps struct {
 	//
 	// Experimental.
 	SupportsAgents *bool `field:"optional" json:"supportsAgents" yaml:"supportsAgents"`
+	// Can be used with a Cross-Region Inference Profile.
+	// Default: - false.
+	//
+	// Experimental.
+	SupportsCrossRegion *bool `field:"optional" json:"supportsCrossRegion" yaml:"supportsCrossRegion"`
 	// Bedrock Knowledge Base can use this model.
 	// Default: - false.
 	//
