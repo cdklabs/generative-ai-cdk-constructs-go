@@ -95,8 +95,6 @@ func init() {
 			"HUGGINGFACESAGEMAKERENDPOINT": ConstructName_HUGGINGFACESAGEMAKERENDPOINT,
 			"JUMPSTARTSAGEMAKERENDPOINT": ConstructName_JUMPSTARTSAGEMAKERENDPOINT,
 			"AWSCONTENTGENAPPSYNCLAMBDA": ConstructName_AWSCONTENTGENAPPSYNCLAMBDA,
-			"AWSRAGAPPSYNCSTEPFNKENDRA": ConstructName_AWSRAGAPPSYNCSTEPFNKENDRA,
-			"AWSWEBCRAWLER": ConstructName_AWSWEBCRAWLER,
 			"AWSTEXTTOSQL": ConstructName_AWSTEXTTOSQL,
 			"AWSLLAMAINDEXDATALOADER": ConstructName_AWSLLAMAINDEXDATALOADER,
 		},
@@ -147,18 +145,6 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.ContentGenerationAppSyncLambdaProps",
 		reflect.TypeOf((*ContentGenerationAppSyncLambdaProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.CrawlerTarget",
-		reflect.TypeOf((*CrawlerTarget)(nil)).Elem(),
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.CrawlerTargetType",
-		reflect.TypeOf((*CrawlerTargetType)(nil)).Elem(),
-		map[string]interface{}{
-			"WEBSITE": CrawlerTargetType_WEBSITE,
-			"RSS_FEED": CrawlerTargetType_RSS_FEED,
-		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.CustomSageMakerEndpoint",
@@ -602,40 +588,5 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.TextToSqlProps",
 		reflect.TypeOf((*TextToSqlProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.WebCrawler",
-		reflect.TypeOf((*WebCrawler)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "dataBucket", GoGetter: "DataBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "jobQueue", GoGetter: "JobQueue"},
-			_jsii_.MemberProperty{JsiiProperty: "jobsTable", GoGetter: "JobsTable"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaCrawler", GoGetter: "LambdaCrawler"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaCrawlerApiSchemaPath", GoGetter: "LambdaCrawlerApiSchemaPath"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "snsTopic", GoGetter: "SnsTopic"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberProperty{JsiiProperty: "targetsTable", GoGetter: "TargetsTable"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-			_jsii_.MemberProperty{JsiiProperty: "webCrawlerJobDefinition", GoGetter: "WebCrawlerJobDefinition"},
-		},
-		func() interface{} {
-			j := jsiiProxy_WebCrawler{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.WebCrawlerProps",
-		reflect.TypeOf((*WebCrawlerProps)(nil)).Elem(),
 	)
 }

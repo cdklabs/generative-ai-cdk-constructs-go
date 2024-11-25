@@ -372,6 +372,17 @@ func DeepLearningContainerImage_DJL_INFERENCE_0_29_0_NEURONX_SDK2_19_1() Contain
 	return returns
 }
 
+func DeepLearningContainerImage_DJL_INFERENCE_0_30_0_NEURONX_SDK2_20_1() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"DJL_INFERENCE_0_30_0_NEURONX_SDK2_20_1",
+		&returns,
+	)
+	return returns
+}
+
 func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_1_10_2_TRANSFORMERS4_17_0_CPU_PY38_UBUNTU20_04() ContainerImage {
 	_init_.Initialize()
 	var returns ContainerImage

@@ -32,10 +32,6 @@ const (
 	// Experimental.
 	ConstructName_AWSCONTENTGENAPPSYNCLAMBDA ConstructName = "AWSCONTENTGENAPPSYNCLAMBDA"
 	// Experimental.
-	ConstructName_AWSRAGAPPSYNCSTEPFNKENDRA ConstructName = "AWSRAGAPPSYNCSTEPFNKENDRA"
-	// Experimental.
-	ConstructName_AWSWEBCRAWLER ConstructName = "AWSWEBCRAWLER"
-	// Experimental.
 	ConstructName_AWSTEXTTOSQL ConstructName = "AWSTEXTTOSQL"
 	// Experimental.
 	ConstructName_AWSLLAMAINDEXDATALOADER ConstructName = "AWSLLAMAINDEXDATALOADER"
