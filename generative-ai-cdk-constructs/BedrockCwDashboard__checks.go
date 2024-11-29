@@ -11,9 +11,6 @@ import (
 )
 
 func (b *jsiiProxy_BedrockCwDashboard) validateAddAllModelsMonitoringParameters(props *ModelMonitoringProps) error {
-	if props == nil {
-		return fmt.Errorf("parameter props is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
 		return err
 	}
@@ -30,9 +27,6 @@ func (b *jsiiProxy_BedrockCwDashboard) validateAddModelMonitoringParameters(mode
 		return fmt.Errorf("parameter modelId is required, but nil was provided")
 	}
 
-	if props == nil {
-		return fmt.Errorf("parameter props is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
 		return err
 	}
@@ -57,9 +51,6 @@ func validateNewBedrockCwDashboardParameters(scope constructs.Construct, id *str
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
-	if props == nil {
-		return fmt.Errorf("parameter props is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
 		return err
 	}
