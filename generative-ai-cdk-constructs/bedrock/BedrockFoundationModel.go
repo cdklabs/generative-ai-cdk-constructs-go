@@ -191,6 +191,39 @@ func BedrockFoundationModel_FromCdkFoundationModelId(modelId awsbedrock.Foundati
 	return returns
 }
 
+func BedrockFoundationModel_AMAZON_NOVA_LITE_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AMAZON_NOVA_LITE_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_AMAZON_NOVA_MICRO_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AMAZON_NOVA_MICRO_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_AMAZON_NOVA_PRO_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AMAZON_NOVA_PRO_V1",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_AMAZON_TITAN_PREMIER_V1_0() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel
