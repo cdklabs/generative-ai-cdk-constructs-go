@@ -350,28 +350,6 @@ func init() {
 		reflect.TypeOf((*JumpStartSageMakerEndpointProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.LangchainCommonDepsLayer",
-		reflect.TypeOf((*LangchainCommonDepsLayer)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "layer", GoGetter: "Layer"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-		},
-		func() interface{} {
-			j := jsiiProxy_LangchainCommonDepsLayer{}
-			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.LangchainLayerProps",
-		reflect.TypeOf((*LangchainLayerProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.LangchainProps",
-		reflect.TypeOf((*LangchainProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.LlamaIndexDataLoader",
 		reflect.TypeOf((*LlamaIndexDataLoader)(nil)).Elem(),
 		[]_jsii_.Member{
