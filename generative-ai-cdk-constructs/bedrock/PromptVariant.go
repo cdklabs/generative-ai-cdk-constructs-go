@@ -12,6 +12,11 @@ import (
 // You can optimize the prompt for specific use cases and models.
 // Experimental.
 type PromptVariant interface {
+	// The template configuration.
+	// Experimental.
+	GenAiResource() *awsbedrock.CfnPrompt_PromptGenAiResourceProperty
+	// Experimental.
+	SetGenAiResource(val *awsbedrock.CfnPrompt_PromptGenAiResourceProperty)
 	// The inference configuration.
 	// Experimental.
 	InferenceConfiguration() *awsbedrock.CfnPrompt_PromptInferenceConfigurationProperty
@@ -42,6 +47,16 @@ type PromptVariant interface {
 // The jsii proxy struct for PromptVariant
 type jsiiProxy_PromptVariant struct {
 	_ byte // padding
+}
+
+func (j *jsiiProxy_PromptVariant) GenAiResource() *awsbedrock.CfnPrompt_PromptGenAiResourceProperty {
+	var returns *awsbedrock.CfnPrompt_PromptGenAiResourceProperty
+	_jsii_.Get(
+		j,
+		"genAiResource",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_PromptVariant) InferenceConfiguration() *awsbedrock.CfnPrompt_PromptInferenceConfigurationProperty {
@@ -106,6 +121,17 @@ func NewPromptVariant_Override(p PromptVariant) {
 	)
 }
 
+func (j *jsiiProxy_PromptVariant)SetGenAiResource(val *awsbedrock.CfnPrompt_PromptGenAiResourceProperty) {
+	if err := j.validateSetGenAiResourceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"genAiResource",
+		val,
+	)
+}
+
 func (j *jsiiProxy_PromptVariant)SetInferenceConfiguration(val *awsbedrock.CfnPrompt_PromptInferenceConfigurationProperty) {
 	if err := j.validateSetInferenceConfigurationParameters(val); err != nil {
 		panic(err)
@@ -156,6 +182,51 @@ func (j *jsiiProxy_PromptVariant)SetTemplateType(val PromptTemplateType) {
 		"templateType",
 		val,
 	)
+}
+
+// Static method to create an agent prompt template.
+// Experimental.
+func PromptVariant_Agent(props *AgentPromptVariantProps) PromptVariant {
+	_init_.Initialize()
+
+	if err := validatePromptVariant_AgentParameters(props); err != nil {
+		panic(err)
+	}
+	var returns PromptVariant
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVariant",
+		"agent",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Static method to create a chat template.
+//
+// Use this template type when
+// the model supports the Converse API or the AnthropicClaude Messages API.
+// This allows you to include a System prompt and previous User messages
+// and Assistant messages for context.
+// Experimental.
+func PromptVariant_Chat(props *ChatPromptVariantProps) PromptVariant {
+	_init_.Initialize()
+
+	if err := validatePromptVariant_ChatParameters(props); err != nil {
+		panic(err)
+	}
+	var returns PromptVariant
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVariant",
+		"chat",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
 }
 
 // Static method to create a text template.

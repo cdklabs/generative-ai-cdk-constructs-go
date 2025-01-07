@@ -367,6 +367,28 @@ func BedrockFoundationModel_COHERE_EMBED_MULTILINGUAL_V3() BedrockFoundationMode
 	return returns
 }
 
+func BedrockFoundationModel_META_LLAMA_3_1_70B_INSTRUCT_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"META_LLAMA_3_1_70B_INSTRUCT_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_META_LLAMA_3_1_8B_INSTRUCT_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"META_LLAMA_3_1_8B_INSTRUCT_V1",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_META_LLAMA_3_2_11B_INSTRUCT_V1() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel

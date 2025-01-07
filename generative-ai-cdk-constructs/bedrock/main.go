@@ -95,6 +95,10 @@ func init() {
 		reflect.TypeOf((*AgentAliasProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentPromptVariantProps",
+		reflect.TypeOf((*AgentPromptVariantProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentProps",
 		reflect.TypeOf((*AgentProps)(nil)).Elem(),
 	)
@@ -178,6 +182,29 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModelProps",
 		reflect.TypeOf((*BedrockFoundationModelProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChatMessage",
+		reflect.TypeOf((*ChatMessage)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "text", GoGetter: "Text"},
+		},
+		func() interface{} {
+			return &jsiiProxy_ChatMessage{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChatMessageRole",
+		reflect.TypeOf((*ChatMessageRole)(nil)).Elem(),
+		map[string]interface{}{
+			"USER": ChatMessageRole_USER,
+			"ASSISTANT": ChatMessageRole_ASSISTANT,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChatPromptVariantProps",
+		reflect.TypeOf((*ChatPromptVariantProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ChunkingStrategy",
@@ -444,6 +471,17 @@ func init() {
 			"WEB_CRAWLER": DataSourceType_WEB_CRAWLER,
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.DefaultPromptRouterIdentifier",
+		reflect.TypeOf((*DefaultPromptRouterIdentifier)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "promptRouterId", GoGetter: "PromptRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "routingModels", GoGetter: "RoutingModels"},
+		},
+		func() interface{} {
+			return &jsiiProxy_DefaultPromptRouterIdentifier{}
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStategyProps",
 		reflect.TypeOf((*FoundationModelParsingStategyProps)(nil)).Elem(),
@@ -649,6 +687,18 @@ func init() {
 			return &jsiiProxy_IPrompt{}
 		},
 	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IPromptRouter",
+		reflect.TypeOf((*IPromptRouter)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "promptRouterArn", GoGetter: "PromptRouterArn"},
+			_jsii_.MemberProperty{JsiiProperty: "promptRouterId", GoGetter: "PromptRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "routingEndpoints", GoGetter: "RoutingEndpoints"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IPromptRouter{}
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.InferenceConfiguration",
 		reflect.TypeOf((*InferenceConfiguration)(nil)).Elem(),
@@ -849,6 +899,27 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptProps",
 		reflect.TypeOf((*PromptProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptRouter",
+		reflect.TypeOf((*PromptRouter)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
+			_jsii_.MemberProperty{JsiiProperty: "invokableArn", GoGetter: "InvokableArn"},
+			_jsii_.MemberProperty{JsiiProperty: "promptRouterArn", GoGetter: "PromptRouterArn"},
+			_jsii_.MemberProperty{JsiiProperty: "promptRouterId", GoGetter: "PromptRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "routingEndpoints", GoGetter: "RoutingEndpoints"},
+		},
+		func() interface{} {
+			j := jsiiProxy_PromptRouter{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInvokable)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IPromptRouter)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptRouterProps",
+		reflect.TypeOf((*PromptRouterProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptState",
 		reflect.TypeOf((*PromptState)(nil)).Elem(),
@@ -862,6 +933,7 @@ func init() {
 		reflect.TypeOf((*PromptTemplateType)(nil)).Elem(),
 		map[string]interface{}{
 			"TEXT": PromptTemplateType_TEXT,
+			"CHAT": PromptTemplateType_CHAT,
 		},
 	)
 	_jsii_.RegisterEnum(
@@ -878,6 +950,7 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PromptVariant",
 		reflect.TypeOf((*PromptVariant)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "genAiResource", GoGetter: "GenAiResource"},
 			_jsii_.MemberProperty{JsiiProperty: "inferenceConfiguration", GoGetter: "InferenceConfiguration"},
 			_jsii_.MemberProperty{JsiiProperty: "modelId", GoGetter: "ModelId"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
@@ -1100,6 +1173,22 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.TextPromptVariantProps",
 		reflect.TypeOf((*TextPromptVariantProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ToolChoice",
+		reflect.TypeOf((*ToolChoice)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "any", GoGetter: "Any"},
+			_jsii_.MemberProperty{JsiiProperty: "auto", GoGetter: "Auto"},
+			_jsii_.MemberProperty{JsiiProperty: "tool", GoGetter: "Tool"},
+		},
+		func() interface{} {
+			return &jsiiProxy_ToolChoice{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ToolConfiguration",
+		reflect.TypeOf((*ToolConfiguration)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Topic",
