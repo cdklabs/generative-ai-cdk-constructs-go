@@ -5,16 +5,16 @@ import (
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
-	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// API Schema in an S3 object.
+// Class to define an API Schema from an S3 object.
 // Experimental.
 type S3ApiSchema interface {
 	ApiSchema
-	// Called when the action group is initialized to allow this object to bind to the stack, add resources and have fun.
 	// Experimental.
-	Bind(_scope constructs.Construct) *ApiSchemaConfig
+	InlineSchema() *string
+	// Experimental.
+	S3File() *awss3.Location
 }
 
 // The jsii proxy struct for S3ApiSchema
@@ -22,18 +22,39 @@ type jsiiProxy_S3ApiSchema struct {
 	jsiiProxy_ApiSchema
 }
 
+func (j *jsiiProxy_S3ApiSchema) InlineSchema() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inlineSchema",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3ApiSchema) S3File() *awss3.Location {
+	var returns *awss3.Location
+	_jsii_.Get(
+		j,
+		"s3File",
+		&returns,
+	)
+	return returns
+}
+
+
 // Experimental.
-func NewS3ApiSchema(bucket awss3.IBucket, key *string) S3ApiSchema {
+func NewS3ApiSchema(location *awss3.Location) S3ApiSchema {
 	_init_.Initialize()
 
-	if err := validateNewS3ApiSchemaParameters(bucket, key); err != nil {
+	if err := validateNewS3ApiSchemaParameters(location); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_S3ApiSchema{}
 
 	_jsii_.Create(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
-		[]interface{}{bucket, key},
+		[]interface{}{location},
 		&j,
 	)
 
@@ -41,63 +62,17 @@ func NewS3ApiSchema(bucket awss3.IBucket, key *string) S3ApiSchema {
 }
 
 // Experimental.
-func NewS3ApiSchema_Override(s S3ApiSchema, bucket awss3.IBucket, key *string) {
+func NewS3ApiSchema_Override(s S3ApiSchema, location *awss3.Location) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
-		[]interface{}{bucket, key},
+		[]interface{}{location},
 		s,
 	)
 }
 
-// Loads the API Schema from a local disk path.
-//
-// Returns: `InlineApiSchema` with the contents of `path`.
-// Experimental.
-func S3ApiSchema_FromAsset(path *string) InlineApiSchema {
-	_init_.Initialize()
-
-	if err := validateS3ApiSchema_FromAssetParameters(path); err != nil {
-		panic(err)
-	}
-	var returns InlineApiSchema
-
-	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
-		"fromAsset",
-		[]interface{}{path},
-		&returns,
-	)
-
-	return returns
-}
-
-// API Schema as an S3 object.
-//
-// Returns: `S3ApiSchema` with the S3 bucket and key.
-// Experimental.
-func S3ApiSchema_FromBucket(bucket awss3.IBucket, key *string) S3ApiSchema {
-	_init_.Initialize()
-
-	if err := validateS3ApiSchema_FromBucketParameters(bucket, key); err != nil {
-		panic(err)
-	}
-	var returns S3ApiSchema
-
-	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
-		"fromBucket",
-		[]interface{}{bucket, key},
-		&returns,
-	)
-
-	return returns
-}
-
-// Inline code for API Schema.
-//
-// Returns: `InlineApiSchema` with inline schema.
+// Creates an API Schema from an inline string.
 // Experimental.
 func S3ApiSchema_FromInline(schema *string) InlineApiSchema {
 	_init_.Initialize()
@@ -117,16 +92,40 @@ func S3ApiSchema_FromInline(schema *string) InlineApiSchema {
 	return returns
 }
 
-func (s *jsiiProxy_S3ApiSchema) Bind(_scope constructs.Construct) *ApiSchemaConfig {
-	if err := s.validateBindParameters(_scope); err != nil {
+// Creates an API Schema from a local file.
+// Experimental.
+func S3ApiSchema_FromLocalAsset(path *string) InlineApiSchema {
+	_init_.Initialize()
+
+	if err := validateS3ApiSchema_FromLocalAssetParameters(path); err != nil {
 		panic(err)
 	}
-	var returns *ApiSchemaConfig
+	var returns InlineApiSchema
 
-	_jsii_.Invoke(
-		s,
-		"bind",
-		[]interface{}{_scope},
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
+		"fromLocalAsset",
+		[]interface{}{path},
+		&returns,
+	)
+
+	return returns
+}
+
+// Creates an API Schema from an S3 File.
+// Experimental.
+func S3ApiSchema_FromS3File(bucket awss3.IBucket, objectKey *string) S3ApiSchema {
+	_init_.Initialize()
+
+	if err := validateS3ApiSchema_FromS3FileParameters(bucket, objectKey); err != nil {
+		panic(err)
+	}
+	var returns S3ApiSchema
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",
+		"fromS3File",
+		[]interface{}{bucket, objectKey},
 		&returns,
 	)
 

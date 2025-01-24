@@ -31,10 +31,9 @@ type KnowledgeBaseProps struct {
 	//
 	// Experimental.
 	IndexName *string `field:"optional" json:"indexName" yaml:"indexName"`
-	// A narrative description of the knowledge base.
+	// Instructions for agents based on the design and type of information of the Knowledge Base.
 	//
-	// A Bedrock Agent can use this instruction to determine if it should
-	// query this Knowledge Base.
+	// This will impact how Agents interact with the Knowledge Base.
 	// Default: - No description provided.
 	//
 	// Experimental.

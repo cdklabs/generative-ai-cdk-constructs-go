@@ -4,11 +4,15 @@ package bedrock
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func validateAgentActionGroup_IsConstructParameters(x interface{}) error {
+func validateAgentActionGroup_CodeInterpreterParameters(enabled *bool) error {
 	return nil
 }
 
-func validateNewAgentActionGroupParameters(scope constructs.Construct, id *string, props *AgentActionGroupProps) error {
+func validateAgentActionGroup_UserInputParameters(enabled *bool) error {
+	return nil
+}
+
+func validateNewAgentActionGroupParameters(props *AgentActionGroupProps) error {
 	return nil
 }
 

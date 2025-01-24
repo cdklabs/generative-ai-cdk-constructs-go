@@ -24,3 +24,19 @@ func (i *jsiiProxy_IKnowledgeBase) validateAddWebCrawlerDataSourceParameters(pro
 	return nil
 }
 
+func (i *jsiiProxy_IKnowledgeBase) validateGrantParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (i *jsiiProxy_IKnowledgeBase) validateGrantQueryParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (i *jsiiProxy_IKnowledgeBase) validateGrantRetrieveParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (i *jsiiProxy_IKnowledgeBase) validateGrantRetrieveAndGenerateParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+

@@ -27,6 +27,30 @@ type IKnowledgeBase interface {
 	// Add a web crawler data source to the knowledge base.
 	// Experimental.
 	AddWebCrawlerDataSource(props *WebCrawlerDataSourceAssociationProps) WebCrawlerDataSource
+	// Grant the given principal identity permissions to perform actions on this knowledge base.
+	// Experimental.
+	Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant
+	// Grant the given identity permissions to query the knowledge base.
+	//
+	// This contains:
+	// - Retrieve
+	// - RetrieveAndGenerate.
+	// Experimental.
+	GrantQuery(grantee awsiam.IGrantable) awsiam.Grant
+	// Grant the given identity permissions to retrieve content from the knowledge base.
+	// Experimental.
+	GrantRetrieve(grantee awsiam.IGrantable) awsiam.Grant
+	// Grant the given identity permissions to retrieve content from the knowledge base.
+	// Experimental.
+	GrantRetrieveAndGenerate(grantee awsiam.IGrantable) awsiam.Grant
+	// A description of the knowledge base.
+	// Experimental.
+	Description() *string
+	// Instructions for agents based on the design and type of information of the Knowledge Base.
+	//
+	// This will impact how Agents interact with the Knowledge Base.
+	// Experimental.
+	Instruction() *string
 	// The ARN of the knowledge base.
 	//
 	// Example:
@@ -128,6 +152,95 @@ func (i *jsiiProxy_IKnowledgeBase) AddWebCrawlerDataSource(props *WebCrawlerData
 		&returns,
 	)
 
+	return returns
+}
+
+func (i *jsiiProxy_IKnowledgeBase) Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant {
+	if err := i.validateGrantParameters(grantee); err != nil {
+		panic(err)
+	}
+	args := []interface{}{grantee}
+	for _, a := range actions {
+		args = append(args, a)
+	}
+
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		i,
+		"grant",
+		args,
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IKnowledgeBase) GrantQuery(grantee awsiam.IGrantable) awsiam.Grant {
+	if err := i.validateGrantQueryParameters(grantee); err != nil {
+		panic(err)
+	}
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		i,
+		"grantQuery",
+		[]interface{}{grantee},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IKnowledgeBase) GrantRetrieve(grantee awsiam.IGrantable) awsiam.Grant {
+	if err := i.validateGrantRetrieveParameters(grantee); err != nil {
+		panic(err)
+	}
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		i,
+		"grantRetrieve",
+		[]interface{}{grantee},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IKnowledgeBase) GrantRetrieveAndGenerate(grantee awsiam.IGrantable) awsiam.Grant {
+	if err := i.validateGrantRetrieveAndGenerateParameters(grantee); err != nil {
+		panic(err)
+	}
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		i,
+		"grantRetrieveAndGenerate",
+		[]interface{}{grantee},
+		&returns,
+	)
+
+	return returns
+}
+
+func (j *jsiiProxy_IKnowledgeBase) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IKnowledgeBase) Instruction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"instruction",
+		&returns,
+	)
 	return returns
 }
 

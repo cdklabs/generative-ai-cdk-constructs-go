@@ -40,6 +40,22 @@ func (k *jsiiProxy_KnowledgeBase) validateGetResourceNameAttributeParameters(nam
 	return nil
 }
 
+func (k *jsiiProxy_KnowledgeBase) validateGrantParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantQueryParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveAndGenerateParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
 func validateKnowledgeBase_FromKnowledgeBaseAttributesParameters(scope constructs.Construct, id *string, attrs *KnowledgeBaseAttributes) error {
 	return nil
 }

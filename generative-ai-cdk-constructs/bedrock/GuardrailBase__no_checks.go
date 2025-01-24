@@ -16,6 +16,10 @@ func (g *jsiiProxy_GuardrailBase) validateGetResourceNameAttributeParameters(nam
 	return nil
 }
 
+func (g *jsiiProxy_GuardrailBase) validateGrantParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
 func (g *jsiiProxy_GuardrailBase) validateGrantApplyParameters(grantee awsiam.IGrantable) error {
 	return nil
 }

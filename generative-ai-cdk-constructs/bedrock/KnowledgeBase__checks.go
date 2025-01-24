@@ -8,6 +8,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
@@ -100,6 +101,38 @@ func (k *jsiiProxy_KnowledgeBase) validateGetResourceArnAttributeParameters(arnA
 func (k *jsiiProxy_KnowledgeBase) validateGetResourceNameAttributeParameters(nameAttr *string) error {
 	if nameAttr == nil {
 		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantQueryParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveAndGenerateParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
 	}
 
 	return nil

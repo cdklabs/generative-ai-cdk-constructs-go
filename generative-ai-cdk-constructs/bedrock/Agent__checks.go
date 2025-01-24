@@ -7,32 +7,13 @@ import (
 
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
+	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
 func (a *jsiiProxy_Agent) validateAddActionGroupParameters(actionGroup AgentActionGroup) error {
 	if actionGroup == nil {
 		return fmt.Errorf("parameter actionGroup is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (a *jsiiProxy_Agent) validateAddActionGroupsParameters(actionGroups *[]AgentActionGroup) error {
-	if actionGroups == nil {
-		return fmt.Errorf("parameter actionGroups is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (a *jsiiProxy_Agent) validateAddAliasParameters(props *AddAgentAliasProps) error {
-	if props == nil {
-		return fmt.Errorf("parameter props is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
-		return err
 	}
 
 	return nil
@@ -46,7 +27,7 @@ func (a *jsiiProxy_Agent) validateAddGuardrailParameters(guardrail IGuardrail) e
 	return nil
 }
 
-func (a *jsiiProxy_Agent) validateAddKnowledgeBaseParameters(knowledgeBase KnowledgeBase) error {
+func (a *jsiiProxy_Agent) validateAddKnowledgeBaseParameters(knowledgeBase IKnowledgeBase) error {
 	if knowledgeBase == nil {
 		return fmt.Errorf("parameter knowledgeBase is required, but nil was provided")
 	}
@@ -54,9 +35,51 @@ func (a *jsiiProxy_Agent) validateAddKnowledgeBaseParameters(knowledgeBase Knowl
 	return nil
 }
 
-func (a *jsiiProxy_Agent) validateAddKnowledgeBasesParameters(knowledgeBases *[]KnowledgeBase) error {
-	if knowledgeBases == nil {
-		return fmt.Errorf("parameter knowledgeBases is required, but nil was provided")
+func (a *jsiiProxy_Agent) validateApplyRemovalPolicyParameters(policy awscdk.RemovalPolicy) error {
+	if policy == "" {
+		return fmt.Errorf("parameter policy is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_Agent) validateGetResourceArnAttributeParameters(arnAttr *string, arnComponents *awscdk.ArnComponents) error {
+	if arnAttr == nil {
+		return fmt.Errorf("parameter arnAttr is required, but nil was provided")
+	}
+
+	if arnComponents == nil {
+		return fmt.Errorf("parameter arnComponents is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(arnComponents, func() string { return "parameter arnComponents" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_Agent) validateGetResourceNameAttributeParameters(nameAttr *string) error {
+	if nameAttr == nil {
+		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateAgent_FromAgentAttrsParameters(scope constructs.Construct, id *string, attrs *AgentAttributes) error {
+	if scope == nil {
+		return fmt.Errorf("parameter scope is required, but nil was provided")
+	}
+
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	if attrs == nil {
+		return fmt.Errorf("parameter attrs is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(attrs, func() string { return "parameter attrs" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -70,27 +93,41 @@ func validateAgent_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Agent) validateSetActionGroupsParameters(val *[]*awsbedrock.CfnAgent_AgentActionGroupProperty) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	for idx_97dfc6, v := range *val {
-		if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
-			return err
-		}
+func validateAgent_IsOwnedResourceParameters(construct constructs.IConstruct) error {
+	if construct == nil {
+		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_Agent) validateSetKnowledgeBasesParameters(val *[]*awsbedrock.CfnAgent_AgentKnowledgeBaseProperty) error {
+func validateAgent_IsResourceParameters(construct constructs.IConstruct) error {
+	if construct == nil {
+		return fmt.Errorf("parameter construct is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Agent) validateSetActionGroupsParameters(val *[]AgentActionGroup) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
-	for idx_97dfc6, v := range *val {
-		if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
-			return err
-		}
+
+	return nil
+}
+
+func (j *jsiiProxy_Agent) validateSetAgentVersionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Agent) validateSetKnowledgeBasesParameters(val *[]IKnowledgeBase) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

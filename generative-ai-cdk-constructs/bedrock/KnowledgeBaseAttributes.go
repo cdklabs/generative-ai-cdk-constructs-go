@@ -18,5 +18,17 @@ type KnowledgeBaseAttributes struct {
 	//
 	// Experimental.
 	KnowledgeBaseId *string `field:"required" json:"knowledgeBaseId" yaml:"knowledgeBaseId"`
+	// The description of the knowledge base.
+	// Default: - No description provided.
+	//
+	// Experimental.
+	Description *string `field:"optional" json:"description" yaml:"description"`
+	// Instructions for agents based on the design and type of information of the Knowledge Base.
+	//
+	// This will impact how Agents interact with the Knowledge Base.
+	// Default: - No description provided.
+	//
+	// Experimental.
+	Instruction *string `field:"optional" json:"instruction" yaml:"instruction"`
 }
 

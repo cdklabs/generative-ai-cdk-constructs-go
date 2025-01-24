@@ -42,6 +42,9 @@ type GuardrailBase interface {
 	// The KMS key of the guardrail if custom encryption is configured.
 	// Experimental.
 	KmsKey() awskms.IKey
+	// When this guardrail was last updated.
+	// Experimental.
+	LastUpdated() *string
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
@@ -85,6 +88,9 @@ type GuardrailBase interface {
 	// which will be a concrete name.
 	// Experimental.
 	GetResourceNameAttribute(nameAttr *string) *string
+	// Grant the given principal identity permissions to perform actions on this agent alias.
+	// Experimental.
+	Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant
 	// Grant the given identity permissions to apply the guardrail.
 	// Experimental.
 	GrantApply(grantee awsiam.IGrantable) awsiam.Grant
@@ -144,6 +150,16 @@ func (j *jsiiProxy_GuardrailBase) KmsKey() awskms.IKey {
 	_jsii_.Get(
 		j,
 		"kmsKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GuardrailBase) LastUpdated() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lastUpdated",
 		&returns,
 	)
 	return returns
@@ -328,6 +344,27 @@ func (g *jsiiProxy_GuardrailBase) GetResourceNameAttribute(nameAttr *string) *st
 		g,
 		"getResourceNameAttribute",
 		[]interface{}{nameAttr},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant {
+	if err := g.validateGrantParameters(grantee); err != nil {
+		panic(err)
+	}
+	args := []interface{}{grantee}
+	for _, a := range actions {
+		args = append(args, a)
+	}
+
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		g,
+		"grant",
+		args,
 		&returns,
 	)
 

@@ -6,27 +6,25 @@ import (
 	"fmt"
 
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-
-	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func validateAgentActionGroup_IsConstructParameters(x interface{}) error {
-	if x == nil {
-		return fmt.Errorf("parameter x is required, but nil was provided")
+func validateAgentActionGroup_CodeInterpreterParameters(enabled *bool) error {
+	if enabled == nil {
+		return fmt.Errorf("parameter enabled is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func validateNewAgentActionGroupParameters(scope constructs.Construct, id *string, props *AgentActionGroupProps) error {
-	if scope == nil {
-		return fmt.Errorf("parameter scope is required, but nil was provided")
+func validateAgentActionGroup_UserInputParameters(enabled *bool) error {
+	if enabled == nil {
+		return fmt.Errorf("parameter enabled is required, but nil was provided")
 	}
 
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
-	}
+	return nil
+}
 
+func validateNewAgentActionGroupParameters(props *AgentActionGroupProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
