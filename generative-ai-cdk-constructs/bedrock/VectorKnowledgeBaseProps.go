@@ -7,22 +7,33 @@ import (
 
 // Properties for a knowledge base.
 // Experimental.
-type KnowledgeBaseProps struct {
-	// The embeddings model for the knowledge base.
-	// Experimental.
-	EmbeddingsModel BedrockFoundationModel `field:"required" json:"embeddingsModel" yaml:"embeddingsModel"`
+type VectorKnowledgeBaseProps struct {
 	// The description of the knowledge base.
 	// Default: - No description provided.
 	//
 	// Experimental.
 	Description *string `field:"optional" json:"description" yaml:"description"`
-	// Existing IAM role with a policy statement granting permission to invoke the specific embeddings model.
+	// Existing IAM role with policy statements granting appropriate permissions to invoke the specific embeddings models.
 	//
 	// Any entity (e.g., an AWS service or application) that assumes
 	// this role will be able to invoke or use the
 	// specified embeddings model within the Bedrock service.
 	// Experimental.
 	ExistingRole awsiam.IRole `field:"optional" json:"existingRole" yaml:"existingRole"`
+	// A narrative description of the knowledge base.
+	//
+	// A Bedrock Agent can use this instruction to determine if it should
+	// query this Knowledge Base.
+	// Default: - No description provided.
+	//
+	// Experimental.
+	Instruction *string `field:"optional" json:"instruction" yaml:"instruction"`
+	// The name of the knowledge base.
+	// Experimental.
+	Name *string `field:"optional" json:"name" yaml:"name"`
+	// The embeddings model for the knowledge base.
+	// Experimental.
+	EmbeddingsModel BedrockFoundationModel `field:"required" json:"embeddingsModel" yaml:"embeddingsModel"`
 	// The name of the vector index.
 	//
 	// If vectorStore is not of type `VectorCollection`,
@@ -31,24 +42,6 @@ type KnowledgeBaseProps struct {
 	//
 	// Experimental.
 	IndexName *string `field:"optional" json:"indexName" yaml:"indexName"`
-	// Instructions for agents based on the design and type of information of the Knowledge Base.
-	//
-	// This will impact how Agents interact with the Knowledge Base.
-	// Default: - No description provided.
-	//
-	// Experimental.
-	Instruction *string `field:"optional" json:"instruction" yaml:"instruction"`
-	// Specifies whether to use the knowledge base or not when sending an InvokeAgent request.
-	// Experimental.
-	KnowledgeBaseState *string `field:"optional" json:"knowledgeBaseState" yaml:"knowledgeBaseState"`
-	// The name of the knowledge base.
-	// Experimental.
-	Name *string `field:"optional" json:"name" yaml:"name"`
-	// OPTIONAL: Tag (KEY-VALUE) bedrock agent resource.
-	// Default: - false.
-	//
-	// Experimental.
-	Tags *map[string]*string `field:"optional" json:"tags" yaml:"tags"`
 	// The name of the field in the vector index.
 	//
 	// If vectorStore is not of type `VectorCollection`,

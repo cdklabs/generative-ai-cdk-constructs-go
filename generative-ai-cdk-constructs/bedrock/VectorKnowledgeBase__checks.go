@@ -12,7 +12,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (k *jsiiProxy_KnowledgeBase) validateAddConfluenceDataSourceParameters(props *ConfluenceDataSourceAssociationProps) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddConfluenceDataSourceParameters(props *ConfluenceDataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -23,7 +23,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAddConfluenceDataSourceParameters(prop
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateAddS3DataSourceParameters(props *S3DataSourceAssociationProps) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddS3DataSourceParameters(props *S3DataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -34,7 +34,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAddS3DataSourceParameters(props *S3Dat
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateAddSalesforceDataSourceParameters(props *SalesforceDataSourceAssociationProps) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddSalesforceDataSourceParameters(props *SalesforceDataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -45,7 +45,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAddSalesforceDataSourceParameters(prop
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateAddSharePointDataSourceParameters(props *SharePointDataSourceAssociationProps) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddSharePointDataSourceParameters(props *SharePointDataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -56,7 +56,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAddSharePointDataSourceParameters(prop
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateAddWebCrawlerDataSourceParameters(props *WebCrawlerDataSourceAssociationProps) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddWebCrawlerDataSourceParameters(props *WebCrawlerDataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -67,7 +67,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAddWebCrawlerDataSourceParameters(prop
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateApplyRemovalPolicyParameters(policy awscdk.RemovalPolicy) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateApplyRemovalPolicyParameters(policy awscdk.RemovalPolicy) error {
 	if policy == "" {
 		return fmt.Errorf("parameter policy is required, but nil was provided")
 	}
@@ -75,7 +75,7 @@ func (k *jsiiProxy_KnowledgeBase) validateApplyRemovalPolicyParameters(policy aw
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateAssociateToAgentParameters(agent Agent) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateAssociateToAgentParameters(agent Agent) error {
 	if agent == nil {
 		return fmt.Errorf("parameter agent is required, but nil was provided")
 	}
@@ -83,7 +83,7 @@ func (k *jsiiProxy_KnowledgeBase) validateAssociateToAgentParameters(agent Agent
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGetResourceArnAttributeParameters(arnAttr *string, arnComponents *awscdk.ArnComponents) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGetResourceArnAttributeParameters(arnAttr *string, arnComponents *awscdk.ArnComponents) error {
 	if arnAttr == nil {
 		return fmt.Errorf("parameter arnAttr is required, but nil was provided")
 	}
@@ -98,7 +98,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGetResourceArnAttributeParameters(arnA
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGetResourceNameAttributeParameters(nameAttr *string) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGetResourceNameAttributeParameters(nameAttr *string) error {
 	if nameAttr == nil {
 		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
 	}
@@ -106,7 +106,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGetResourceNameAttributeParameters(nam
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGrantParameters(grantee awsiam.IGrantable) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGrantParameters(grantee awsiam.IGrantable) error {
 	if grantee == nil {
 		return fmt.Errorf("parameter grantee is required, but nil was provided")
 	}
@@ -114,7 +114,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGrantParameters(grantee awsiam.IGranta
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGrantQueryParameters(grantee awsiam.IGrantable) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGrantQueryParameters(grantee awsiam.IGrantable) error {
 	if grantee == nil {
 		return fmt.Errorf("parameter grantee is required, but nil was provided")
 	}
@@ -122,7 +122,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGrantQueryParameters(grantee awsiam.IG
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveParameters(grantee awsiam.IGrantable) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGrantRetrieveParameters(grantee awsiam.IGrantable) error {
 	if grantee == nil {
 		return fmt.Errorf("parameter grantee is required, but nil was provided")
 	}
@@ -130,7 +130,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveParameters(grantee awsiam
 	return nil
 }
 
-func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveAndGenerateParameters(grantee awsiam.IGrantable) error {
+func (v *jsiiProxy_VectorKnowledgeBase) validateGrantRetrieveAndGenerateParameters(grantee awsiam.IGrantable) error {
 	if grantee == nil {
 		return fmt.Errorf("parameter grantee is required, but nil was provided")
 	}
@@ -138,7 +138,7 @@ func (k *jsiiProxy_KnowledgeBase) validateGrantRetrieveAndGenerateParameters(gra
 	return nil
 }
 
-func validateKnowledgeBase_FromKnowledgeBaseAttributesParameters(scope constructs.Construct, id *string, attrs *KnowledgeBaseAttributes) error {
+func validateVectorKnowledgeBase_FromKnowledgeBaseAttributesParameters(scope constructs.Construct, id *string, attrs *VectorKnowledgeBaseAttributes) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}
@@ -157,7 +157,7 @@ func validateKnowledgeBase_FromKnowledgeBaseAttributesParameters(scope construct
 	return nil
 }
 
-func validateKnowledgeBase_IsConstructParameters(x interface{}) error {
+func validateVectorKnowledgeBase_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -165,7 +165,7 @@ func validateKnowledgeBase_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateKnowledgeBase_IsOwnedResourceParameters(construct constructs.IConstruct) error {
+func validateVectorKnowledgeBase_IsOwnedResourceParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
@@ -173,7 +173,7 @@ func validateKnowledgeBase_IsOwnedResourceParameters(construct constructs.IConst
 	return nil
 }
 
-func validateKnowledgeBase_IsResourceParameters(construct constructs.IConstruct) error {
+func validateVectorKnowledgeBase_IsResourceParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
@@ -181,7 +181,7 @@ func validateKnowledgeBase_IsResourceParameters(construct constructs.IConstruct)
 	return nil
 }
 
-func validateNewKnowledgeBaseParameters(scope constructs.Construct, id *string, props *KnowledgeBaseProps) error {
+func validateNewVectorKnowledgeBaseParameters(scope constructs.Construct, id *string, props *VectorKnowledgeBaseProps) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

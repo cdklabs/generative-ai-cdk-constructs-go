@@ -1,9 +1,9 @@
 package bedrock
 
 
-// Properties for importing a knowledge base outside of this stack.
+// Common properties for importing a knowledge base (of any type) created outside of this stack.
 // Experimental.
-type KnowledgeBaseAttributes struct {
+type CommonKnowledgeBaseAttributes struct {
 	// The Service Execution Role associated with the knowledge base.
 	//
 	// Example:
@@ -30,5 +30,10 @@ type KnowledgeBaseAttributes struct {
 	//
 	// Experimental.
 	Instruction *string `field:"optional" json:"instruction" yaml:"instruction"`
+	// Specifies whether to use the knowledge base or not when sending an InvokeAgent request.
+	// Default: - ENABLED.
+	//
+	// Experimental.
+	KnowledgeBaseState *string `field:"optional" json:"knowledgeBaseState" yaml:"knowledgeBaseState"`
 }
 
