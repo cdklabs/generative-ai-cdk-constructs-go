@@ -86,7 +86,9 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.BedrockCwDashboard",
 		reflect.TypeOf((*BedrockCwDashboard)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addAllGuardrailsMonitoring", GoMethod: "AddAllGuardrailsMonitoring"},
 			_jsii_.MemberMethod{JsiiMethod: "addAllModelsMonitoring", GoMethod: "AddAllModelsMonitoring"},
+			_jsii_.MemberMethod{JsiiMethod: "addGuardrailMonitoring", GoMethod: "AddGuardrailMonitoring"},
 			_jsii_.MemberMethod{JsiiMethod: "addModelMonitoring", GoMethod: "AddModelMonitoring"},
 			_jsii_.MemberProperty{JsiiProperty: "dashboard", GoGetter: "Dashboard"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -110,16 +112,10 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.ConstructName",
 		reflect.TypeOf((*ConstructName)(nil)).Elem(),
 		map[string]interface{}{
-			"AWSRAGAPPSYNCSTEPFNOPENSEARCH": ConstructName_AWSRAGAPPSYNCSTEPFNOPENSEARCH,
-			"AWSQAAPPSYNCOPENSEARCH": ConstructName_AWSQAAPPSYNCOPENSEARCH,
-			"AWSSUMMARIZATIONAPPSYNCSTEPFN": ConstructName_AWSSUMMARIZATIONAPPSYNCSTEPFN,
 			"AWSMODELDEPLOYMENTSAGEMAKER": ConstructName_AWSMODELDEPLOYMENTSAGEMAKER,
 			"CUSTOMSAGEMAKERENDPOINT": ConstructName_CUSTOMSAGEMAKERENDPOINT,
 			"HUGGINGFACESAGEMAKERENDPOINT": ConstructName_HUGGINGFACESAGEMAKERENDPOINT,
 			"JUMPSTARTSAGEMAKERENDPOINT": ConstructName_JUMPSTARTSAGEMAKERENDPOINT,
-			"AWSCONTENTGENAPPSYNCLAMBDA": ConstructName_AWSCONTENTGENAPPSYNCLAMBDA,
-			"AWSTEXTTOSQL": ConstructName_AWSTEXTTOSQL,
-			"AWSLLAMAINDEXDATALOADER": ConstructName_AWSLLAMAINDEXDATALOADER,
 		},
 	)
 	_jsii_.RegisterClass(
@@ -135,39 +131,6 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.ContainerImageConfig",
 		reflect.TypeOf((*ContainerImageConfig)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.ContentGenerationAppSyncLambda",
-		reflect.TypeOf((*ContentGenerationAppSyncLambda)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "cgLambdaFunction", GoGetter: "CgLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "generatedImageBus", GoGetter: "GeneratedImageBus"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlApi", GoGetter: "GraphqlApi"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "s3GenerateAssetsBucket", GoGetter: "S3GenerateAssetsBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "s3GenerateAssetsBucketInterface", GoGetter: "S3GenerateAssetsBucketInterface"},
-			_jsii_.MemberProperty{JsiiProperty: "securityGroup", GoGetter: "SecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-		},
-		func() interface{} {
-			j := jsiiProxy_ContentGenerationAppSyncLambda{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.ContentGenerationAppSyncLambdaProps",
-		reflect.TypeOf((*ContentGenerationAppSyncLambdaProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.CustomSageMakerEndpoint",
@@ -213,14 +176,6 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.CustomSageMakerEndpointProps",
 		reflect.TypeOf((*CustomSageMakerEndpointProps)(nil)).Elem(),
 	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.DbName",
-		reflect.TypeOf((*DbName)(nil)).Elem(),
-		map[string]interface{}{
-			"MYSQL": DbName_MYSQL,
-			"POSTGRESQL": DbName_POSTGRESQL,
-		},
-	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
 		reflect.TypeOf((*DeepLearningContainerImage)(nil)).Elem(),
@@ -232,10 +187,6 @@ func init() {
 			_jsii_.InitJsiiProxy(&j.jsiiProxy_ContainerImage)
 			return &j
 		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.DockerLambdaCustomProps",
-		reflect.TypeOf((*DockerLambdaCustomProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.HuggingFaceSageMakerEndpoint",
@@ -372,116 +323,9 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartSageMakerEndpointProps",
 		reflect.TypeOf((*JumpStartSageMakerEndpointProps)(nil)).Elem(),
 	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.LlamaIndexDataLoader",
-		reflect.TypeOf((*LlamaIndexDataLoader)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "outputBucket", GoGetter: "OutputBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "queueProcessingFargateService", GoGetter: "QueueProcessingFargateService"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-		},
-		func() interface{} {
-			j := jsiiProxy_LlamaIndexDataLoader{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.LlamaIndexDataLoaderProps",
-		reflect.TypeOf((*LlamaIndexDataLoaderProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.MetatdataSource",
-		reflect.TypeOf((*MetatdataSource)(nil)).Elem(),
-		map[string]interface{}{
-			"CONFIG_FILE": MetatdataSource_CONFIG_FILE,
-			"KNOWLEDGE_BASE": MetatdataSource_KNOWLEDGE_BASE,
-		},
-	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.ModelMonitoringProps",
 		reflect.TypeOf((*ModelMonitoringProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.QaAppsyncOpensearch",
-		reflect.TypeOf((*QaAppsyncOpensearch)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlApi", GoGetter: "GraphqlApi"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "qaBus", GoGetter: "QaBus"},
-			_jsii_.MemberProperty{JsiiProperty: "qaLambdaFunction", GoGetter: "QaLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "s3InputAssetsBucket", GoGetter: "S3InputAssetsBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "s3InputAssetsBucketInterface", GoGetter: "S3InputAssetsBucketInterface"},
-			_jsii_.MemberProperty{JsiiProperty: "securityGroup", GoGetter: "SecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-		},
-		func() interface{} {
-			j := jsiiProxy_QaAppsyncOpensearch{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.QaAppsyncOpensearchProps",
-		reflect.TypeOf((*QaAppsyncOpensearchProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.RagAppsyncStepfnOpensearch",
-		reflect.TypeOf((*RagAppsyncStepfnOpensearch)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "embeddingsLambdaFunction", GoGetter: "EmbeddingsLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "fileTransformerLambdaFunction", GoGetter: "FileTransformerLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlApi", GoGetter: "GraphqlApi"},
-			_jsii_.MemberProperty{JsiiProperty: "ingestionBus", GoGetter: "IngestionBus"},
-			_jsii_.MemberProperty{JsiiProperty: "inputValidationLambdaFunction", GoGetter: "InputValidationLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "s3InputAssetsBucket", GoGetter: "S3InputAssetsBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "s3InputAssetsBucketInterface", GoGetter: "S3InputAssetsBucketInterface"},
-			_jsii_.MemberProperty{JsiiProperty: "s3ProcessedAssetsBucket", GoGetter: "S3ProcessedAssetsBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "s3ProcessedAssetsBucketInterface", GoGetter: "S3ProcessedAssetsBucketInterface"},
-			_jsii_.MemberProperty{JsiiProperty: "securityGroup", GoGetter: "SecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberProperty{JsiiProperty: "stateMachine", GoGetter: "StateMachine"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-		},
-		func() interface{} {
-			j := jsiiProxy_RagAppsyncStepfnOpensearch{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.RagAppsyncStepfnOpensearchProps",
-		reflect.TypeOf((*RagAppsyncStepfnOpensearchProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.SageMakerEndpointBase",
@@ -515,79 +359,5 @@ func init() {
 		func() interface{} {
 			return &jsiiProxy_SageMakerInstanceType{}
 		},
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.SummarizationAppsyncStepfn",
-		reflect.TypeOf((*SummarizationAppsyncStepfn)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "documentReaderLambdaFunction", GoGetter: "DocumentReaderLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "eventBridgeBus", GoGetter: "EventBridgeBus"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlApi", GoGetter: "GraphqlApi"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlApiId", GoGetter: "GraphqlApiId"},
-			_jsii_.MemberProperty{JsiiProperty: "graphqlUrl", GoGetter: "GraphqlUrl"},
-			_jsii_.MemberProperty{JsiiProperty: "inputAssetBucket", GoGetter: "InputAssetBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "inputValidationLambdaFunction", GoGetter: "InputValidationLambdaFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "processedAssetBucket", GoGetter: "ProcessedAssetBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "securityGroup", GoGetter: "SecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberProperty{JsiiProperty: "stateMachine", GoGetter: "StateMachine"},
-			_jsii_.MemberProperty{JsiiProperty: "summaryGeneratorLambdaFunction", GoGetter: "SummaryGeneratorLambdaFunction"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-		},
-		func() interface{} {
-			j := jsiiProxy_SummarizationAppsyncStepfn{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.SummarizationAppsyncStepfnProps",
-		reflect.TypeOf((*SummarizationAppsyncStepfnProps)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.TextToSql",
-		reflect.TypeOf((*TextToSql)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "addObservabilityToConstruct", GoMethod: "AddObservabilityToConstruct"},
-			_jsii_.MemberProperty{JsiiProperty: "configAssetBucket", GoGetter: "ConfigAssetBucket"},
-			_jsii_.MemberProperty{JsiiProperty: "constructUsageMetric", GoGetter: "ConstructUsageMetric"},
-			_jsii_.MemberProperty{JsiiProperty: "dbSecurityGroup", GoGetter: "DbSecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "enablexray", GoGetter: "Enablexray"},
-			_jsii_.MemberProperty{JsiiProperty: "eventBus", GoGetter: "EventBus"},
-			_jsii_.MemberProperty{JsiiProperty: "eventsRule", GoGetter: "EventsRule"},
-			_jsii_.MemberProperty{JsiiProperty: "feedbackQueue", GoGetter: "FeedbackQueue"},
-			_jsii_.MemberProperty{JsiiProperty: "fieldLogLevel", GoGetter: "FieldLogLevel"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaSecurityGroup", GoGetter: "LambdaSecurityGroup"},
-			_jsii_.MemberProperty{JsiiProperty: "lambdaTracing", GoGetter: "LambdaTracing"},
-			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "outputQueue", GoGetter: "OutputQueue"},
-			_jsii_.MemberProperty{JsiiProperty: "retention", GoGetter: "Retention"},
-			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
-			_jsii_.MemberProperty{JsiiProperty: "stepFunction", GoGetter: "StepFunction"},
-			_jsii_.MemberProperty{JsiiProperty: "subnetGroup", GoGetter: "SubnetGroup"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberMethod{JsiiMethod: "updateConstructUsageMetricCode", GoMethod: "UpdateConstructUsageMetricCode"},
-			_jsii_.MemberMethod{JsiiMethod: "updateEnvSuffix", GoMethod: "UpdateEnvSuffix"},
-			_jsii_.MemberProperty{JsiiProperty: "vpc", GoGetter: "Vpc"},
-		},
-		func() interface{} {
-			j := jsiiProxy_TextToSql{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_BaseClass)
-			return &j
-		},
-	)
-	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.TextToSqlProps",
-		reflect.TypeOf((*TextToSqlProps)(nil)).Elem(),
 	)
 }

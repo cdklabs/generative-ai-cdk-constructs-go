@@ -8,6 +8,10 @@ func (b *jsiiProxy_BedrockCwDashboard) validateAddAllModelsMonitoringParameters(
 	return nil
 }
 
+func (b *jsiiProxy_BedrockCwDashboard) validateAddGuardrailMonitoringParameters(guardrail bedrock.IGuardrail) error {
+	return nil
+}
+
 func (b *jsiiProxy_BedrockCwDashboard) validateAddModelMonitoringParameters(modelName *string, modelId *string, props *ModelMonitoringProps) error {
 	return nil
 }

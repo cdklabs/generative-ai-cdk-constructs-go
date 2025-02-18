@@ -56,6 +56,38 @@ func (g *jsiiProxy_Guardrail) validateGrantApplyParameters(grantee awsiam.IGrant
 	return nil
 }
 
+func (g *jsiiProxy_Guardrail) validateMetricParameters(metricName *string, props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationClientErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationLatencyParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationServerErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationsIntervenedParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricInvocationThrottlesParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (g *jsiiProxy_Guardrail) validateMetricTextUnitCountParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
 func validateGuardrail_FromCfnGuardrailParameters(cfnGuardrail awsbedrock.CfnGuardrail) error {
 	return nil
 }
@@ -73,6 +105,26 @@ func validateGuardrail_IsOwnedResourceParameters(construct constructs.IConstruct
 }
 
 func validateGuardrail_IsResourceParameters(construct constructs.IConstruct) error {
+	return nil
+}
+
+func validateGuardrail_MetricAllParameters(metricName *string, props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func validateGuardrail_MetricAllInvocationLatencyParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func validateGuardrail_MetricAllInvocationsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func validateGuardrail_MetricAllInvocationsIntervenedParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func validateGuardrail_MetricAllTextUnitCountParameters(props *awscloudwatch.MetricOptions) error {
 	return nil
 }
 

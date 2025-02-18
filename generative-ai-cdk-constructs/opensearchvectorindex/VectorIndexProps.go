@@ -10,12 +10,16 @@ type VectorIndexProps struct {
 	// The OpenSearch Vector Collection.
 	// Experimental.
 	Collection opensearchserverless.VectorCollection `field:"required" json:"collection" yaml:"collection"`
+	// Experimental.
+	DistanceType *string `field:"required" json:"distanceType" yaml:"distanceType"`
 	// The name of the index.
 	// Experimental.
 	IndexName *string `field:"required" json:"indexName" yaml:"indexName"`
 	// The metadata management fields.
 	// Experimental.
 	Mappings *[]*MetadataManagementFieldProps `field:"required" json:"mappings" yaml:"mappings"`
+	// Experimental.
+	Precision *string `field:"required" json:"precision" yaml:"precision"`
 	// The number of dimensions in the vector.
 	// Experimental.
 	VectorDimensions *float64 `field:"required" json:"vectorDimensions" yaml:"vectorDimensions"`

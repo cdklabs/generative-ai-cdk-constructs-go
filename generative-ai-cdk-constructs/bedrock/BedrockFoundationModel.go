@@ -25,6 +25,8 @@ type BedrockFoundationModel interface {
 	// Experimental.
 	ModelId() *string
 	// Experimental.
+	SupportedVectorType() *[]VectorType
+	// Experimental.
 	SupportsAgents() *bool
 	// Experimental.
 	SupportsCrossRegion() *bool
@@ -78,6 +80,16 @@ func (j *jsiiProxy_BedrockFoundationModel) ModelId() *string {
 	_jsii_.Get(
 		j,
 		"modelId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BedrockFoundationModel) SupportedVectorType() *[]VectorType {
+	var returns *[]VectorType
+	_jsii_.Get(
+		j,
+		"supportedVectorType",
 		&returns,
 	)
 	return returns

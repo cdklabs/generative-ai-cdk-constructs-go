@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
 	"github.com/aws/constructs-go/constructs/v10"
@@ -94,6 +95,33 @@ type GuardrailBase interface {
 	// Grant the given identity permissions to apply the guardrail.
 	// Experimental.
 	GrantApply(grantee awsiam.IGrantable) awsiam.Grant
+	// Return the given named metric for this guardrail.
+	//
+	// By default, the metric will be calculated as a sum over a period of 5 minutes.
+	// You can customize this by using the `statistic` and `period` properties.
+	// Experimental.
+	Metric(metricName *string, props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocation client errors metric for this guardrail.
+	// Experimental.
+	MetricInvocationClientErrors(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocation latency metric for this guardrail.
+	// Experimental.
+	MetricInvocationLatency(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocations metric for this guardrail.
+	// Experimental.
+	MetricInvocations(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocation server errors metric for this guardrail.
+	// Experimental.
+	MetricInvocationServerErrors(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocations intervened metric for this guardrail.
+	// Experimental.
+	MetricInvocationsIntervened(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the invocation throttles metric for this guardrail.
+	// Experimental.
+	MetricInvocationThrottles(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Return the text unit count metric for this guardrail.
+	// Experimental.
+	MetricTextUnitCount(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
 	// Returns a string representation of this construct.
 	// Experimental.
 	ToString() *string
@@ -294,6 +322,109 @@ func GuardrailBase_IsResource(construct constructs.IConstruct) *bool {
 	return returns
 }
 
+// Return the given named metric for all guardrails.
+//
+// By default, the metric will be calculated as a sum over a period of 5 minutes.
+// You can customize this by using the `statistic` and `period` properties.
+// Experimental.
+func GuardrailBase_MetricAll(metricName *string, props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	_init_.Initialize()
+
+	if err := validateGuardrailBase_MetricAllParameters(metricName, props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		"metricAll",
+		[]interface{}{metricName, props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Return the invocation latency metric for all guardrails.
+// Experimental.
+func GuardrailBase_MetricAllInvocationLatency(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	_init_.Initialize()
+
+	if err := validateGuardrailBase_MetricAllInvocationLatencyParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		"metricAllInvocationLatency",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Return the invocations metric for all guardrails.
+// Experimental.
+func GuardrailBase_MetricAllInvocations(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	_init_.Initialize()
+
+	if err := validateGuardrailBase_MetricAllInvocationsParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		"metricAllInvocations",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Return the invocations intervened metric for all guardrails.
+// Experimental.
+func GuardrailBase_MetricAllInvocationsIntervened(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	_init_.Initialize()
+
+	if err := validateGuardrailBase_MetricAllInvocationsIntervenedParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		"metricAllInvocationsIntervened",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+// Return the text unit count metric for all guardrails.
+// Experimental.
+func GuardrailBase_MetricAllTextUnitCount(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	_init_.Initialize()
+
+	if err := validateGuardrailBase_MetricAllTextUnitCountParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GuardrailBase",
+		"metricAllTextUnitCount",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
 func (g *jsiiProxy_GuardrailBase) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
 	if err := g.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)
@@ -381,6 +512,134 @@ func (g *jsiiProxy_GuardrailBase) GrantApply(grantee awsiam.IGrantable) awsiam.G
 		g,
 		"grantApply",
 		[]interface{}{grantee},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) Metric(metricName *string, props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricParameters(metricName, props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metric",
+		[]interface{}{metricName, props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocationClientErrors(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationClientErrorsParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocationClientErrors",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocationLatency(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationLatencyParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocationLatency",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocations(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationsParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocations",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocationServerErrors(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationServerErrorsParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocationServerErrors",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocationsIntervened(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationsIntervenedParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocationsIntervened",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricInvocationThrottles(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricInvocationThrottlesParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricInvocationThrottles",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GuardrailBase) MetricTextUnitCount(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := g.validateMetricTextUnitCountParameters(props); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		g,
+		"metricTextUnitCount",
+		[]interface{}{props},
 		&returns,
 	)
 

@@ -13,7 +13,7 @@ type AgentAliasProps struct {
 	// Experimental.
 	AgentVersion *string `field:"optional" json:"agentVersion" yaml:"agentVersion"`
 	// The name for the agent alias.
-	// Default: - "latest".
+	// Default: - "latest-{hash}".
 	//
 	// Experimental.
 	AliasName *string `field:"optional" json:"aliasName" yaml:"aliasName"`

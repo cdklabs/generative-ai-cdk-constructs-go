@@ -8,6 +8,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -59,6 +60,74 @@ func (g *jsiiProxy_GuardrailBase) validateGrantApplyParameters(grantee awsiam.IG
 	return nil
 }
 
+func (g *jsiiProxy_GuardrailBase) validateMetricParameters(metricName *string, props *awscloudwatch.MetricOptions) error {
+	if metricName == nil {
+		return fmt.Errorf("parameter metricName is required, but nil was provided")
+	}
+
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationClientErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationLatencyParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationsParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationServerErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationsIntervenedParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricInvocationThrottlesParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GuardrailBase) validateMetricTextUnitCountParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func validateGuardrailBase_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
@@ -78,6 +147,50 @@ func validateGuardrailBase_IsOwnedResourceParameters(construct constructs.IConst
 func validateGuardrailBase_IsResourceParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateGuardrailBase_MetricAllParameters(metricName *string, props *awscloudwatch.MetricOptions) error {
+	if metricName == nil {
+		return fmt.Errorf("parameter metricName is required, but nil was provided")
+	}
+
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func validateGuardrailBase_MetricAllInvocationLatencyParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func validateGuardrailBase_MetricAllInvocationsParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func validateGuardrailBase_MetricAllInvocationsIntervenedParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func validateGuardrailBase_MetricAllTextUnitCountParameters(props *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
 	}
 
 	return nil

@@ -114,12 +114,12 @@ func Topic_FINANCIAL_ADVICE() Topic {
 	return returns
 }
 
-func Topic_INNOPROPRIATE_CONTENT() Topic {
+func Topic_INAPPROPRIATE_CONTENT() Topic {
 	_init_.Initialize()
 	var returns Topic
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Topic",
-		"INNOPROPRIATE_CONTENT",
+		"INAPPROPRIATE_CONTENT",
 		&returns,
 	)
 	return returns

@@ -8,11 +8,20 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/constructs-go/constructs/v10"
+	"github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/bedrock"
 )
 
 func (b *jsiiProxy_BedrockCwDashboard) validateAddAllModelsMonitoringParameters(props *ModelMonitoringProps) error {
 	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_BedrockCwDashboard) validateAddGuardrailMonitoringParameters(guardrail bedrock.IGuardrail) error {
+	if guardrail == nil {
+		return fmt.Errorf("parameter guardrail is required, but nil was provided")
 	}
 
 	return nil

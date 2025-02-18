@@ -3,6 +3,9 @@ package bedrock
 
 // Experimental.
 type BedrockFoundationModelProps struct {
+	// Embeddings models have different supported vector types.
+	// Experimental.
+	SupportedVectorType *[]VectorType `field:"optional" json:"supportedVectorType" yaml:"supportedVectorType"`
 	// Bedrock Agents can use this model.
 	// Default: - false.
 	//

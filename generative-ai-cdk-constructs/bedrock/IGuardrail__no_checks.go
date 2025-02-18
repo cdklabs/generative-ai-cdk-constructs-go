@@ -12,6 +12,38 @@ func (i *jsiiProxy_IGuardrail) validateGrantApplyParameters(grantee awsiam.IGran
 	return nil
 }
 
+func (i *jsiiProxy_IGuardrail) validateMetricParameters(metricName *string, props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationClientErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationLatencyParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationServerErrorsParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationsIntervenedParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricInvocationThrottlesParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (i *jsiiProxy_IGuardrail) validateMetricTextUnitCountParameters(props *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
 func (j *jsiiProxy_IGuardrail) validateSetGuardrailVersionParameters(val *string) error {
 	return nil
 }

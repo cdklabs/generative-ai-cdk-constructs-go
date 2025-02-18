@@ -6,6 +6,7 @@ import (
 
 	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/constructs-go/constructs/v10"
+	"github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/bedrock"
 	"github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/internal"
 )
 
@@ -19,8 +20,14 @@ type BedrockCwDashboard interface {
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
+	// Add guardrail monitoring to the dashboard.
+	// Experimental.
+	AddAllGuardrailsMonitoring()
 	// Experimental.
 	AddAllModelsMonitoring(props *ModelMonitoringProps)
+	// Add guardrail monitoring to the dashboard.
+	// Experimental.
+	AddGuardrailMonitoring(guardrail bedrock.IGuardrail)
 	// Experimental.
 	AddModelMonitoring(modelName *string, modelId *string, props *ModelMonitoringProps)
 	// Returns a string representation of this construct.
@@ -121,6 +128,14 @@ func BedrockCwDashboard_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
+func (b *jsiiProxy_BedrockCwDashboard) AddAllGuardrailsMonitoring() {
+	_jsii_.InvokeVoid(
+		b,
+		"addAllGuardrailsMonitoring",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BedrockCwDashboard) AddAllModelsMonitoring(props *ModelMonitoringProps) {
 	if err := b.validateAddAllModelsMonitoringParameters(props); err != nil {
 		panic(err)
@@ -129,6 +144,17 @@ func (b *jsiiProxy_BedrockCwDashboard) AddAllModelsMonitoring(props *ModelMonito
 		b,
 		"addAllModelsMonitoring",
 		[]interface{}{props},
+	)
+}
+
+func (b *jsiiProxy_BedrockCwDashboard) AddGuardrailMonitoring(guardrail bedrock.IGuardrail) {
+	if err := b.validateAddGuardrailMonitoringParameters(guardrail); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"addGuardrailMonitoring",
+		[]interface{}{guardrail},
 	)
 }
 

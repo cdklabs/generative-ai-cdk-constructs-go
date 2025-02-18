@@ -68,5 +68,10 @@ type VectorKnowledgeBaseProps struct {
 	//
 	// Experimental.
 	VectorStore interface{} `field:"optional" json:"vectorStore" yaml:"vectorStore"`
+	// The vector type to store vector embeddings.
+	// Default: - VectorType.FLOATING_POINT
+	//
+	// Experimental.
+	VectorType VectorType `field:"optional" json:"vectorType" yaml:"vectorType"`
 }
 
