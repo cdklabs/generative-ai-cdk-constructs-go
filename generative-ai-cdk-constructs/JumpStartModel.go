@@ -75,12 +75,34 @@ func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_LLAMA_70B_1_0_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_LLAMA_70B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_LLAMA_70B_1_1_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_LLAMA_8B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"DEEPSEEK_LLM_R1_DISTILL_LLAMA_8B_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_LLAMA_8B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_LLAMA_8B_1_1_0",
 		&returns,
 	)
 	return returns
@@ -97,12 +119,34 @@ func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_1_5B_1_0_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_1_5B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_QWEN_1_5B_1_1_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_14B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"DEEPSEEK_LLM_R1_DISTILL_QWEN_14B_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_14B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_QWEN_14B_1_1_0",
 		&returns,
 	)
 	return returns
@@ -119,12 +163,34 @@ func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_32B_1_0_0() JumpStartModel {
 	return returns
 }
 
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_32B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_QWEN_32B_1_1_0",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_7B_1_0_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"DEEPSEEK_LLM_R1_DISTILL_QWEN_7B_1_0_0",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_DEEPSEEK_LLM_R1_DISTILL_QWEN_7B_1_1_0() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"DEEPSEEK_LLM_R1_DISTILL_QWEN_7B_1_1_0",
 		&returns,
 	)
 	return returns
