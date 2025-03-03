@@ -45,6 +45,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBases", GoGetter: "KnowledgeBases"},
 			_jsii_.MemberProperty{JsiiProperty: "lastUpdated", GoGetter: "LastUpdated"},
+			_jsii_.MemberProperty{JsiiProperty: "memory", GoGetter: "Memory"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
@@ -191,6 +192,8 @@ func init() {
 			"PRE_PROCESSING": AgentStepType_PRE_PROCESSING,
 			"ORCHESTRATION": AgentStepType_ORCHESTRATION,
 			"POST_PROCESSING": AgentStepType_POST_PROCESSING,
+			"ROUTING_CLASSIFIER": AgentStepType_ROUTING_CLASSIFIER,
+			"MEMORY_SUMMARIZATION": AgentStepType_MEMORY_SUMMARIZATION,
 			"KNOWLEDGE_BASE_RESPONSE_GENERATION": AgentStepType_KNOWLEDGE_BASE_RESPONSE_GENERATION,
 		},
 	)
@@ -1083,6 +1086,14 @@ func init() {
 			"PROFANITY": ManagedWordFilterType_PROFANITY,
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.Memory",
+		reflect.TypeOf((*Memory)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_Memory{}
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PIIFilter",
 		reflect.TypeOf((*PIIFilter)(nil)).Elem(),
@@ -1390,6 +1401,10 @@ func init() {
 			"USER": SalesforceObjectType_USER,
 			"COLLABORATION_GROUP": SalesforceObjectType_COLLABORATION_GROUP,
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SessionSummaryMemoryProps",
+		reflect.TypeOf((*SessionSummaryMemoryProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.SharePointCrawlingFilters",

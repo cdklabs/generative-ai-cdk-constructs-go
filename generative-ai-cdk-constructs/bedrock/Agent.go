@@ -76,6 +76,9 @@ type Agent interface {
 	// When this agent was last updated.
 	// Experimental.
 	LastUpdated() *string
+	// The memory configuration for the agent.
+	// Experimental.
+	Memory() Memory
 	// The name of the agent.
 	// Experimental.
 	Name() *string
@@ -309,6 +312,16 @@ func (j *jsiiProxy_Agent) LastUpdated() *string {
 	_jsii_.Get(
 		j,
 		"lastUpdated",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Agent) Memory() Memory {
+	var returns Memory
+	_jsii_.Get(
+		j,
+		"memory",
 		&returns,
 	)
 	return returns
