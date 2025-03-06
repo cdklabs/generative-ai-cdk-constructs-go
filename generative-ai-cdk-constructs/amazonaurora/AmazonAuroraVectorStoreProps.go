@@ -32,6 +32,9 @@ type AmazonAuroraVectorStoreProps struct {
 	// The field name for the vector column in the Aurora Vector Store.
 	// Experimental.
 	VectorField *string `field:"optional" json:"vectorField" yaml:"vectorField"`
+	// Cluster identifier.
+	// Experimental.
+	ClusterId *string `field:"optional" json:"clusterId" yaml:"clusterId"`
 	// The name of the database for the Aurora Vector Store.
 	// Experimental.
 	DatabaseName *string `field:"optional" json:"databaseName" yaml:"databaseName"`

@@ -203,6 +203,39 @@ func BedrockFoundationModel_FromCdkFoundationModelId(modelId awsbedrock.Foundati
 	return returns
 }
 
+func BedrockFoundationModel_AI21_JAMBA_1_5_LARGE_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AI21_JAMBA_1_5_LARGE_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_AI21_JAMBA_1_5_MINI_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AI21_JAMBA_1_5_MINI_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_AI21_JAMBA_INSTRUCT_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"AI21_JAMBA_INSTRUCT_V1",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_AMAZON_NOVA_LITE_V1() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel
@@ -440,6 +473,17 @@ func BedrockFoundationModel_META_LLAMA_3_2_3B_INSTRUCT_V1() BedrockFoundationMod
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
 		"META_LLAMA_3_2_3B_INSTRUCT_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_META_LLAMA_3_3_70B_INSTRUCT_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"META_LLAMA_3_3_70B_INSTRUCT_V1",
 		&returns,
 	)
 	return returns
