@@ -443,6 +443,8 @@ include Amazon S3 buckets, Web Crawlers, SharePoint sites, Salesforce instances,
   `kb.addSharePointDataSource(..)`.
 * **Salesforce**. You can either create a new data source using the `bedrock.SalesforceDataSource(..)` class, or using the
   `kb.addSalesforceDataSource(..)`.
+* **Custom**. You can either create a new data source using the `bedrock.CustomDataSource(..)` class, or using the
+  `kb.addCustomDataSource(..)`. This allows you to add your own custom data source to the knowledge base.
 
 Typescript
 
@@ -538,6 +540,11 @@ kb.addSharePointDataSource({
       excludePatterns: ['.*confidential.*\\.pdf'],
     },
   ],
+});
+
+kb.addCustomDataSource({
+  dataSourceName: 'CustomDataSource',
+  chunkingStrategy: ChunkingStrategy.FIXED_SIZE,
 });
 ```
 
@@ -649,6 +656,11 @@ class PythonTestStack(Stack):
                     exclude_patterns= [".*confidential.*\\.pdf"],
                 ),
             ]
+        )
+
+        kb.add_custom_data_source(
+            data_source_name='CustomDataSource',
+            chunking_strategy=bedrock.ChunkingStrategy.FIXED_SIZE,
         )
 
 ```

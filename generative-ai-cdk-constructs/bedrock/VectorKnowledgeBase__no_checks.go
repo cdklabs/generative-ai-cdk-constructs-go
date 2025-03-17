@@ -8,6 +8,10 @@ func (v *jsiiProxy_VectorKnowledgeBase) validateAddConfluenceDataSourceParameter
 	return nil
 }
 
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddCustomDataSourceParameters(props *CustomDataSourceAssociationProps) error {
+	return nil
+}
+
 func (v *jsiiProxy_VectorKnowledgeBase) validateAddS3DataSourceParameters(props *S3DataSourceAssociationProps) error {
 	return nil
 }

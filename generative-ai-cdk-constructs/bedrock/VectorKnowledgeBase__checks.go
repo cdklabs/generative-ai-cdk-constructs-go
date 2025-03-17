@@ -23,6 +23,17 @@ func (v *jsiiProxy_VectorKnowledgeBase) validateAddConfluenceDataSourceParameter
 	return nil
 }
 
+func (v *jsiiProxy_VectorKnowledgeBase) validateAddCustomDataSourceParameters(props *CustomDataSourceAssociationProps) error {
+	if props == nil {
+		return fmt.Errorf("parameter props is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(props, func() string { return "parameter props" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (v *jsiiProxy_VectorKnowledgeBase) validateAddS3DataSourceParameters(props *S3DataSourceAssociationProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")

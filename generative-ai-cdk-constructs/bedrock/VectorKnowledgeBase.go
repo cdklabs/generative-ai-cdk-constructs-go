@@ -72,6 +72,9 @@ type VectorKnowledgeBase interface {
 	// Add a Confluence data source to the knowledge base.
 	// Experimental.
 	AddConfluenceDataSource(props *ConfluenceDataSourceAssociationProps) ConfluenceDataSource
+	// Add a Custom data source to the knowledge base.
+	// Experimental.
+	AddCustomDataSource(props *CustomDataSourceAssociationProps) CustomDataSource
 	// Add an S3 data source to the knowledge base.
 	// Experimental.
 	AddS3DataSource(props *S3DataSourceAssociationProps) S3DataSource
@@ -406,6 +409,22 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddConfluenceDataSource(props *Confluenc
 	_jsii_.Invoke(
 		v,
 		"addConfluenceDataSource",
+		[]interface{}{props},
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VectorKnowledgeBase) AddCustomDataSource(props *CustomDataSourceAssociationProps) CustomDataSource {
+	if err := v.validateAddCustomDataSourceParameters(props); err != nil {
+		panic(err)
+	}
+	var returns CustomDataSource
+
+	_jsii_.Invoke(
+		v,
+		"addCustomDataSource",
 		[]interface{}{props},
 		&returns,
 	)

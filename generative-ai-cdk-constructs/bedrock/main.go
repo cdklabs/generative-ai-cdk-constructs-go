@@ -498,6 +498,41 @@ func init() {
 			"APAC": CrossRegionInferenceProfileRegion_APAC,
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomDataSource",
+		reflect.TypeOf((*CustomDataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceId", GoGetter: "DataSourceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceName", GoGetter: "DataSourceName"},
+			_jsii_.MemberProperty{JsiiProperty: "dataSourceType", GoGetter: "DataSourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "formatAsCfnProps", GoMethod: "FormatAsCfnProps"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
+			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_CustomDataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_DataSourceNew)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomDataSourceAssociationProps",
+		reflect.TypeOf((*CustomDataSourceAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomDataSourceProps",
+		reflect.TypeOf((*CustomDataSourceProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomOrchestration",
 		reflect.TypeOf((*CustomOrchestration)(nil)).Elem(),
@@ -612,6 +647,8 @@ func init() {
 			"SALESFORCE": DataSourceType_SALESFORCE,
 			"SHAREPOINT": DataSourceType_SHAREPOINT,
 			"WEB_CRAWLER": DataSourceType_WEB_CRAWLER,
+			"CUSTOM": DataSourceType_CUSTOM,
+			"REDSHIFT_METADATA": DataSourceType_REDSHIFT_METADATA,
 		},
 	)
 	_jsii_.RegisterClass(
@@ -927,6 +964,7 @@ func init() {
 		reflect.TypeOf((*IVectorKnowledgeBase)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addCustomDataSource", GoMethod: "AddCustomDataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
@@ -1573,6 +1611,7 @@ func init() {
 		reflect.TypeOf((*VectorKnowledgeBase)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addCustomDataSource", GoMethod: "AddCustomDataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
 			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
