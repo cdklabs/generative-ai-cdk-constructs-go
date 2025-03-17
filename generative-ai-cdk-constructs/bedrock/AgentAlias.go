@@ -81,6 +81,9 @@ type AgentAlias interface {
 	// Grant the given principal identity permissions to perform actions on this agent alias.
 	// Experimental.
 	Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant
+	// Grant the given identity permissions to get the agent alias.
+	// Experimental.
+	GrantGet(grantee awsiam.IGrantable) awsiam.Grant
 	// Grant the given identity permissions to invoke the agent alias.
 	// Experimental.
 	GrantInvoke(grantee awsiam.IGrantable) awsiam.Grant
@@ -377,6 +380,22 @@ func (a *jsiiProxy_AgentAlias) Grant(grantee awsiam.IGrantable, actions ...*stri
 		a,
 		"grant",
 		args,
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AgentAlias) GrantGet(grantee awsiam.IGrantable) awsiam.Grant {
+	if err := a.validateGrantGetParameters(grantee); err != nil {
+		panic(err)
+	}
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		a,
+		"grantGet",
+		[]interface{}{grantee},
 		&returns,
 	)
 

@@ -14,6 +14,13 @@ type PromptStepConfiguration struct {
 	//
 	// Experimental.
 	CustomPromptTemplate *string `field:"optional" json:"customPromptTemplate" yaml:"customPromptTemplate"`
+	// The foundation model to use for this specific prompt step.
+	//
+	// This allows using different models for different steps in the agent sequence.
+	// Default: - The agent's default foundation model will be used.
+	//
+	// Experimental.
+	FoundationModel IInvokable `field:"optional" json:"foundationModel" yaml:"foundationModel"`
 	// The inference configuration parameters to use.
 	// Experimental.
 	InferenceConfig *InferenceConfiguration `field:"optional" json:"inferenceConfig" yaml:"inferenceConfig"`

@@ -1,6 +1,7 @@
 package bedrock
 
 
+// Properties for SessionSummaryConfiguration.
 // Experimental.
 type SessionSummaryMemoryProps struct {
 	// Maximum number of recent session summaries to include (min 1).

@@ -22,6 +22,12 @@ type Agent interface {
 	// The ARN of the agent.
 	// Experimental.
 	AgentArn() *string
+	// Agent collaboration type.
+	// Experimental.
+	AgentCollaboration() AgentCollaboratorType
+	// Agent collaborators.
+	// Experimental.
+	AgentCollaborators() *[]AgentCollaborator
 	// The unique identifier for the agent.
 	// Experimental.
 	AgentId() *string
@@ -33,6 +39,9 @@ type Agent interface {
 	// Whether the agent can generate, run, and troubleshoot code when trying to complete a task.
 	// Experimental.
 	CodeInterpreterEnabled() *bool
+	// Custom orchestration configuration.
+	// Experimental.
+	CustomOrchestration() *CustomOrchestration
 	// The description for the agent.
 	// Experimental.
 	Description() *string
@@ -85,6 +94,9 @@ type Agent interface {
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
+	// The type of orchestration for the agent.
+	// Experimental.
+	OrchestrationType() OrchestrationType
 	// Returns a string-encoded token that resolves to the physical name that should be passed to the CloudFormation resource.
 	//
 	// This value will resolve to one of the following:
@@ -123,6 +135,9 @@ type Agent interface {
 	// Add multiple action groups to the agent.
 	// Experimental.
 	AddActionGroups(actionGroups ...AgentActionGroup)
+	// Add an agent collaborator to the agent.
+	// Experimental.
+	AddAgentCollaborator(agentCollaborator AgentCollaborator)
 	// Add guardrail to the agent.
 	// Experimental.
 	AddGuardrail(guardrail IGuardrail)
@@ -187,6 +202,26 @@ func (j *jsiiProxy_Agent) AgentArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Agent) AgentCollaboration() AgentCollaboratorType {
+	var returns AgentCollaboratorType
+	_jsii_.Get(
+		j,
+		"agentCollaboration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Agent) AgentCollaborators() *[]AgentCollaborator {
+	var returns *[]AgentCollaborator
+	_jsii_.Get(
+		j,
+		"agentCollaborators",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Agent) AgentId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -212,6 +247,16 @@ func (j *jsiiProxy_Agent) CodeInterpreterEnabled() *bool {
 	_jsii_.Get(
 		j,
 		"codeInterpreterEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Agent) CustomOrchestration() *CustomOrchestration {
+	var returns *CustomOrchestration
+	_jsii_.Get(
+		j,
+		"customOrchestration",
 		&returns,
 	)
 	return returns
@@ -342,6 +387,16 @@ func (j *jsiiProxy_Agent) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Agent) OrchestrationType() OrchestrationType {
+	var returns OrchestrationType
+	_jsii_.Get(
+		j,
+		"orchestrationType",
 		&returns,
 	)
 	return returns
@@ -605,6 +660,17 @@ func (a *jsiiProxy_Agent) AddActionGroups(actionGroups ...AgentActionGroup) {
 		a,
 		"addActionGroups",
 		args,
+	)
+}
+
+func (a *jsiiProxy_Agent) AddAgentCollaborator(agentCollaborator AgentCollaborator) {
+	if err := a.validateAddAgentCollaboratorParameters(agentCollaborator); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"addAgentCollaborator",
+		[]interface{}{agentCollaborator},
 	)
 }
 

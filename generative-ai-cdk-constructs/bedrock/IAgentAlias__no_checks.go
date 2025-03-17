@@ -8,6 +8,10 @@ func (i *jsiiProxy_IAgentAlias) validateGrantParameters(grantee awsiam.IGrantabl
 	return nil
 }
 
+func (i *jsiiProxy_IAgentAlias) validateGrantGetParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
 func (i *jsiiProxy_IAgentAlias) validateGrantInvokeParameters(grantee awsiam.IGrantable) error {
 	return nil
 }

@@ -21,11 +21,26 @@ type AgentProps struct {
 	// The Action Groups associated with the agent.
 	// Experimental.
 	ActionGroups *[]AgentActionGroup `field:"optional" json:"actionGroups" yaml:"actionGroups"`
+	// The collaboration type for the agent.
+	// Default: - No collaboration (AgentCollaboratorType.DISABLED).
+	//
+	// Experimental.
+	AgentCollaboration AgentCollaboratorType `field:"optional" json:"agentCollaboration" yaml:"agentCollaboration"`
+	// Collaborators that this agent will work with.
+	// Default: - No collaborators.
+	//
+	// Experimental.
+	AgentCollaborators *[]AgentCollaborator `field:"optional" json:"agentCollaborators" yaml:"agentCollaborators"`
 	// Select whether the agent can generate, run, and troubleshoot code when trying to complete a task.
 	// Default: - false.
 	//
 	// Experimental.
 	CodeInterpreterEnabled *bool `field:"optional" json:"codeInterpreterEnabled" yaml:"codeInterpreterEnabled"`
+	// Details of custom orchestration for the agent.
+	// Default: - Standard orchestration.
+	//
+	// Experimental.
+	CustomOrchestration *CustomOrchestration `field:"optional" json:"customOrchestration" yaml:"customOrchestration"`
 	// A description of the agent.
 	// Default: - No description is provided.
 	//
@@ -78,6 +93,11 @@ type AgentProps struct {
 	//
 	// Experimental.
 	Name *string `field:"optional" json:"name" yaml:"name"`
+	// The type of orchestration to use for the agent.
+	// Default: - STANDARD.
+	//
+	// Experimental.
+	OrchestrationType OrchestrationType `field:"optional" json:"orchestrationType" yaml:"orchestrationType"`
 	// Overrides some prompt templates in different parts of an agent sequence configuration.
 	// Default: - No overrides are provided.
 	//

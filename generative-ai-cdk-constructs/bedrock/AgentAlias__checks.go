@@ -52,6 +52,14 @@ func (a *jsiiProxy_AgentAlias) validateGrantParameters(grantee awsiam.IGrantable
 	return nil
 }
 
+func (a *jsiiProxy_AgentAlias) validateGrantGetParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_AgentAlias) validateGrantInvokeParameters(grantee awsiam.IGrantable) error {
 	if grantee == nil {
 		return fmt.Errorf("parameter grantee is required, but nil was provided")

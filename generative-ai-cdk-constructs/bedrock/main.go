@@ -25,13 +25,17 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "actionGroups", GoGetter: "ActionGroups"},
 			_jsii_.MemberMethod{JsiiMethod: "addActionGroup", GoMethod: "AddActionGroup"},
 			_jsii_.MemberMethod{JsiiMethod: "addActionGroups", GoMethod: "AddActionGroups"},
+			_jsii_.MemberMethod{JsiiMethod: "addAgentCollaborator", GoMethod: "AddAgentCollaborator"},
 			_jsii_.MemberMethod{JsiiMethod: "addGuardrail", GoMethod: "AddGuardrail"},
 			_jsii_.MemberMethod{JsiiMethod: "addKnowledgeBase", GoMethod: "AddKnowledgeBase"},
 			_jsii_.MemberProperty{JsiiProperty: "agentArn", GoGetter: "AgentArn"},
+			_jsii_.MemberProperty{JsiiProperty: "agentCollaboration", GoGetter: "AgentCollaboration"},
+			_jsii_.MemberProperty{JsiiProperty: "agentCollaborators", GoGetter: "AgentCollaborators"},
 			_jsii_.MemberProperty{JsiiProperty: "agentId", GoGetter: "AgentId"},
 			_jsii_.MemberProperty{JsiiProperty: "agentVersion", GoGetter: "AgentVersion"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "codeInterpreterEnabled", GoGetter: "CodeInterpreterEnabled"},
+			_jsii_.MemberProperty{JsiiProperty: "customOrchestration", GoGetter: "CustomOrchestration"},
 			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
 			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
 			_jsii_.MemberProperty{JsiiProperty: "forceDelete", GoGetter: "ForceDelete"},
@@ -48,6 +52,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "memory", GoGetter: "Memory"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "orchestrationType", GoGetter: "OrchestrationType"},
 			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
 			_jsii_.MemberProperty{JsiiProperty: "promptOverrideConfiguration", GoGetter: "PromptOverrideConfiguration"},
 			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
@@ -98,6 +103,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantGet", GoMethod: "GrantGet"},
 			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onCloudTrailEvent", GoMethod: "OnCloudTrailEvent"},
@@ -128,6 +134,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantGet", GoMethod: "GrantGet"},
 			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onCloudTrailEvent", GoMethod: "OnCloudTrailEvent"},
@@ -175,6 +182,33 @@ func init() {
 			_jsii_.InitJsiiProxy(&j.Type__awscdkResource)
 			_jsii_.InitJsiiProxy(&j.jsiiProxy_IAgent)
 			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentCollaborator",
+		reflect.TypeOf((*AgentCollaborator)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "agentAlias", GoGetter: "AgentAlias"},
+			_jsii_.MemberProperty{JsiiProperty: "collaborationInstruction", GoGetter: "CollaborationInstruction"},
+			_jsii_.MemberProperty{JsiiProperty: "collaboratorName", GoGetter: "CollaboratorName"},
+			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberProperty{JsiiProperty: "relayConversationHistory", GoGetter: "RelayConversationHistory"},
+		},
+		func() interface{} {
+			return &jsiiProxy_AgentCollaborator{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentCollaboratorProps",
+		reflect.TypeOf((*AgentCollaboratorProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.AgentCollaboratorType",
+		reflect.TypeOf((*AgentCollaboratorType)(nil)).Elem(),
+		map[string]interface{}{
+			"SUPERVISOR": AgentCollaboratorType_SUPERVISOR,
+			"DISABLED": AgentCollaboratorType_DISABLED,
+			"SUPERVISOR_ROUTER": AgentCollaboratorType_SUPERVISOR_ROUTER,
 		},
 	)
 	_jsii_.RegisterStruct(
@@ -465,6 +499,10 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomOrchestration",
+		reflect.TypeOf((*CustomOrchestration)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.CustomParserProps",
 		reflect.TypeOf((*CustomParserProps)(nil)).Elem(),
 	)
@@ -730,6 +768,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
 			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantGet", GoMethod: "GrantGet"},
 			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onCloudTrailEvent", GoMethod: "OnCloudTrailEvent"},
@@ -1094,6 +1133,24 @@ func init() {
 			return &jsiiProxy_Memory{}
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.OrchestrationExecutor",
+		reflect.TypeOf((*OrchestrationExecutor)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "lambdaFunction", GoGetter: "LambdaFunction"},
+		},
+		func() interface{} {
+			return &jsiiProxy_OrchestrationExecutor{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.OrchestrationType",
+		reflect.TypeOf((*OrchestrationType)(nil)).Elem(),
+		map[string]interface{}{
+			"DEFAULT": OrchestrationType_DEFAULT,
+			"CUSTOM_ORCHESTRATION": OrchestrationType_CUSTOM_ORCHESTRATION,
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.PIIFilter",
 		reflect.TypeOf((*PIIFilter)(nil)).Elem(),
@@ -1277,6 +1334,14 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.RegexFilter",
 		reflect.TypeOf((*RegexFilter)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.RelayConversationHistoryType",
+		reflect.TypeOf((*RelayConversationHistoryType)(nil)).Elem(),
+		map[string]interface{}{
+			"TO_COLLABORATOR": RelayConversationHistoryType_TO_COLLABORATOR,
+			"DISABLED": RelayConversationHistoryType_DISABLED,
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.S3ApiSchema",

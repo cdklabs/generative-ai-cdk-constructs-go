@@ -20,6 +20,10 @@ func (a *jsiiProxy_AgentAliasBase) validateGrantParameters(grantee awsiam.IGrant
 	return nil
 }
 
+func (a *jsiiProxy_AgentAliasBase) validateGrantGetParameters(grantee awsiam.IGrantable) error {
+	return nil
+}
+
 func (a *jsiiProxy_AgentAliasBase) validateGrantInvokeParameters(grantee awsiam.IGrantable) error {
 	return nil
 }
