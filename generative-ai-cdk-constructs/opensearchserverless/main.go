@@ -52,6 +52,9 @@ func init() {
 			"JA_STOP": TokenFilterType_JA_STOP,
 			"LOWERCASE": TokenFilterType_LOWERCASE,
 			"ICU_FOLDING": TokenFilterType_ICU_FOLDING,
+			"NORI_PART_OF_SPEECH": TokenFilterType_NORI_PART_OF_SPEECH,
+			"NORI_READINGFORM": TokenFilterType_NORI_READINGFORM,
+			"NORI_NUMBER": TokenFilterType_NORI_NUMBER,
 		},
 	)
 	_jsii_.RegisterEnum(
@@ -60,6 +63,7 @@ func init() {
 		map[string]interface{}{
 			"KUROMOJI_TOKENIZER": TokenizerType_KUROMOJI_TOKENIZER,
 			"ICU_TOKENIZER": TokenizerType_ICU_TOKENIZER,
+			"NORI_TOKENIZER": TokenizerType_NORI_TOKENIZER,
 		},
 	)
 	_jsii_.RegisterClass(

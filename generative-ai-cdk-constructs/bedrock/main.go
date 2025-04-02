@@ -441,6 +441,24 @@ func init() {
 			"PROMPT_ATTACK": ContentFilterType_PROMPT_ATTACK,
 		},
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextEnrichment",
+		reflect.TypeOf((*ContextEnrichment)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "configuration", GoGetter: "Configuration"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePolicyStatements", GoMethod: "GeneratePolicyStatements"},
+		},
+		func() interface{} {
+			return &jsiiProxy_ContextEnrichment{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextEnrichmentType",
+		reflect.TypeOf((*ContextEnrichmentType)(nil)).Elem(),
+		map[string]interface{}{
+			"BEDROCK_FOUNDATION_MODEL": ContextEnrichmentType_BEDROCK_FOUNDATION_MODEL,
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ContextualGroundingFilter",
 		reflect.TypeOf((*ContextualGroundingFilter)(nil)).Elem(),
@@ -661,6 +679,17 @@ func init() {
 		func() interface{} {
 			return &jsiiProxy_DefaultPromptRouterIdentifier{}
 		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.EnrichmentStrategyConfigurationType",
+		reflect.TypeOf((*EnrichmentStrategyConfigurationType)(nil)).Elem(),
+		map[string]interface{}{
+			"CHUNK_ENTITY_EXTRACTION": EnrichmentStrategyConfigurationType_CHUNK_ENTITY_EXTRACTION,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelContextEnrichmentProps",
+		reflect.TypeOf((*FoundationModelContextEnrichmentProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStategyProps",
@@ -1680,6 +1709,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "handleCommonPermissions", GoMethod: "HandleCommonPermissions"},
 			_jsii_.MemberProperty{JsiiProperty: "kmsKey", GoGetter: "KmsKey"},
 			_jsii_.MemberProperty{JsiiProperty: "knowledgeBase", GoGetter: "KnowledgeBase"},
+			_jsii_.MemberProperty{JsiiProperty: "maxPages", GoGetter: "MaxPages"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
 			_jsii_.MemberProperty{JsiiProperty: "siteUrls", GoGetter: "SiteUrls"},

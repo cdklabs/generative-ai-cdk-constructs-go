@@ -15,6 +15,11 @@ type WebCrawlerDataSourceAssociationProps struct {
 	//
 	// Experimental.
 	ChunkingStrategy ChunkingStrategy `field:"optional" json:"chunkingStrategy" yaml:"chunkingStrategy"`
+	// The context enrichment configuration to use.
+	// Default: - No context enrichment is used.
+	//
+	// Experimental.
+	ContextEnrichment ContextEnrichment `field:"optional" json:"contextEnrichment" yaml:"contextEnrichment"`
 	// The custom transformation strategy to use.
 	// Default: - No custom transformation is used.
 	//
@@ -67,5 +72,30 @@ type WebCrawlerDataSourceAssociationProps struct {
 	//
 	// Experimental.
 	Filters *CrawlingFilters `field:"optional" json:"filters" yaml:"filters"`
+	// The maximum number of pages to crawl.
+	//
+	// The max number of web pages crawled from your source URLs,
+	// up to 25,000 pages. If the web pages exceed this limit, the data source sync will fail and
+	// no web pages will be ingested.
+	// Default: - No limit.
+	//
+	// Experimental.
+	MaxPages *float64 `field:"optional" json:"maxPages" yaml:"maxPages"`
+	// The user agent string to use when crawling.
+	// Default: - Default user agent string.
+	//
+	// Experimental.
+	UserAgent *string `field:"optional" json:"userAgent" yaml:"userAgent"`
+	// The user agent header to use when crawling.
+	//
+	// A string used for identifying
+	// the crawler or bot when it accesses a web server. The user agent header value
+	// consists of the bedrockbot, UUID, and a user agent suffix for your crawler (if one is provided).
+	// By default, it is set to bedrockbot_UUID. You can optionally append a custom suffix to bedrockbot_UUID
+	// to allowlist a specific user agent permitted to access your source URLs.
+	// Default: - Default user agent header (bedrockbot_UUID).
+	//
+	// Experimental.
+	UserAgentHeader *string `field:"optional" json:"userAgentHeader" yaml:"userAgentHeader"`
 }
 

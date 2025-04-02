@@ -46,6 +46,9 @@ type WebCrawlerDataSource interface {
 	// The knowledge base associated with the data source.
 	// Experimental.
 	KnowledgeBase() IKnowledgeBase
+	// The maximum number of pages to crawl.
+	// Experimental.
+	MaxPages() *float64
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
@@ -173,6 +176,16 @@ func (j *jsiiProxy_WebCrawlerDataSource) KnowledgeBase() IKnowledgeBase {
 	_jsii_.Get(
 		j,
 		"knowledgeBase",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WebCrawlerDataSource) MaxPages() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxPages",
 		&returns,
 	)
 	return returns

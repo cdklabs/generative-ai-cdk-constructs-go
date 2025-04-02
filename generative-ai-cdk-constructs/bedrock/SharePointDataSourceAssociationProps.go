@@ -16,6 +16,11 @@ type SharePointDataSourceAssociationProps struct {
 	//
 	// Experimental.
 	ChunkingStrategy ChunkingStrategy `field:"optional" json:"chunkingStrategy" yaml:"chunkingStrategy"`
+	// The context enrichment configuration to use.
+	// Default: - No context enrichment is used.
+	//
+	// Experimental.
+	ContextEnrichment ContextEnrichment `field:"optional" json:"contextEnrichment" yaml:"contextEnrichment"`
 	// The custom transformation strategy to use.
 	// Default: - No custom transformation is used.
 	//
