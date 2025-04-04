@@ -3,9 +3,9 @@ module github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-cons
 go 1.18
 
 require (
-	github.com/aws/jsii-runtime-go v1.110.0
+	github.com/aws/jsii-runtime-go v1.111.0
 	github.com/aws/aws-cdk-go/awscdk/v2 v2.187.0
-	github.com/cdklabs/cdk-nag-go/cdknag/v2 v2.35.60
+	github.com/cdklabs/cdk-nag-go/cdknag/v2 v2.35.62
 	github.com/aws/constructs-go/constructs/v10 v10.3.0
 	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.230 // indirect
 	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.1.0 // indirect
