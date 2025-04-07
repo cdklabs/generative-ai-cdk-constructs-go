@@ -1012,6 +1012,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "vectorStoreType", GoGetter: "VectorStoreType"},
 		},
 		func() interface{} {
 			j := jsiiProxy_IVectorKnowledgeBase{}
@@ -1668,11 +1669,11 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
 			_jsii_.MemberProperty{JsiiProperty: "vectorStore", GoGetter: "VectorStore"},
+			_jsii_.MemberProperty{JsiiProperty: "vectorStoreType", GoGetter: "VectorStoreType"},
 		},
 		func() interface{} {
 			j := jsiiProxy_VectorKnowledgeBase{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_KnowledgeBaseBase)
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_IVectorKnowledgeBase)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_VectorKnowledgeBaseBase)
 			return &j
 		},
 	)
@@ -1680,9 +1681,58 @@ func init() {
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseAttributes",
 		reflect.TypeOf((*VectorKnowledgeBaseAttributes)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseBase",
+		reflect.TypeOf((*VectorKnowledgeBaseBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addCustomDataSource", GoMethod: "AddCustomDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addWebCrawlerDataSource", GoMethod: "AddWebCrawlerDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantQuery", GoMethod: "GrantQuery"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieve", GoMethod: "GrantRetrieve"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieveAndGenerate", GoMethod: "GrantRetrieveAndGenerate"},
+			_jsii_.MemberProperty{JsiiProperty: "instruction", GoGetter: "Instruction"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "vectorStoreType", GoGetter: "VectorStoreType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_VectorKnowledgeBaseBase{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_KnowledgeBaseBase)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IVectorKnowledgeBase)
+			return &j
+		},
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseProps",
 		reflect.TypeOf((*VectorKnowledgeBaseProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorStoreType",
+		reflect.TypeOf((*VectorStoreType)(nil)).Elem(),
+		map[string]interface{}{
+			"OPENSEARCH_SERVERLESS": VectorStoreType_OPENSEARCH_SERVERLESS,
+			"PINECONE": VectorStoreType_PINECONE,
+			"AMAZON_AURORA": VectorStoreType_AMAZON_AURORA,
+			"MONGO_DB_ATLAS": VectorStoreType_MONGO_DB_ATLAS,
+			"NEPTUNE_ANALYTICS": VectorStoreType_NEPTUNE_ANALYTICS,
+		},
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorType",

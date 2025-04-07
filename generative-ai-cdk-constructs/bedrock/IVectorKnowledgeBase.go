@@ -34,6 +34,9 @@ type IVectorKnowledgeBase interface {
 	// Grant the given identity permissions to retrieve content from the knowledge base.
 	// Experimental.
 	GrantRetrieveAndGenerate(grantee awsiam.IGrantable) awsiam.Grant
+	// The storage type for the Vector Embeddings.
+	// Experimental.
+	VectorStoreType() VectorStoreType
 }
 
 // The jsii proxy for IVectorKnowledgeBase
@@ -166,6 +169,16 @@ func (i *jsiiProxy_IVectorKnowledgeBase) GrantRetrieveAndGenerate(grantee awsiam
 		&returns,
 	)
 
+	return returns
+}
+
+func (j *jsiiProxy_IVectorKnowledgeBase) VectorStoreType() VectorStoreType {
+	var returns VectorStoreType
+	_jsii_.Get(
+		j,
+		"vectorStoreType",
+		&returns,
+	)
 	return returns
 }
 

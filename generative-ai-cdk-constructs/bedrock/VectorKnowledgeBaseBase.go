@@ -5,16 +5,18 @@ import (
 	_init_ "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// Deploys a Bedrock Knowledge Base and configures a backend by OpenSearch Serverless, Pinecone, Redis Enterprise Cloud or Amazon Aurora PostgreSQL.
+// Abstract base class for Vector Knowledge Base.
+//
+// Contains methods valid for KBs either created with CDK or imported.
 // Experimental.
-type VectorKnowledgeBase interface {
-	VectorKnowledgeBaseBase
-	// A description of the knowledge base.
+type VectorKnowledgeBaseBase interface {
+	KnowledgeBaseBase
+	IVectorKnowledgeBase
+	// The description of the knowledge base.
 	// Experimental.
 	Description() *string
 	// The environment this resource belongs to.
@@ -27,9 +29,10 @@ type VectorKnowledgeBase interface {
 	// that might be different than the stack they were imported into.
 	// Experimental.
 	Env() *awscdk.ResourceEnvironment
-	// Instructions for agents based on the design and type of information of the Knowledge Base.
+	// A narrative instruction of the knowledge base.
 	//
-	// This will impact how Agents interact with the Knowledge Base.
+	// A Bedrock Agent can use this instruction to determine if it should
+	// query this Knowledge Base.
 	// Experimental.
 	Instruction() *string
 	// The ARN of the knowledge base.
@@ -38,12 +41,6 @@ type VectorKnowledgeBase interface {
 	// The ID of the knowledge base.
 	// Experimental.
 	KnowledgeBaseId() *string
-	// Instance of knowledge base.
-	// Experimental.
-	KnowledgeBaseInstance() awsbedrock.CfnKnowledgeBase
-	// The name of the knowledge base.
-	// Experimental.
-	Name() *string
 	// The tree node.
 	// Experimental.
 	Node() constructs.Node
@@ -56,7 +53,7 @@ type VectorKnowledgeBase interface {
 	//   cross-environment scenarios.
 	// Experimental.
 	PhysicalName() *string
-	// The role the Knowledge Base uses to access the vector store and data source.
+	// The role associated with the knowledge base.
 	// Experimental.
 	Role() awsiam.IRole
 	// The stack in which this resource is defined.
@@ -65,10 +62,7 @@ type VectorKnowledgeBase interface {
 	// The type of knowledge base.
 	// Experimental.
 	Type() KnowledgeBaseType
-	// The vector store for the knowledge base.
-	// Experimental.
-	VectorStore() interface{}
-	// The type of the knowledge base.
+	// The storage type for the Vector Embeddings.
 	// Experimental.
 	VectorStoreType() VectorStoreType
 	// Add a Confluence data source to the knowledge base.
@@ -100,9 +94,6 @@ type VectorKnowledgeBase interface {
 	// account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 	// Experimental.
 	ApplyRemovalPolicy(policy awscdk.RemovalPolicy)
-	// Associate knowledge base with an agent.
-	// Experimental.
-	AssociateToAgent(agent Agent)
 	// Experimental.
 	GeneratePhysicalName() *string
 	// Returns an environment-sensitive token that should be used for the resource's "ARN" attribute (e.g. `bucket.bucketArn`).
@@ -141,12 +132,13 @@ type VectorKnowledgeBase interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for VectorKnowledgeBase
-type jsiiProxy_VectorKnowledgeBase struct {
-	jsiiProxy_VectorKnowledgeBaseBase
+// The jsii proxy struct for VectorKnowledgeBaseBase
+type jsiiProxy_VectorKnowledgeBaseBase struct {
+	jsiiProxy_KnowledgeBaseBase
+	jsiiProxy_IVectorKnowledgeBase
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Description() *string {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Description() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -156,7 +148,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Description() *string {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Env() *awscdk.ResourceEnvironment {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Env() *awscdk.ResourceEnvironment {
 	var returns *awscdk.ResourceEnvironment
 	_jsii_.Get(
 		j,
@@ -166,7 +158,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Env() *awscdk.ResourceEnvironment {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Instruction() *string {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Instruction() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -176,7 +168,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Instruction() *string {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) KnowledgeBaseArn() *string {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) KnowledgeBaseArn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -186,7 +178,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) KnowledgeBaseArn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) KnowledgeBaseId() *string {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) KnowledgeBaseId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -196,27 +188,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) KnowledgeBaseId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) KnowledgeBaseInstance() awsbedrock.CfnKnowledgeBase {
-	var returns awsbedrock.CfnKnowledgeBase
-	_jsii_.Get(
-		j,
-		"knowledgeBaseInstance",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_VectorKnowledgeBase) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_VectorKnowledgeBase) Node() constructs.Node {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -226,7 +198,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) PhysicalName() *string {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) PhysicalName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -236,7 +208,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) PhysicalName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Role() awsiam.IRole {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Role() awsiam.IRole {
 	var returns awsiam.IRole
 	_jsii_.Get(
 		j,
@@ -246,7 +218,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Role() awsiam.IRole {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Stack() awscdk.Stack {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Stack() awscdk.Stack {
 	var returns awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -256,7 +228,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Stack() awscdk.Stack {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) Type() KnowledgeBaseType {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) Type() KnowledgeBaseType {
 	var returns KnowledgeBaseType
 	_jsii_.Get(
 		j,
@@ -266,17 +238,7 @@ func (j *jsiiProxy_VectorKnowledgeBase) Type() KnowledgeBaseType {
 	return returns
 }
 
-func (j *jsiiProxy_VectorKnowledgeBase) VectorStore() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"vectorStore",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_VectorKnowledgeBase) VectorStoreType() VectorStoreType {
+func (j *jsiiProxy_VectorKnowledgeBaseBase) VectorStoreType() VectorStoreType {
 	var returns VectorStoreType
 	_jsii_.Get(
 		j,
@@ -288,51 +250,14 @@ func (j *jsiiProxy_VectorKnowledgeBase) VectorStoreType() VectorStoreType {
 
 
 // Experimental.
-func NewVectorKnowledgeBase(scope constructs.Construct, id *string, props *VectorKnowledgeBaseProps) VectorKnowledgeBase {
-	_init_.Initialize()
-
-	if err := validateNewVectorKnowledgeBaseParameters(scope, id, props); err != nil {
-		panic(err)
-	}
-	j := jsiiProxy_VectorKnowledgeBase{}
-
-	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
-		[]interface{}{scope, id, props},
-		&j,
-	)
-
-	return &j
-}
-
-// Experimental.
-func NewVectorKnowledgeBase_Override(v VectorKnowledgeBase, scope constructs.Construct, id *string, props *VectorKnowledgeBaseProps) {
+func NewVectorKnowledgeBaseBase_Override(v VectorKnowledgeBaseBase, scope constructs.Construct, id *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
-		[]interface{}{scope, id, props},
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseBase",
+		[]interface{}{scope, id},
 		v,
 	)
-}
-
-// Experimental.
-func VectorKnowledgeBase_FromKnowledgeBaseAttributes(scope constructs.Construct, id *string, attrs *VectorKnowledgeBaseAttributes) IVectorKnowledgeBase {
-	_init_.Initialize()
-
-	if err := validateVectorKnowledgeBase_FromKnowledgeBaseAttributesParameters(scope, id, attrs); err != nil {
-		panic(err)
-	}
-	var returns IVectorKnowledgeBase
-
-	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
-		"fromKnowledgeBaseAttributes",
-		[]interface{}{scope, id, attrs},
-		&returns,
-	)
-
-	return returns
 }
 
 // Checks if `x` is a construct.
@@ -353,16 +278,16 @@ func VectorKnowledgeBase_FromKnowledgeBaseAttributes(scope constructs.Construct,
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Experimental.
-func VectorKnowledgeBase_IsConstruct(x interface{}) *bool {
+func VectorKnowledgeBaseBase_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateVectorKnowledgeBase_IsConstructParameters(x); err != nil {
+	if err := validateVectorKnowledgeBaseBase_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseBase",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -373,16 +298,16 @@ func VectorKnowledgeBase_IsConstruct(x interface{}) *bool {
 
 // Returns true if the construct was created by CDK, and false otherwise.
 // Experimental.
-func VectorKnowledgeBase_IsOwnedResource(construct constructs.IConstruct) *bool {
+func VectorKnowledgeBaseBase_IsOwnedResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateVectorKnowledgeBase_IsOwnedResourceParameters(construct); err != nil {
+	if err := validateVectorKnowledgeBaseBase_IsOwnedResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseBase",
 		"isOwnedResource",
 		[]interface{}{construct},
 		&returns,
@@ -393,16 +318,16 @@ func VectorKnowledgeBase_IsOwnedResource(construct constructs.IConstruct) *bool 
 
 // Check whether the given construct is a Resource.
 // Experimental.
-func VectorKnowledgeBase_IsResource(construct constructs.IConstruct) *bool {
+func VectorKnowledgeBaseBase_IsResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateVectorKnowledgeBase_IsResourceParameters(construct); err != nil {
+	if err := validateVectorKnowledgeBaseBase_IsResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBaseBase",
 		"isResource",
 		[]interface{}{construct},
 		&returns,
@@ -411,7 +336,7 @@ func VectorKnowledgeBase_IsResource(construct constructs.IConstruct) *bool {
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddConfluenceDataSource(props *ConfluenceDataSourceAssociationProps) ConfluenceDataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddConfluenceDataSource(props *ConfluenceDataSourceAssociationProps) ConfluenceDataSource {
 	if err := v.validateAddConfluenceDataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -427,7 +352,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddConfluenceDataSource(props *Confluenc
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddCustomDataSource(props *CustomDataSourceAssociationProps) CustomDataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddCustomDataSource(props *CustomDataSourceAssociationProps) CustomDataSource {
 	if err := v.validateAddCustomDataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -443,7 +368,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddCustomDataSource(props *CustomDataSou
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddS3DataSource(props *S3DataSourceAssociationProps) S3DataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddS3DataSource(props *S3DataSourceAssociationProps) S3DataSource {
 	if err := v.validateAddS3DataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -459,7 +384,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddS3DataSource(props *S3DataSourceAssoc
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddSalesforceDataSource(props *SalesforceDataSourceAssociationProps) SalesforceDataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddSalesforceDataSource(props *SalesforceDataSourceAssociationProps) SalesforceDataSource {
 	if err := v.validateAddSalesforceDataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -475,7 +400,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddSalesforceDataSource(props *Salesforc
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddSharePointDataSource(props *SharePointDataSourceAssociationProps) SharePointDataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddSharePointDataSource(props *SharePointDataSourceAssociationProps) SharePointDataSource {
 	if err := v.validateAddSharePointDataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -491,7 +416,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddSharePointDataSource(props *SharePoin
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AddWebCrawlerDataSource(props *WebCrawlerDataSourceAssociationProps) WebCrawlerDataSource {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) AddWebCrawlerDataSource(props *WebCrawlerDataSourceAssociationProps) WebCrawlerDataSource {
 	if err := v.validateAddWebCrawlerDataSourceParameters(props); err != nil {
 		panic(err)
 	}
@@ -507,7 +432,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) AddWebCrawlerDataSource(props *WebCrawle
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
 	if err := v.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)
 	}
@@ -518,18 +443,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) ApplyRemovalPolicy(policy awscdk.Removal
 	)
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) AssociateToAgent(agent Agent) {
-	if err := v.validateAssociateToAgentParameters(agent); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		v,
-		"associateToAgent",
-		[]interface{}{agent},
-	)
-}
-
-func (v *jsiiProxy_VectorKnowledgeBase) GeneratePhysicalName() *string {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GeneratePhysicalName() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -542,7 +456,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GeneratePhysicalName() *string {
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
 	if err := v.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
 		panic(err)
 	}
@@ -558,7 +472,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GetResourceArnAttribute(arnAttr *string,
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) GetResourceNameAttribute(nameAttr *string) *string {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GetResourceNameAttribute(nameAttr *string) *string {
 	if err := v.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
 		panic(err)
 	}
@@ -574,7 +488,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GetResourceNameAttribute(nameAttr *strin
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) Grant(grantee awsiam.IGrantable, actions ...*string) awsiam.Grant {
 	if err := v.validateGrantParameters(grantee); err != nil {
 		panic(err)
 	}
@@ -595,7 +509,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) Grant(grantee awsiam.IGrantable, actions
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) GrantQuery(grantee awsiam.IGrantable) awsiam.Grant {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GrantQuery(grantee awsiam.IGrantable) awsiam.Grant {
 	if err := v.validateGrantQueryParameters(grantee); err != nil {
 		panic(err)
 	}
@@ -611,7 +525,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GrantQuery(grantee awsiam.IGrantable) aw
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) GrantRetrieve(grantee awsiam.IGrantable) awsiam.Grant {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GrantRetrieve(grantee awsiam.IGrantable) awsiam.Grant {
 	if err := v.validateGrantRetrieveParameters(grantee); err != nil {
 		panic(err)
 	}
@@ -627,7 +541,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GrantRetrieve(grantee awsiam.IGrantable)
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) GrantRetrieveAndGenerate(grantee awsiam.IGrantable) awsiam.Grant {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) GrantRetrieveAndGenerate(grantee awsiam.IGrantable) awsiam.Grant {
 	if err := v.validateGrantRetrieveAndGenerateParameters(grantee); err != nil {
 		panic(err)
 	}
@@ -643,7 +557,7 @@ func (v *jsiiProxy_VectorKnowledgeBase) GrantRetrieveAndGenerate(grantee awsiam.
 	return returns
 }
 
-func (v *jsiiProxy_VectorKnowledgeBase) ToString() *string {
+func (v *jsiiProxy_VectorKnowledgeBaseBase) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(

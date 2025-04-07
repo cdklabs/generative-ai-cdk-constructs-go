@@ -35,5 +35,8 @@ type VectorKnowledgeBaseAttributes struct {
 	//
 	// Experimental.
 	KnowledgeBaseState *string `field:"optional" json:"knowledgeBaseState" yaml:"knowledgeBaseState"`
+	// The vector store type for the knowledge base.
+	// Experimental.
+	VectorStoreType VectorStoreType `field:"required" json:"vectorStoreType" yaml:"vectorStoreType"`
 }
 
