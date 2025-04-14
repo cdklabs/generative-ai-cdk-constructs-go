@@ -49564,6 +49564,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_1_1_5() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_1_1_5",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -49619,6 +49630,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BA
 	return returns
 }
 
+func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_5() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_5",
+		&returns,
+	)
+	return returns
+}
+
 func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_0() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -49669,6 +49691,17 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBAS
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_4",
+		&returns,
+	)
+	return returns
+}
+
+func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_5() JumpStartModel {
+	_init_.Initialize()
+	var returns JumpStartModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
+		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_5",
 		&returns,
 	)
 	return returns

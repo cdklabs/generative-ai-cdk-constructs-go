@@ -966,6 +966,17 @@ func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_6_0_TGI3_2_0
 	return returns
 }
 
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_6_0_TGI3_2_3_GPU_PY311_CU124_UBUNTU22_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_6_0_TGI3_2_3_GPU_PY311_CU124_UBUNTU22_04",
+		&returns,
+	)
+	return returns
+}
+
 func DeepLearningContainerImage_HUGGINGFACE_TENSORFLOW_INFERENCE_2_11_0_TRANSFORMERS4_26_0_CPU_PY39_UBUNTU20_04() ContainerImage {
 	_init_.Initialize()
 	var returns ContainerImage

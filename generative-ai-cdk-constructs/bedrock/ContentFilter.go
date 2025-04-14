@@ -13,5 +13,15 @@ type ContentFilter struct {
 	// The type of harmful category that the content filter is applied to.
 	// Experimental.
 	Type ContentFilterType `field:"required" json:"type" yaml:"type"`
+	// The input modalities to apply the content filter to.
+	// Default: undefined - Applies to text modality.
+	//
+	// Experimental.
+	InputModalities *[]ModalityType `field:"optional" json:"inputModalities" yaml:"inputModalities"`
+	// The output modalities to apply the content filter to.
+	// Default: undefined - Applies to text modality.
+	//
+	// Experimental.
+	OutputModalities *[]ModalityType `field:"optional" json:"outputModalities" yaml:"outputModalities"`
 }
 

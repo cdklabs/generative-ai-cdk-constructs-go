@@ -500,6 +500,72 @@ func BedrockFoundationModel_META_LLAMA_3_3_70B_INSTRUCT_V1() BedrockFoundationMo
 	return returns
 }
 
+func BedrockFoundationModel_MISTRAL_7B_INSTRUCT_V0() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_7B_INSTRUCT_V0",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_MISTRAL_LARGE_2402_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_LARGE_2402_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_MISTRAL_LARGE_2407_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_LARGE_2407_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_MISTRAL_MIXTRAL_8X7B_INSTRUCT_V0() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_MIXTRAL_8X7B_INSTRUCT_V0",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_MISTRAL_PIXTRAL_LARGE_2502_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_PIXTRAL_LARGE_2502_V1",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_MISTRAL_SMALL_2402_V1() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"MISTRAL_SMALL_2402_V1",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_TITAN_EMBED_TEXT_V1() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel

@@ -1201,6 +1201,14 @@ func init() {
 			return &jsiiProxy_Memory{}
 		},
 	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ModalityType",
+		reflect.TypeOf((*ModalityType)(nil)).Elem(),
+		map[string]interface{}{
+			"TEXT": ModalityType_TEXT,
+			"IMAGE": ModalityType_IMAGE,
+		},
+	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.OrchestrationExecutor",
 		reflect.TypeOf((*OrchestrationExecutor)(nil)).Elem(),
@@ -1596,6 +1604,28 @@ func init() {
 			"EVENT": SharePointObjectType_EVENT,
 			"FILE": SharePointObjectType_FILE,
 		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SupplementalDataStorageLocation",
+		reflect.TypeOf((*SupplementalDataStorageLocation)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "locationConfig", GoGetter: "LocationConfig"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+		},
+		func() interface{} {
+			return &jsiiProxy_SupplementalDataStorageLocation{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SupplementalDataStorageLocationType",
+		reflect.TypeOf((*SupplementalDataStorageLocationType)(nil)).Elem(),
+		map[string]interface{}{
+			"S3": SupplementalDataStorageLocationType_S3,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.SupplementalDataStorageS3Config",
+		reflect.TypeOf((*SupplementalDataStorageS3Config)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.TextPromptVariantProps",

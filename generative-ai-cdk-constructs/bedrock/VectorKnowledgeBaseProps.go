@@ -42,6 +42,9 @@ type VectorKnowledgeBaseProps struct {
 	//
 	// Experimental.
 	IndexName *string `field:"optional" json:"indexName" yaml:"indexName"`
+	// The supplemental data storage locations for the knowledge base.
+	// Experimental.
+	SupplementalDataStorageLocations *[]SupplementalDataStorageLocation `field:"optional" json:"supplementalDataStorageLocations" yaml:"supplementalDataStorageLocations"`
 	// The name of the field in the vector index.
 	//
 	// If vectorStore is not of type `VectorCollection`,
@@ -63,7 +66,7 @@ type VectorKnowledgeBaseProps struct {
 	//
 	// Must be either of
 	// type `VectorCollection`, `RedisEnterpriseVectorStore`,
-	// `PineconeVectorStore` or `AmazonAuroraVectorStore`.
+	// `PineconeVectorStore`, `AmazonAuroraVectorStore`, or `MongoDBAtlasVectorStore`.
 	// Default: - A new OpenSearch Serverless vector collection is created.
 	//
 	// Experimental.
