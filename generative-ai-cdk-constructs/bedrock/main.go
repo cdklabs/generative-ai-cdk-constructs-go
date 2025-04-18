@@ -696,6 +696,94 @@ func init() {
 		reflect.TypeOf((*FoundationModelParsingStategyProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GraphKnowledgeBase",
+		reflect.TypeOf((*GraphKnowledgeBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addCustomDataSource", GoMethod: "AddCustomDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addWebCrawlerDataSource", GoMethod: "AddWebCrawlerDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "embeddingModel", GoGetter: "EmbeddingModel"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "fieldMapping", GoGetter: "FieldMapping"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantQuery", GoMethod: "GrantQuery"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieve", GoMethod: "GrantRetrieve"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieveAndGenerate", GoMethod: "GrantRetrieveAndGenerate"},
+			_jsii_.MemberProperty{JsiiProperty: "graph", GoGetter: "Graph"},
+			_jsii_.MemberProperty{JsiiProperty: "instruction", GoGetter: "Instruction"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "notebook", GoGetter: "Notebook"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "vectorStoreType", GoGetter: "VectorStoreType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GraphKnowledgeBase{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_GraphKnowledgeBaseBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GraphKnowledgeBaseAttributes",
+		reflect.TypeOf((*GraphKnowledgeBaseAttributes)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GraphKnowledgeBaseBase",
+		reflect.TypeOf((*GraphKnowledgeBaseBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addConfluenceDataSource", GoMethod: "AddConfluenceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addCustomDataSource", GoMethod: "AddCustomDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addS3DataSource", GoMethod: "AddS3DataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSalesforceDataSource", GoMethod: "AddSalesforceDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addSharePointDataSource", GoMethod: "AddSharePointDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "addWebCrawlerDataSource", GoMethod: "AddWebCrawlerDataSource"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantQuery", GoMethod: "GrantQuery"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieve", GoMethod: "GrantRetrieve"},
+			_jsii_.MemberMethod{JsiiMethod: "grantRetrieveAndGenerate", GoMethod: "GrantRetrieveAndGenerate"},
+			_jsii_.MemberProperty{JsiiProperty: "graph", GoGetter: "Graph"},
+			_jsii_.MemberProperty{JsiiProperty: "instruction", GoGetter: "Instruction"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "vectorStoreType", GoGetter: "VectorStoreType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GraphKnowledgeBaseBase{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_VectorKnowledgeBaseBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.GraphKnowledgeBaseProps",
+		reflect.TypeOf((*GraphKnowledgeBaseProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.Guardrail",
 		reflect.TypeOf((*Guardrail)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -859,6 +947,30 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_IDataSource{}
 			_jsii_.InitJsiiProxy(&j.Type__awscdkIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.IGraphKnowledgeBase",
+		reflect.TypeOf((*IGraphKnowledgeBase)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "grant", GoMethod: "Grant"},
+			_jsii_.MemberMethod{JsiiMethod: "grantQuery", GoMethod: "GrantQuery"},
+			_jsii_.MemberProperty{JsiiProperty: "graph", GoGetter: "Graph"},
+			_jsii_.MemberProperty{JsiiProperty: "instruction", GoGetter: "Instruction"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseArn", GoGetter: "KnowledgeBaseArn"},
+			_jsii_.MemberProperty{JsiiProperty: "knowledgeBaseId", GoGetter: "KnowledgeBaseId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "role", GoGetter: "Role"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IGraphKnowledgeBase{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IKnowledgeBase)
 			return &j
 		},
 	)
@@ -1665,6 +1777,10 @@ func init() {
 		map[string]interface{}{
 			"POST_CHUNKING": TransformationStep_POST_CHUNKING,
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorFieldMapping",
+		reflect.TypeOf((*VectorFieldMapping)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.VectorKnowledgeBase",
