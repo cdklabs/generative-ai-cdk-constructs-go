@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsbedrock"
 )
 
-func validateParsingStategy_FoundationModelParameters(props *FoundationModelParsingStategyProps) error {
+func validateParsingStrategy_FoundationModelParameters(props *FoundationModelParsingStrategyProps) error {
 	if props == nil {
 		return fmt.Errorf("parameter props is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func validateParsingStategy_FoundationModelParameters(props *FoundationModelPars
 	return nil
 }
 
-func (j *jsiiProxy_ParsingStategy) validateSetConfigurationParameters(val *awsbedrock.CfnDataSource_ParsingConfigurationProperty) error {
+func (j *jsiiProxy_ParsingStrategy) validateSetConfigurationParameters(val *awsbedrock.CfnDataSource_ParsingConfigurationProperty) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

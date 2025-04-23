@@ -49,6 +49,6 @@ type DataSourceAssociationProps struct {
 	// Default: - No Parsing Stategy is used.
 	//
 	// Experimental.
-	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
+	ParsingStrategy ParsingStrategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
 }
 

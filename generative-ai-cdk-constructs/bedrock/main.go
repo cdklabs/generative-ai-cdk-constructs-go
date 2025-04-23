@@ -692,8 +692,8 @@ func init() {
 		reflect.TypeOf((*FoundationModelContextEnrichmentProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStategyProps",
-		reflect.TypeOf((*FoundationModelParsingStategyProps)(nil)).Elem(),
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.FoundationModelParsingStrategyProps",
+		reflect.TypeOf((*FoundationModelParsingStrategyProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.GraphKnowledgeBase",
@@ -1362,22 +1362,22 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStategy",
-		reflect.TypeOf((*ParsingStategy)(nil)).Elem(),
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStrategy",
+		reflect.TypeOf((*ParsingStrategy)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "configuration", GoGetter: "Configuration"},
 			_jsii_.MemberMethod{JsiiMethod: "generatePolicyStatements", GoMethod: "GeneratePolicyStatements"},
 		},
 		func() interface{} {
-			return &jsiiProxy_ParsingStategy{}
+			return &jsiiProxy_ParsingStrategy{}
 		},
 	)
 	_jsii_.RegisterEnum(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStategyType",
-		reflect.TypeOf((*ParsingStategyType)(nil)).Elem(),
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStrategyType",
+		reflect.TypeOf((*ParsingStrategyType)(nil)).Elem(),
 		map[string]interface{}{
-			"FOUNDATION_MODEL": ParsingStategyType_FOUNDATION_MODEL,
-			"DATA_AUTOMATION": ParsingStategyType_DATA_AUTOMATION,
+			"FOUNDATION_MODEL": ParsingStrategyType_FOUNDATION_MODEL,
+			"DATA_AUTOMATION": ParsingStrategyType_DATA_AUTOMATION,
 		},
 	)
 	_jsii_.RegisterClass(

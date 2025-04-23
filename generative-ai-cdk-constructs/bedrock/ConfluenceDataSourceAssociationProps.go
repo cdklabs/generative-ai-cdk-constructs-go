@@ -50,7 +50,7 @@ type ConfluenceDataSourceAssociationProps struct {
 	// Default: - No Parsing Stategy is used.
 	//
 	// Experimental.
-	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
+	ParsingStrategy ParsingStrategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
 	// The AWS Secrets Manager secret that stores your authentication credentials for your Confluence instance URL.
 	//
 	// Secret must start with "AmazonBedrock-".

@@ -49,7 +49,7 @@ type WebCrawlerDataSourceAssociationProps struct {
 	// Default: - No Parsing Stategy is used.
 	//
 	// Experimental.
-	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
+	ParsingStrategy ParsingStrategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
 	// The source urls in the format `https://www.sitename.com`. Maximum of 100 URLs.
 	// Experimental.
 	SourceUrls *[]*string `field:"required" json:"sourceUrls" yaml:"sourceUrls"`

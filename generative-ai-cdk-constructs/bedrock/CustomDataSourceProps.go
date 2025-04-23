@@ -49,7 +49,7 @@ type CustomDataSourceProps struct {
 	// Default: - No Parsing Stategy is used.
 	//
 	// Experimental.
-	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
+	ParsingStrategy ParsingStrategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
 	// The knowledge base to associate with the data source.
 	// Experimental.
 	KnowledgeBase IKnowledgeBase `field:"required" json:"knowledgeBase" yaml:"knowledgeBase"`

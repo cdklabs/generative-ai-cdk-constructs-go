@@ -12,7 +12,7 @@ import (
 // See: https://docs.aws.amazon.com/bedrock/latest/userguide/kb-chunking-parsing.html#kb-advanced-parsing
 //
 // Experimental.
-type ParsingStategy interface {
+type ParsingStrategy interface {
 	// The CloudFormation property representation of this configuration.
 	// Experimental.
 	Configuration() *awsbedrock.CfnDataSource_ParsingConfigurationProperty
@@ -22,12 +22,12 @@ type ParsingStategy interface {
 	GeneratePolicyStatements() *[]awsiam.PolicyStatement
 }
 
-// The jsii proxy struct for ParsingStategy
-type jsiiProxy_ParsingStategy struct {
+// The jsii proxy struct for ParsingStrategy
+type jsiiProxy_ParsingStrategy struct {
 	_ byte // padding
 }
 
-func (j *jsiiProxy_ParsingStategy) Configuration() *awsbedrock.CfnDataSource_ParsingConfigurationProperty {
+func (j *jsiiProxy_ParsingStrategy) Configuration() *awsbedrock.CfnDataSource_ParsingConfigurationProperty {
 	var returns *awsbedrock.CfnDataSource_ParsingConfigurationProperty
 	_jsii_.Get(
 		j,
@@ -39,17 +39,17 @@ func (j *jsiiProxy_ParsingStategy) Configuration() *awsbedrock.CfnDataSource_Par
 
 
 // Experimental.
-func NewParsingStategy_Override(p ParsingStategy) {
+func NewParsingStrategy_Override(p ParsingStrategy) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStategy",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStrategy",
 		nil, // no parameters
 		p,
 	)
 }
 
-func (j *jsiiProxy_ParsingStategy)SetConfiguration(val *awsbedrock.CfnDataSource_ParsingConfigurationProperty) {
+func (j *jsiiProxy_ParsingStrategy)SetConfiguration(val *awsbedrock.CfnDataSource_ParsingConfigurationProperty) {
 	if err := j.validateSetConfigurationParameters(val); err != nil {
 		panic(err)
 	}
@@ -60,6 +60,26 @@ func (j *jsiiProxy_ParsingStategy)SetConfiguration(val *awsbedrock.CfnDataSource
 	)
 }
 
+// Creates a Bedrock Data Automation-based parsing strategy for processing multimodal data.
+//
+// It leverages generative AI to automate the transformation of multi-modal data into structured formats.
+// If the parsing fails, the Amazon Bedrock default parser is used instead.
+// Experimental.
+func ParsingStrategy_BedrockDataAutomation() ParsingStrategy {
+	_init_.Initialize()
+
+	var returns ParsingStrategy
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStrategy",
+		"bedrockDataAutomation",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 // Creates a Foundation Model-based parsing strategy for extracting non-textual information from documents such as tables and charts.
 //
 // - Additional costs apply when using advanced parsing due to foundation model usage.
@@ -67,16 +87,16 @@ func (j *jsiiProxy_ParsingStategy)SetConfiguration(val *awsbedrock.CfnDataSource
 // See: https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ds.html#kb-ds-supported-doc-formats-limits
 //
 // Experimental.
-func ParsingStategy_FoundationModel(props *FoundationModelParsingStategyProps) ParsingStategy {
+func ParsingStrategy_FoundationModel(props *FoundationModelParsingStrategyProps) ParsingStrategy {
 	_init_.Initialize()
 
-	if err := validateParsingStategy_FoundationModelParameters(props); err != nil {
+	if err := validateParsingStrategy_FoundationModelParameters(props); err != nil {
 		panic(err)
 	}
-	var returns ParsingStategy
+	var returns ParsingStrategy
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStategy",
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ParsingStrategy",
 		"foundationModel",
 		[]interface{}{props},
 		&returns,
@@ -85,7 +105,7 @@ func ParsingStategy_FoundationModel(props *FoundationModelParsingStategyProps) P
 	return returns
 }
 
-func (p *jsiiProxy_ParsingStategy) GeneratePolicyStatements() *[]awsiam.PolicyStatement {
+func (p *jsiiProxy_ParsingStrategy) GeneratePolicyStatements() *[]awsiam.PolicyStatement {
 	var returns *[]awsiam.PolicyStatement
 
 	_jsii_.Invoke(

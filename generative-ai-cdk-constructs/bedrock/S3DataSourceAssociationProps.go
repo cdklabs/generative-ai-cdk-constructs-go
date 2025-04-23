@@ -50,7 +50,7 @@ type S3DataSourceAssociationProps struct {
 	// Default: - No Parsing Stategy is used.
 	//
 	// Experimental.
-	ParsingStrategy ParsingStategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
+	ParsingStrategy ParsingStrategy `field:"optional" json:"parsingStrategy" yaml:"parsingStrategy"`
 	// The bucket that contains the data source.
 	// Experimental.
 	Bucket awss3.IBucket `field:"required" json:"bucket" yaml:"bucket"`
