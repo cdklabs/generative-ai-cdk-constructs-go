@@ -842,6 +842,7 @@ func init() {
 		map[string]interface{}{
 			"BLOCK": GuardrailAction_BLOCK,
 			"ANONYMIZE": GuardrailAction_ANONYMIZE,
+			"NONE": GuardrailAction_NONE,
 		},
 	)
 	_jsii_.RegisterStruct(
@@ -1297,6 +1298,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.LambdaCustomTransformationProps",
 		reflect.TypeOf((*LambdaCustomTransformationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.ManagedWordFilter",
+		reflect.TypeOf((*ManagedWordFilter)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.ManagedWordFilterType",
@@ -1874,6 +1879,7 @@ func init() {
 		reflect.TypeOf((*VectorStoreType)(nil)).Elem(),
 		map[string]interface{}{
 			"OPENSEARCH_SERVERLESS": VectorStoreType_OPENSEARCH_SERVERLESS,
+			"OPENSEARCH_MANAGED_CLUSTER": VectorStoreType_OPENSEARCH_MANAGED_CLUSTER,
 			"PINECONE": VectorStoreType_PINECONE,
 			"AMAZON_AURORA": VectorStoreType_AMAZON_AURORA,
 			"MONGO_DB_ATLAS": VectorStoreType_MONGO_DB_ATLAS,
@@ -1925,5 +1931,9 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/generative-ai-cdk-constructs.bedrock.WebCrawlerDataSourceProps",
 		reflect.TypeOf((*WebCrawlerDataSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.WordFilter",
+		reflect.TypeOf((*WordFilter)(nil)).Elem(),
 	)
 }

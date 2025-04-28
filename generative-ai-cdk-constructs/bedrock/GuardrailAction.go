@@ -12,5 +12,8 @@ const (
 	// If sensitive information is detected in the model response, the guardrail masks it with an identifier, the sensitive information is masked and replaced with identifier tags (for example: [NAME-1], [NAME-2], [EMAIL-1], etc.).
 	// Experimental.
 	GuardrailAction_ANONYMIZE GuardrailAction = "ANONYMIZE"
+	// Do not take any action.
+	// Experimental.
+	GuardrailAction_NONE GuardrailAction = "NONE"
 )
 

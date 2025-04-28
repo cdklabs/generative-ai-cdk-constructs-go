@@ -44,9 +44,12 @@ func (g *jsiiProxy_Guardrail) validateAddDeniedTopicFilterParameters(filter Topi
 	return nil
 }
 
-func (g *jsiiProxy_Guardrail) validateAddManagedWordListFilterParameters(filter ManagedWordFilterType) error {
-	if filter == "" {
+func (g *jsiiProxy_Guardrail) validateAddManagedWordListFilterParameters(filter *ManagedWordFilter) error {
+	if filter == nil {
 		return fmt.Errorf("parameter filter is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(filter, func() string { return "parameter filter" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -74,9 +77,12 @@ func (g *jsiiProxy_Guardrail) validateAddRegexFilterParameters(filter *RegexFilt
 	return nil
 }
 
-func (g *jsiiProxy_Guardrail) validateAddWordFilterParameters(filter *string) error {
+func (g *jsiiProxy_Guardrail) validateAddWordFilterParameters(filter *WordFilter) error {
 	if filter == nil {
 		return fmt.Errorf("parameter filter is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(filter, func() string { return "parameter filter" }); err != nil {
+		return err
 	}
 
 	return nil

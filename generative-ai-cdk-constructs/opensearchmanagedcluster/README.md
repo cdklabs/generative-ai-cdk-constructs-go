@@ -1,4 +1,4 @@
-# Amazon OpenSearch Serverless Construct Library
+# OpenSearch Managed Cluster Vector Store Construct Library
 
 <!--BEGIN STABILITY BANNER-->---
 
@@ -20,21 +20,51 @@
 | ![.Net](https://docs.aws.amazon.com/cdk/api/latest/img/dotnet32.png) .Net                   | `CdkLabs.GenerativeAICdkConstructs`|
 | ![Go](https://docs.aws.amazon.com/cdk/api/latest/img/go32.png) Go                   | `github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs`|
 
-This construct library extends the [automatically generated L1 constructs](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_opensearchserverless-readme.html) to provide an L2 construct for a vector collection.
+This construct library provides a class that defines an existing OpenSearch managed cluster to be used as a vector store for a Knowledge Base.
 
 ## Table of contents
 
 * [API](#api)
-* [Vector Collection](#vector-collection)
+* [OpenSearch Managed Cluster Vector Store](#opensearch-managed-cluster-vector-store)
 
 ## API
 
-See the [API documentation](../../../apidocs/@cdklabs/namespaces/opensearchserverless/README.md).
+See the [API documentation](../../../apidocs/namespaces/opensearchmanagedcluster/README.md).
 
-## Vector Collection
+## OpenSearch Managed Cluster Vector Store
 
-This resource creates an Amazon OpenSearch Serverless collection configured for `VECTORSEARCH`. It creates default encryption, network, and data policies for use with Amazon Bedrock Knowledge Bases. For encryption, it uses the default AWS owned KMS key. It allows network connections from the public internet, but access is restricted to specific IAM principals.
+TypeScript
 
-### Granting Data Access
+```go
+import { opensearchmanagedcluster } from '@cdklabs/generative-ai-cdk-constructs';
 
-The `grantDataAccess` method grants the specified role access to read and write the data in the collection.
+new opensearchmanagedcluster.OpenSearchManagedClusterVectorStore({
+  domainArn: 'arn:aws:es:region:account:domain/your-domain',
+  domainEndpoint: 'https://your-domain.region.es.amazonaws.com',
+  vectorIndexName: 'your-vector-index',
+  fieldMapping: {
+    metadataField: 'metadata',
+    textField: 'text',
+    vectorField: 'vector'
+  }
+});
+```
+
+Python
+
+```python
+from cdklabs.generative_ai_cdk_constructs import (
+    opensearchmanagedcluster
+)
+
+opensearchvs = opensearchmanagedcluster.OpenSearchManagedClusterVectorStore(
+    domain_arn='arn:aws:es:region:account:domain/your-domain',
+    domain_endpoint='https://your-domain.region.es.amazonaws.com',
+    vector_index_name='your-vector-index',
+    field_mapping={
+        'metadataField': 'metadata',
+        'textField': 'text',
+        'vectorField': 'vector'
+    }
+)
+```

@@ -41,7 +41,7 @@ type GuardrailProps struct {
 	KmsKey awskms.IKey `field:"optional" json:"kmsKey" yaml:"kmsKey"`
 	// The managed word filters to apply to the guardrail.
 	// Experimental.
-	ManagedWordListFilters *[]ManagedWordFilterType `field:"optional" json:"managedWordListFilters" yaml:"managedWordListFilters"`
+	ManagedWordListFilters *[]*ManagedWordFilter `field:"optional" json:"managedWordListFilters" yaml:"managedWordListFilters"`
 	// The PII filters to apply to the guardrail.
 	// Experimental.
 	PiiFilters *[]*PIIFilter `field:"optional" json:"piiFilters" yaml:"piiFilters"`
@@ -50,6 +50,6 @@ type GuardrailProps struct {
 	RegexFilters *[]*RegexFilter `field:"optional" json:"regexFilters" yaml:"regexFilters"`
 	// The word filters to apply to the guardrail.
 	// Experimental.
-	WordFilters *[]*string `field:"optional" json:"wordFilters" yaml:"wordFilters"`
+	WordFilters *[]*WordFilter `field:"optional" json:"wordFilters" yaml:"wordFilters"`
 }
 

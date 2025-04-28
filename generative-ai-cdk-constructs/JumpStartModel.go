@@ -53194,17 +53194,6 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_
 	return returns
 }
 
-func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_1_1_5() JumpStartModel {
-	_init_.Initialize()
-	var returns JumpStartModel
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_1_1_5",
-		&returns,
-	)
-	return returns
-}
-
 func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_V2_1_1_1_6() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -53266,17 +53255,6 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BA
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
 		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_4",
-		&returns,
-	)
-	return returns
-}
-
-func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_5() JumpStartModel {
-	_init_.Initialize()
-	var returns JumpStartModel
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XL_BASE_1_0_1_1_5",
 		&returns,
 	)
 	return returns
@@ -53348,17 +53326,6 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBAS
 	return returns
 }
 
-func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_5() JumpStartModel {
-	_init_.Initialize()
-	var returns JumpStartModel
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_5",
-		&returns,
-	)
-	return returns
-}
-
 func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBASE1_1_1_6() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
@@ -53370,23 +53337,23 @@ func JumpStartModel_HUGGINGFACE_TXT2IMGNEURON_STABILITYAI_STABLE_DIFFUSION_XLBAS
 	return returns
 }
 
-func JumpStartModel_HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_0() JumpStartModel {
+func JumpStartModel_HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_2() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_0",
+		"HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_2",
 		&returns,
 	)
 	return returns
 }
 
-func JumpStartModel_HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_1() JumpStartModel {
+func JumpStartModel_HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_3() JumpStartModel {
 	_init_.Initialize()
 	var returns JumpStartModel
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.JumpStartModel",
-		"HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_1",
+		"HUGGINGFACE_VLM_GEMMA_3_27B_INSTRUCT_1_0_3",
 		&returns,
 	)
 	return returns

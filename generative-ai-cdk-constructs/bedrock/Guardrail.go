@@ -68,7 +68,7 @@ type Guardrail interface {
 	LastUpdated() *string
 	// The managed word list filters applied by the guardrail.
 	// Experimental.
-	ManagedWordListFilters() *[]ManagedWordFilterType
+	ManagedWordListFilters() *[]*ManagedWordFilter
 	// The name of the guardrail.
 	// Experimental.
 	Name() *string
@@ -95,7 +95,7 @@ type Guardrail interface {
 	Stack() awscdk.Stack
 	// The word filters applied by the guardrail.
 	// Experimental.
-	WordFilters() *[]*string
+	WordFilters() *[]*WordFilter
 	// Adds a content filter to the guardrail.
 	// Experimental.
 	AddContentFilter(filter *ContentFilter)
@@ -107,7 +107,7 @@ type Guardrail interface {
 	AddDeniedTopicFilter(filter Topic)
 	// Adds a managed word list filter to the guardrail.
 	// Experimental.
-	AddManagedWordListFilter(filter ManagedWordFilterType)
+	AddManagedWordListFilter(filter *ManagedWordFilter)
 	// Adds a PII filter to the guardrail.
 	// Experimental.
 	AddPIIFilter(filter *PIIFilter)
@@ -116,10 +116,10 @@ type Guardrail interface {
 	AddRegexFilter(filter *RegexFilter)
 	// Adds a word filter to the guardrail.
 	// Experimental.
-	AddWordFilter(filter *string)
+	AddWordFilter(filter *WordFilter)
 	// Adds a word filter to the guardrail.
 	// Experimental.
-	AddWordFilterFromFile(filePath *string)
+	AddWordFilterFromFile(filePath *string, inputAction GuardrailAction, outputAction GuardrailAction, inputEnabled *bool, outputEnabled *bool)
 	// Apply the given removal policy to this resource.
 	//
 	// The Removal Policy controls what happens to this resource when it stops
@@ -296,8 +296,8 @@ func (j *jsiiProxy_Guardrail) LastUpdated() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Guardrail) ManagedWordListFilters() *[]ManagedWordFilterType {
-	var returns *[]ManagedWordFilterType
+func (j *jsiiProxy_Guardrail) ManagedWordListFilters() *[]*ManagedWordFilter {
+	var returns *[]*ManagedWordFilter
 	_jsii_.Get(
 		j,
 		"managedWordListFilters",
@@ -366,8 +366,8 @@ func (j *jsiiProxy_Guardrail) Stack() awscdk.Stack {
 	return returns
 }
 
-func (j *jsiiProxy_Guardrail) WordFilters() *[]*string {
-	var returns *[]*string
+func (j *jsiiProxy_Guardrail) WordFilters() *[]*WordFilter {
+	var returns *[]*WordFilter
 	_jsii_.Get(
 		j,
 		"wordFilters",
@@ -669,7 +669,7 @@ func (g *jsiiProxy_Guardrail) AddDeniedTopicFilter(filter Topic) {
 	)
 }
 
-func (g *jsiiProxy_Guardrail) AddManagedWordListFilter(filter ManagedWordFilterType) {
+func (g *jsiiProxy_Guardrail) AddManagedWordListFilter(filter *ManagedWordFilter) {
 	if err := g.validateAddManagedWordListFilterParameters(filter); err != nil {
 		panic(err)
 	}
@@ -702,7 +702,7 @@ func (g *jsiiProxy_Guardrail) AddRegexFilter(filter *RegexFilter) {
 	)
 }
 
-func (g *jsiiProxy_Guardrail) AddWordFilter(filter *string) {
+func (g *jsiiProxy_Guardrail) AddWordFilter(filter *WordFilter) {
 	if err := g.validateAddWordFilterParameters(filter); err != nil {
 		panic(err)
 	}
@@ -713,14 +713,14 @@ func (g *jsiiProxy_Guardrail) AddWordFilter(filter *string) {
 	)
 }
 
-func (g *jsiiProxy_Guardrail) AddWordFilterFromFile(filePath *string) {
+func (g *jsiiProxy_Guardrail) AddWordFilterFromFile(filePath *string, inputAction GuardrailAction, outputAction GuardrailAction, inputEnabled *bool, outputEnabled *bool) {
 	if err := g.validateAddWordFilterFromFileParameters(filePath); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		g,
 		"addWordFilterFromFile",
-		[]interface{}{filePath},
+		[]interface{}{filePath, inputAction, outputAction, inputEnabled, outputEnabled},
 	)
 }
 

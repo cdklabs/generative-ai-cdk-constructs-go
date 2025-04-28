@@ -16,7 +16,7 @@ func (g *jsiiProxy_Guardrail) validateAddDeniedTopicFilterParameters(filter Topi
 	return nil
 }
 
-func (g *jsiiProxy_Guardrail) validateAddManagedWordListFilterParameters(filter ManagedWordFilterType) error {
+func (g *jsiiProxy_Guardrail) validateAddManagedWordListFilterParameters(filter *ManagedWordFilter) error {
 	return nil
 }
 
@@ -28,7 +28,7 @@ func (g *jsiiProxy_Guardrail) validateAddRegexFilterParameters(filter *RegexFilt
 	return nil
 }
 
-func (g *jsiiProxy_Guardrail) validateAddWordFilterParameters(filter *string) error {
+func (g *jsiiProxy_Guardrail) validateAddWordFilterParameters(filter *WordFilter) error {
 	return nil
 }
 

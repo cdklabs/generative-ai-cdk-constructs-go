@@ -13,5 +13,11 @@ type ContextualGroundingFilter struct {
 	// The type of contextual grounding filter.
 	// Experimental.
 	Type ContextualGroundingFilterType `field:"required" json:"type" yaml:"type"`
+	// The action to take when contextual grounding is detected.
+	// Experimental.
+	Action GuardrailAction `field:"optional" json:"action" yaml:"action"`
+	// Whether the contextual grounding filter is enabled.
+	// Experimental.
+	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
 }
 

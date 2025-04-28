@@ -29,5 +29,17 @@ type CustomTopicProps struct {
 	// The name of the topic to deny.
 	// Experimental.
 	Name *string `field:"required" json:"name" yaml:"name"`
+	// The action to take when a topic is detected in the input.
+	// Experimental.
+	InputAction GuardrailAction `field:"optional" json:"inputAction" yaml:"inputAction"`
+	// Whether the topic filter is enabled for input.
+	// Experimental.
+	InputEnabled *bool `field:"optional" json:"inputEnabled" yaml:"inputEnabled"`
+	// The action to take when a topic is detected in the output.
+	// Experimental.
+	OutputAction GuardrailAction `field:"optional" json:"outputAction" yaml:"outputAction"`
+	// Whether the topic filter is enabled for output.
+	// Experimental.
+	OutputEnabled *bool `field:"optional" json:"outputEnabled" yaml:"outputEnabled"`
 }
 

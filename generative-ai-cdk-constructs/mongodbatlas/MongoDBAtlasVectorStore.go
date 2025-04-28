@@ -26,6 +26,9 @@ type MongoDBAtlasVectorStore interface {
 	// The field mapping for MongoDB Atlas.
 	// Experimental.
 	FieldMapping() *MongoDbAtlasFieldMapping
+	// The name of the text index.
+	// Experimental.
+	TextIndexName() *string
 	// The name of the vector index.
 	// Experimental.
 	VectorIndexName() *string
@@ -91,6 +94,16 @@ func (j *jsiiProxy_MongoDBAtlasVectorStore) FieldMapping() *MongoDbAtlasFieldMap
 	_jsii_.Get(
 		j,
 		"fieldMapping",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MongoDBAtlasVectorStore) TextIndexName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"textIndexName",
 		&returns,
 	)
 	return returns

@@ -16,14 +16,17 @@ type MongoDBAtlasVectorStoreProps struct {
 	// The endpoint URL for MongoDB Atlas.
 	// Experimental.
 	Endpoint *string `field:"required" json:"endpoint" yaml:"endpoint"`
-	// The name of the endpoint service.
-	// Experimental.
-	EndpointServiceName *string `field:"required" json:"endpointServiceName" yaml:"endpointServiceName"`
 	// The field mapping for MongoDB Atlas.
 	// Experimental.
 	FieldMapping *MongoDbAtlasFieldMapping `field:"required" json:"fieldMapping" yaml:"fieldMapping"`
 	// The name of the vector index.
 	// Experimental.
 	VectorIndexName *string `field:"required" json:"vectorIndexName" yaml:"vectorIndexName"`
+	// The name of the endpoint service.
+	// Experimental.
+	EndpointServiceName *string `field:"optional" json:"endpointServiceName" yaml:"endpointServiceName"`
+	// The name of the text index.
+	// Experimental.
+	TextIndexName *string `field:"optional" json:"textIndexName" yaml:"textIndexName"`
 }
 

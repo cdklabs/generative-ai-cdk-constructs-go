@@ -13,6 +13,9 @@ const (
 	// `OPENSEARCH_SERVERLESS` is the vector store for OpenSearch Serverless.
 	// Experimental.
 	VectorStoreType_OPENSEARCH_SERVERLESS VectorStoreType = "OPENSEARCH_SERVERLESS"
+	// `OPENSEARCH_MANAGED_CLUSTER` is the vector store for OpenSearch Managed Cluster.
+	// Experimental.
+	VectorStoreType_OPENSEARCH_MANAGED_CLUSTER VectorStoreType = "OPENSEARCH_MANAGED_CLUSTER"
 	// `PINECONE` is the vector store for Pinecone.
 	// Experimental.
 	VectorStoreType_PINECONE VectorStoreType = "PINECONE"

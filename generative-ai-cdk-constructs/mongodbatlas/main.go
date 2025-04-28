@@ -17,6 +17,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "endpoint", GoGetter: "Endpoint"},
 			_jsii_.MemberProperty{JsiiProperty: "endpointServiceName", GoGetter: "EndpointServiceName"},
 			_jsii_.MemberProperty{JsiiProperty: "fieldMapping", GoGetter: "FieldMapping"},
+			_jsii_.MemberProperty{JsiiProperty: "textIndexName", GoGetter: "TextIndexName"},
 			_jsii_.MemberProperty{JsiiProperty: "vectorIndexName", GoGetter: "VectorIndexName"},
 		},
 		func() interface{} {
