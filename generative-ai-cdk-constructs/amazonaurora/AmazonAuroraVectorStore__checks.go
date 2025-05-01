@@ -13,7 +13,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) error {
+func (a *jsiiProxy_AmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.ISecurityGroup, auroraSecurityGroup awsec2.ISecurityGroup) error {
 	if lambdaSecurityGroup == nil {
 		return fmt.Errorf("parameter lambdaSecurityGroup is required, but nil was provided")
 	}
@@ -68,7 +68,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupCustomResourceParameter
 	return nil
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) error {
+func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroup awsec2.ISecurityGroup) error {
 	if vpc == nil {
 		return fmt.Errorf("parameter vpc is required, but nil was provided")
 	}
@@ -81,8 +81,8 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) validateSetupDatabaseClusterResource
 		return fmt.Errorf("parameter clusterIdentifier is required, but nil was provided")
 	}
 
-	if auroraSecurityGroupId == nil {
-		return fmt.Errorf("parameter auroraSecurityGroupId is required, but nil was provided")
+	if auroraSecurityGroup == nil {
+		return fmt.Errorf("parameter auroraSecurityGroup is required, but nil was provided")
 	}
 
 	return nil

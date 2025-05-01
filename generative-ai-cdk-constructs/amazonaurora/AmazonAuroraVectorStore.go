@@ -55,7 +55,7 @@ type AmazonAuroraVectorStore interface {
 	// Experimental.
 	Vpc() awsec2.IVpc
 	// Experimental.
-	AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup)
+	AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.ISecurityGroup, auroraSecurityGroup awsec2.ISecurityGroup)
 	// Experimental.
 	CreateAuroraPgCRPolicy(clusterIdentifier *string) awsiam.ManagedPolicy
 	// Experimental.
@@ -65,7 +65,7 @@ type AmazonAuroraVectorStore interface {
 	// Experimental.
 	SetupCustomResource(databaseClusterResources *DatabaseClusterResources, lambdaSecurityGroup awsec2.SecurityGroup, auroraPgCRPolicy awsiam.ManagedPolicy) awscdk.CustomResource
 	// Experimental.
-	SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) *DatabaseClusterResources
+	SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroup awsec2.ISecurityGroup) *DatabaseClusterResources
 	// Returns a string representation of this construct.
 	// Experimental.
 	ToString() *string
@@ -231,8 +231,7 @@ func NewAmazonAuroraVectorStore_Override(a AmazonAuroraVectorStore, scope constr
 // You need to provide your existing Aurora Vector Store properties
 // such as `databaseName`, `clusterIdentifier`, `vpc` where database is deployed,
 // `secret` containing username and password for authentication to database,
-// and `auroraSecurityGroupId` with the value of a security group id that was
-// used for the database.
+// and `auroraSecurityGroup` with the ecurity group that was used for the database.
 //
 // Returns: An instance of AmazonAuroraVectorStore.
 // Experimental.
@@ -290,7 +289,7 @@ func AmazonAuroraVectorStore_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) {
+func (a *jsiiProxy_AmazonAuroraVectorStore) AddIngressRuleToAuroraSecurityGroup(lambdaSecurityGroup awsec2.ISecurityGroup, auroraSecurityGroup awsec2.ISecurityGroup) {
 	if err := a.validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup, auroraSecurityGroup); err != nil {
 		panic(err)
 	}
@@ -365,8 +364,8 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) SetupCustomResource(databaseClusterR
 	return returns
 }
 
-func (a *jsiiProxy_AmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) *DatabaseClusterResources {
-	if err := a.validateSetupDatabaseClusterResourcesParameters(vpc, secret, clusterIdentifier, auroraSecurityGroupId); err != nil {
+func (a *jsiiProxy_AmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroup awsec2.ISecurityGroup) *DatabaseClusterResources {
+	if err := a.validateSetupDatabaseClusterResourcesParameters(vpc, secret, clusterIdentifier, auroraSecurityGroup); err != nil {
 		panic(err)
 	}
 	var returns *DatabaseClusterResources
@@ -374,7 +373,7 @@ func (a *jsiiProxy_AmazonAuroraVectorStore) SetupDatabaseClusterResources(vpc aw
 	_jsii_.Invoke(
 		a,
 		"setupDatabaseClusterResources",
-		[]interface{}{vpc, secret, clusterIdentifier, auroraSecurityGroupId},
+		[]interface{}{vpc, secret, clusterIdentifier, auroraSecurityGroup},
 		&returns,
 	)
 

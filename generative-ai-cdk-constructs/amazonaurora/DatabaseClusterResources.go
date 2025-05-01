@@ -11,7 +11,7 @@ import (
 type DatabaseClusterResources struct {
 	// The security group associated with the Aurora cluster.
 	// Experimental.
-	AuroraSecurityGroup awsec2.SecurityGroup `field:"required" json:"auroraSecurityGroup" yaml:"auroraSecurityGroup"`
+	AuroraSecurityGroup awsec2.ISecurityGroup `field:"required" json:"auroraSecurityGroup" yaml:"auroraSecurityGroup"`
 	// The unique cluster identifier of the Aurora RDS cluster.
 	// Experimental.
 	ClusterIdentifier *string `field:"required" json:"clusterIdentifier" yaml:"clusterIdentifier"`

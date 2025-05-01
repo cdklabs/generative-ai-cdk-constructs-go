@@ -36,12 +36,12 @@ type ExistingAmazonAuroraVectorStoreProps struct {
 	// The field name for the vector column in the Aurora Vector Store.
 	// Experimental.
 	VectorField *string `field:"optional" json:"vectorField" yaml:"vectorField"`
-	// The id of the security group associated with the RDS Aurora instance.
+	// The Security group associated with the RDS Aurora instance.
 	//
 	// This security group allows access to the Aurora Vector Store from Lambda's
 	// custom resource running pgVector SQL commands.
 	// Experimental.
-	AuroraSecurityGroupId *string `field:"required" json:"auroraSecurityGroupId" yaml:"auroraSecurityGroupId"`
+	AuroraSecurityGroup awsec2.ISecurityGroup `field:"required" json:"auroraSecurityGroup" yaml:"auroraSecurityGroup"`
 	// The unique cluster identifier of your Aurora RDS cluster.
 	// Experimental.
 	ClusterIdentifier *string `field:"required" json:"clusterIdentifier" yaml:"clusterIdentifier"`

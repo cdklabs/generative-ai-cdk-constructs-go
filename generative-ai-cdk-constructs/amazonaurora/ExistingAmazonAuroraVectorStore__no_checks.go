@@ -4,7 +4,7 @@ package amazonaurora
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.SecurityGroup, auroraSecurityGroup awsec2.SecurityGroup) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateAddIngressRuleToAuroraSecurityGroupParameters(lambdaSecurityGroup awsec2.ISecurityGroup, auroraSecurityGroup awsec2.ISecurityGroup) error {
 	return nil
 }
 
@@ -24,7 +24,7 @@ func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateSetupCustomResourceP
 	return nil
 }
 
-func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroupId *string) error {
+func (e *jsiiProxy_ExistingAmazonAuroraVectorStore) validateSetupDatabaseClusterResourcesParameters(vpc awsec2.IVpc, secret awssecretsmanager.ISecret, clusterIdentifier *string, auroraSecurityGroup awsec2.ISecurityGroup) error {
 	return nil
 }
 
