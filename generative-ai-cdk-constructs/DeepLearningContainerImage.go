@@ -669,6 +669,17 @@ func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_2_6_0_TRANSFORMERS
 	return returns
 }
 
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_2_6_0_TRANSFORMERS4_51_3_GPU_PY312_CU124_UBUNTU22_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_INFERENCE_2_6_0_TRANSFORMERS4_51_3_GPU_PY312_CU124_UBUNTU22_04",
+		&returns,
+	)
+	return returns
+}
+
 func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_INFERENCE_NEURONX_1_13_0_TRANSFORMERS4_28_1_NEURONX_PY38_SDK2_9_1_UBUNTU20_04() ContainerImage {
 	_init_.Initialize()
 	var returns ContainerImage
@@ -972,6 +983,28 @@ func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_6_0_TGI3_2_3
 	_jsii_.StaticGet(
 		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
 		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_6_0_TGI3_2_3_GPU_PY311_CU124_UBUNTU22_04",
+		&returns,
+	)
+	return returns
+}
+
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_7_0_TGI3_3_4_GPU_PY311_CU124_UBUNTU22_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_7_0_TGI3_3_4_GPU_PY311_CU124_UBUNTU22_04",
+		&returns,
+	)
+	return returns
+}
+
+func DeepLearningContainerImage_HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_7_0_TGI3_3_6_GPU_PY311_CU124_UBUNTU22_04() ContainerImage {
+	_init_.Initialize()
+	var returns ContainerImage
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.DeepLearningContainerImage",
+		"HUGGINGFACE_PYTORCH_TGI_INFERENCE_2_7_0_TGI3_3_6_GPU_PY311_CU124_UBUNTU22_04",
 		&returns,
 	)
 	return returns

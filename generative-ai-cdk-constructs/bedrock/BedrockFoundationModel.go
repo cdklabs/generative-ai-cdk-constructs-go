@@ -346,6 +346,28 @@ func BedrockFoundationModel_ANTHROPIC_CLAUDE_3_7_SONNET_V1_0() BedrockFoundation
 	return returns
 }
 
+func BedrockFoundationModel_ANTHROPIC_CLAUDE_4_OPUS_V1_0() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"ANTHROPIC_CLAUDE_4_OPUS_V1_0",
+		&returns,
+	)
+	return returns
+}
+
+func BedrockFoundationModel_ANTHROPIC_CLAUDE_4_SONNET_V1_0() BedrockFoundationModel {
+	_init_.Initialize()
+	var returns BedrockFoundationModel
+	_jsii_.StaticGet(
+		"@cdklabs/generative-ai-cdk-constructs.bedrock.BedrockFoundationModel",
+		"ANTHROPIC_CLAUDE_4_SONNET_V1_0",
+		&returns,
+	)
+	return returns
+}
+
 func BedrockFoundationModel_ANTHROPIC_CLAUDE_HAIKU_V1_0() BedrockFoundationModel {
 	_init_.Initialize()
 	var returns BedrockFoundationModel
