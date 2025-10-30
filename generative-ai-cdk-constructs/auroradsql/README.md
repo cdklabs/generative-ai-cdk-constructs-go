@@ -47,17 +47,18 @@ Aurora DSQL provides several configuration options to help you establish the rig
 ### Single region cluster
 
 ```go
-new auroraDsql.Cluster(stack, 'TestCluster', {});
+auroraDsql.NewCluster(this, jsii.String("TestCluster"), &ClusterCustomProps{
+})
 ```
 
 You can use tags on a cluster, for instance:
 
 ```go
-new auroraDsql.Cluster(this, 'TestCluster', {
-    tags: {
-        Name: 'TestCluster',
-    }
-});
+auroraDsql.NewCluster(this, jsii.String("TestCluster"), &ClusterCustomProps{
+	Tags: map[string]*string{
+		"Name": jsii.String("TestCluster"),
+	},
+})
 ```
 
 ### Multi region cluster
@@ -66,14 +67,18 @@ Multi-Region peered clusters provide the same resilience and connectivity as sin
 
 ```go
 // create a cluster in a different region
-const peeredCluster1 = new auroraDsql.Cluster(stack1, 'TestPeeredCluster1', {});
+peeredCluster1 := auroraDsql.NewCluster(stack1, jsii.String("TestPeeredCluster1"), &ClusterCustomProps{
+})
 
 // or load existing cluster through the fromAttributes method
 
-new Cluster(stack3, 'TestCluster', {
-    multiRegionProperties: {
-        witnessRegion: 'us-east-1',
-        clusters: [peeredCluster1],
-    },
-});
+// or load existing cluster through the fromAttributes method
+auroraDsql.NewCluster(this, jsii.String("TestCluster"), &ClusterCustomProps{
+	MultiRegionProperties: &MultiRegionProperties{
+		WitnessRegion: jsii.String("us-east-1"),
+		Clusters: []ICluster{
+			peeredCluster1,
+		},
+	},
+})
 ```

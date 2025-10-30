@@ -73,21 +73,21 @@ type INeptuneGraph interface {
 	// The Neptune Graph ARN.
 	//
 	// Example:
-	//   'arn:aws:neptune-graph:us-east-1:111122223333:graph/g-12a3bcdef4'
+	//   "arn:aws:neptune-graph:us-east-1:111122223333:graph/g-12a3bcdef4"
 	//
 	// Experimental.
 	GraphArn() *string
 	// The Neptune Graph endpoint.
 	//
 	// Example:
-	//   'g-12a3bcdef4.us-east-1.neptune-graph.amazonaws.com'
+	//   "g-12a3bcdef4.us-east-1.neptune-graph.amazonaws.com"
 	//
 	// Experimental.
 	GraphEndpoint() *string
 	// The Neptune Graph Identifier.
 	//
 	// Example:
-	//   'g-12a3bcdef4'
+	//   "g-12a3bcdef4"
 	//
 	// Experimental.
 	GraphId() *string

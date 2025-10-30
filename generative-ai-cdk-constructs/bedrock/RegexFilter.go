@@ -2,14 +2,6 @@ package bedrock
 
 
 // A Regular expression (regex) filter for sensitive information.
-//
-// Example:
-//   const regexFilter: RegexFilter = {
-//     name: "my-custom-filter",
-//     action: SensitiveInfoGuardrailAction.BLOCK,
-//     pattern: "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b",
-//   };
-//
 // Experimental.
 type RegexFilter struct {
 	// The action to take when a regex match is detected.

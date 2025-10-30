@@ -17,7 +17,10 @@ type SharePointCrawlingFilters struct {
 	// Content matching these patterns will be skipped during crawling.
 	//
 	// Example:
-	//   ['.*private.*', '.*confidential.*']
+	//   []*string{
+	//   	".*private.*",
+	//   	".*confidential.*",
+	//   }
 	//
 	// Experimental.
 	ExcludePatterns *[]*string `field:"optional" json:"excludePatterns" yaml:"excludePatterns"`
@@ -26,7 +29,10 @@ type SharePointCrawlingFilters struct {
 	// Only content matching these patterns will be crawled.
 	//
 	// Example:
-	//   ['.*public.*', '.*shared.*']
+	//   []*string{
+	//   	".*public.*",
+	//   	".*shared.*",
+	//   }
 	//
 	// Experimental.
 	IncludePatterns *[]*string `field:"optional" json:"includePatterns" yaml:"includePatterns"`

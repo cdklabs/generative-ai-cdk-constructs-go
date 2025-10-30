@@ -33,28 +33,11 @@ See the [API documentation](../../../apidocs/namespaces/pinecone/README.md).
 
 ## Pinecone Vector Store
 
-TypeScript
-
 ```go
-import { pinecone } from '@cdklabs/generative-ai-cdk-constructs';
-
-new pinecone.PineconeVectorStore({
-  connectionString: 'https://your-index-1234567.svc.gcp-starter.pinecone.io',
-  credentialsSecretArn: 'arn:aws:secretsmanager:your-region:123456789876:secret:your-key-name',
-  textField: 'question',
-  metadataField: 'metadata'
-});
-```
-
-Python
-
-```python
-from cdklabs.generative_ai_cdk_constructs import (
-    pinecone
-)
-
-pineconevs = pinecone.PineconeVectorStore(
-            connection_string='https://your-index-1234567.svc.gcp-starter.pinecone.io',
-            credentials_secret_arn='arn:aws:secretsmanager:your-region:123456789876:secret:your-key-name',
-        )
+pinecone.NewPineconeVectorStore(&PineconeVectorStoreProps{
+	ConnectionString: jsii.String("https://your-index-1234567.svc.gcp-starter.pinecone.io"),
+	CredentialsSecretArn: jsii.String("arn:aws:secretsmanager:your-region:123456789876:secret:your-key-name"),
+	TextField: jsii.String("question"),
+	MetadataField: jsii.String("metadata"),
+})
 ```

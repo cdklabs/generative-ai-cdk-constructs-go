@@ -68,7 +68,9 @@ type SharePointDataSourceAssociationProps struct {
 	// Must start with “https”. All URLs must start with same protocol.
 	//
 	// Example:
-	//   ["https://yourdomain.sharepoint.com/sites/mysite"]
+	//   []*string{
+	//   	"https://yourdomain.sharepoint.com/sites/mysite",
+	//   }
 	//
 	// Experimental.
 	SiteUrls *[]*string `field:"required" json:"siteUrls" yaml:"siteUrls"`

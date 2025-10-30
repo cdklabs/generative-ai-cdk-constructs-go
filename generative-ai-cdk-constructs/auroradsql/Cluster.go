@@ -379,17 +379,6 @@ func Cluster_IsResource(construct constructs.IConstruct) *bool {
 	return returns
 }
 
-func Cluster_PROPERTY_INJECTION_ID() *string {
-	_init_.Initialize()
-	var returns *string
-	_jsii_.StaticGet(
-		"@cdklabs/generative-ai-cdk-constructs.auroraDsql.Cluster",
-		"PROPERTY_INJECTION_ID",
-		&returns,
-	)
-	return returns
-}
-
 func (c *jsiiProxy_Cluster) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
 	if err := c.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)

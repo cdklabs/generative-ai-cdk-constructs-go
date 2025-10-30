@@ -5,17 +5,9 @@ package bedrock
 // Experimental.
 type AgentAttributes struct {
 	// The ARN of the agent.
-	//
-	// Example:
-	//   "arn:aws:bedrock:us-east-1:123456789012:agent/OKDSJOGKMO"@attributeundefined
-	//
 	// Experimental.
 	AgentArn *string `field:"required" json:"agentArn" yaml:"agentArn"`
 	// The ARN of the IAM role associated to the agent.
-	//
-	// Example:
-	//   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"@attributeundefined
-	//
 	// Experimental.
 	RoleArn *string `field:"required" json:"roleArn" yaml:"roleArn"`
 	// The agent version.

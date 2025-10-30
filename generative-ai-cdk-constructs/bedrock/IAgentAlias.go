@@ -34,14 +34,14 @@ type IAgentAlias interface {
 	// The ARN of the agent alias.
 	//
 	// Example:
-	//   `arn:aws:bedrock:us-east-1:123456789012:agent-alias/DNCJJYQKSU/TCLCITFZTN`
+	//   "arn:aws:bedrock:us-east-1:123456789012:agent-alias/DNCJJYQKSU/TCLCITFZTN"
 	//
 	// Experimental.
 	AliasArn() *string
 	// The unique identifier of the agent alias.
 	//
 	// Example:
-	//   `TCLCITFZTN`
+	//   "TCLCITFZTN"
 	//
 	// Experimental.
 	AliasId() *string

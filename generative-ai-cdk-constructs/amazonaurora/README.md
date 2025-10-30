@@ -37,25 +37,9 @@ See the [API documentation](../../../apidocs/namespaces/amazonaurora/README.md).
 TypeScript
 
 ```go
-import { amazonaurora, foundation_models } from '@cdklabs/generative-ai-cdk-constructs';
-
-new amazonaurora.AmazonAuroraVectorStore(stack, 'AuroraVectorStore', {
-  embeddingsModel: foundation_models.BedrockFoundationModel.COHERE_EMBED_ENGLISH_V3,
-});
-```
-
-Python
-
-```python
-
-from cdklabs.generative_ai_cdk_constructs import (
-    amazonaurora,
-    foundation_models
-)
-
-aurora = amazonaurora.AmazonAuroraVectorStore(self, 'AuroraVectorStore',
-            embeddings_model=foundation_models.BedrockFoundationModel.COHERE_EMBED_ENGLISH_V3,
-        )
+amazonaurora.NewAmazonAuroraVectorStore(this, jsii.String("AuroraVectorStore"), &AmazonAuroraVectorStoreProps{
+	EmbeddingsModelVectorDimension: bedrock.BedrockFoundationModel_COHERE_EMBED_ENGLISH_V3().VectorDimensions,
+})
 ```
 
 ## fromExistingAuroraVectorStore()
@@ -65,124 +49,45 @@ You can import your existing Aurora DB to be used as a vector DB for a knowledge
 TypeScript
 
 ```go
-import { amazonaurora, foundation_models, bedrock } from '@cdklabs/generative-ai-cdk-constructs';
-import * as cdk from 'aws-cdk-lib';
+auroraDb := amazonaurora.AmazonAuroraVectorStore_FromExistingAuroraVectorStore(this, jsii.String("ExistingAuroraVectorStore"), &ExistingAmazonAuroraVectorStoreProps{
+	ClusterIdentifier: jsii.String("aurora-serverless-vector-cluster"),
+	DatabaseName: jsii.String("bedrock_vector_db"),
+	SchemaName: jsii.String("bedrock_integration"),
+	TableName: jsii.String("bedrock_kb"),
+	VectorField: jsii.String("embedding"),
+	TextField: jsii.String("chunks"),
+	MetadataField: jsii.String("metadata"),
+	PrimaryKeyField: jsii.String("id"),
+	EmbeddingsModelVectorDimension: bedrock.BedrockFoundationModel_COHERE_EMBED_ENGLISH_V3().VectorDimensions,
+	Vpc: aws_ec2.Vpc_FromLookup(this, jsii.String("VPC"), &VpcLookupOptions{
+		VpcId: jsii.String("vpc-0c1a234567ee8bc90"),
+	}),
+	AuroraSecurityGroup: aws_ec2.SecurityGroup_FromSecurityGroupId(this, jsii.String("AuroraSecurityGroup"), jsii.String("sg-012456789")),
+	Secret: aws_rds.DatabaseSecret_FromSecretCompleteArn(this, jsii.String("Secret"), cdk.Stack_Of(this).FormatArn(&ArnComponents{
+		Service: jsii.String("secretsmanager"),
+		Resource: jsii.String("secret"),
+		ResourceName: jsii.String("rds-db-credentials/cluster-1234567890"),
+		Region: cdk.Stack_*Of(this).Region,
+		Account: cdk.Stack_*Of(this).Account,
+		ArnFormat: cdk.ArnFormat_COLON_RESOURCE_NAME,
+	})),
+})
 
-const auroraDb = amazonaurora.AmazonAuroraVectorStore.fromExistingAuroraVectorStore(stack, 'ExistingAuroraVectorStore', {
-  clusterIdentifier: 'aurora-serverless-vector-cluster',
-  databaseName: 'bedrock_vector_db',
-  schemaName: 'bedrock_integration',
-  tableName: 'bedrock_kb',
-  vectorField: 'embedding',
-  textField: 'chunks',
-  metadataField: 'metadata',
-  primaryKeyField: 'id',
-  embeddingsModelVectorDimension: bedrock.BedrockFoundationModel.COHERE_EMBED_ENGLISH_V3.vectorDimensions!,
-  vpc: cdk.aws_ec2.Vpc.fromLookup(stack, 'VPC', {
-    vpcId: 'vpc-0c1a234567ee8bc90',
-  }),
-  auroraSecurityGroup: cdk.aws_ec2.SecurityGroup.fromSecurityGroupId(
-    stack,
-    'AuroraSecurityGroup',
-    'sg-012456789'
-  ),
-  secret: cdk.aws_rds.DatabaseSecret.fromSecretCompleteArn(
-    stack,
-    'Secret',
-    cdk.Stack.of(stack).formatArn({
-      service: 'secretsmanager',
-      resource: 'secret',
-      resourceName: 'rds-db-credentials/cluster-1234567890',
-      region: cdk.Stack.of(stack).region,
-      account: cdk.Stack.of(stack).account,
-      arnFormat: cdk.ArnFormat.COLON_RESOURCE_NAME,
-    }),
-  ),
-});
+kb := bedrock.NewVectorKnowledgeBase(this, jsii.String("KnowledgeBase"), &VectorKnowledgeBaseProps{
+	EmbeddingsModel: bedrock.BedrockFoundationModel_COHERE_EMBED_ENGLISH_V3(),
+	VectorStore: auroraDb,
+	Instruction: jsii.String("Use this knowledge base to answer questions about books. " + "It contains the full text of novels."),
+})
 
-const kb = new bedrock.VectorKnowledgeBase(this, "KnowledgeBase", {
-  embeddingsModel: foundation_models.BedrockFoundationModel.COHERE_EMBED_ENGLISH_V3,
-  vectorStore: auroraDb,
-  instruction:
-    "Use this knowledge base to answer questions about books. " +
-    "It contains the full text of novels.",
-});
+docBucket := aws_s3.NewBucket(this, jsii.String("DocBucket"))
 
-const docBucket = new cdk.aws_s3.Bucket(this, "DocBucket");
-
-new bedrock.S3DataSource(this, "DataSource", {
-  bucket: docBucket,
-  knowledgeBase: kb,
-  dataSourceName: "books",
-  chunkingStrategy: bedrock.ChunkingStrategy.fixedSize({
-    maxTokens: 500,
-    overlapPercentage: 20,
-  }),
-});
-```
-
-Python
-
-```python
-from aws_cdk import (
-    aws_s3 as s3,
-    aws_rds as rds,
-    aws_ec2 as ec2,
-    Stack,
-    ArnFormat
-)
-from cdklabs.generative_ai_cdk_constructs import (
-    bedrock,
-    amazonaurora,
-    foundation_models
-)
-
-aurora_db = amazonaurora.AmazonAuroraVectorStore.from_existing_aurora_vector_store(
-    self, 'ExistingAuroraVectorStore',
-    cluster_identifier='aurora-serverless-vector-cluster',
-    database_name='bedrock_vector_db',
-    schema_name='bedrock_integration',
-    table_name='bedrock_kb',
-    vector_field='embedding',
-    text_field='chunks',
-    metadata_field='metadata',
-    primary_key_field='id',
-    embeddings_model_vector_dimension=bedrock.BedrockFoundationModel.COHERE_EMBED_ENGLISH_V3.vectorDimensions!,
-    vpc=ec2.Vpc.from_lookup(self, 'VPC', vpc_id='vpc-0c1a234567ee8bc90'),
-    aurora_security_group=ec2.SecurityGroup.from_security_group_id(
-        self,
-        'AuroraSecurityGroup',
-        'sg-01245678'
-    ),
-    secret=rds.DatabaseSecret.from_secret_complete_arn(
-        self,
-        'Secret',
-        Stack.of(self).format_arn(
-            service= 'secretsmanager',
-            resource= 'secret',
-            resource_name= 'rds-db-credentials/cluster-1234567890',
-            region= Stack.of(self).region,
-            account= Stack.of(self).account,
-            arn_format= ArnFormat.COLON_RESOURCE_NAME
-        )
-    )
-)
-
-kb = bedrock.VectorKnowledgeBase(self, 'KnowledgeBase',
-            embeddings_model= foundation_models.BedrockFoundationModel.TITAN_EMBED_TEXT_V2_1024,
-            vector_store=aurora_db,
-            instruction=  'Use this knowledge base to answer questions about books. ' +
-    'It contains the full text of novels.'
-)
-
-docBucket = s3.Bucket(self, 'DockBucket')
-
-bedrock.S3DataSource(self, 'DataSource',
-    bucket= docBucket,
-    knowledge_base=kb,
-    data_source_name='books',
-    chunking_strategy= bedrock.ChunkingStrategy.FIXED_SIZE,
-    max_tokens=500,
-    overlap_percentage=20
-)
+bedrock.NewS3DataSource(this, jsii.String("DataSource"), &S3DataSourceProps{
+	Bucket: docBucket,
+	KnowledgeBase: kb,
+	DataSourceName: jsii.String("books"),
+	ChunkingStrategy: bedrock.ChunkingStrategy_FixedSize(&FixedSizeChunkingConfigurationProperty{
+		MaxTokens: jsii.Number(500),
+		OverlapPercentage: jsii.Number(20),
+	}),
+})
 ```

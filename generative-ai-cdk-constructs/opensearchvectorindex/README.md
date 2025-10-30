@@ -36,87 +36,39 @@ See the [API documentation](../../../apidocs/namespaces/opensearch_vectorindex/R
 
 The `VectorIndex` resource connects to OpenSearch and creates an index suitable for use with Amazon Bedrock Knowledge Bases.
 
-TypeScript
-
 ```go
-import {
-  opensearchserverless,
-  opensearch_vectorindex,
-} from '@cdklabs/generative-ai-cdk-constructs';
+vectorStore := opensearchserverless.NewVectorCollection(this, jsii.String("VectorCollection"))
 
-const vectorStore = new opensearchserverless.VectorCollection(
-  this,
-  'VectorCollection'
-);
-
-new opensearch_vectorindex.VectorIndex(this, 'VectorIndex', {
-  collection: vectorStore,
-  indexName: 'bedrock-knowledge-base-default-index',
-  vectorField: 'bedrock-knowledge-base-default-vector',
-  vectorDimensions: 1536,
-  precision: 'float',
-  distanceType: 'l2',
-  mappings: [
-    {
-      mappingField: 'AMAZON_BEDROCK_TEXT_CHUNK',
-      dataType: 'text',
-      filterable: true,
-    },
-    {
-      mappingField: 'AMAZON_BEDROCK_METADATA',
-      dataType: 'text',
-      filterable: false,
-    },
-  ],
-  analyzer: {
-    characterFilters: [opensearchserverless.CharacterFilterType.ICU_NORMALIZER],
-    tokenizer: opensearchserverless.TokenizerType.KUROMOJI_TOKENIZER,
-    tokenFilters: [
-      opensearchserverless.TokenFilterType.KUROMOJI_BASEFORM,
-      opensearchserverless.TokenFilterType.JA_STOP,
-    ],
-  },
-});
-```
-
-Python
-
-```python
-from cdklabs.generative_ai_cdk_constructs import (
-    opensearchserverless,
-    opensearch_vectorindex,
-)
-
-vectorCollection = opensearchserverless.VectorCollection(self, "VectorCollection")
-
-vectorIndex = opensearch_vectorindex.VectorIndex(self, "VectorIndex",
-    vector_dimensions= 1536,
-    collection=vectorCollection,
-    index_name='bedrock-knowledge-base-default-index',
-    vector_field='bedrock-knowledge-base-default-vector',
-    precision='float',
-    distance_type='l2',
-    mappings= [
-        opensearch_vectorindex.MetadataManagementFieldProps(
-            mapping_field='AMAZON_BEDROCK_TEXT_CHUNK',
-            data_type='text',
-            filterable=True
-        ),
-        opensearch_vectorindex.MetadataManagementFieldProps(
-            mapping_field='AMAZON_BEDROCK_METADATA',
-            data_type='text',
-            filterable=False
-        )
-    ],
-    analyzer=opensearchserverless.AnalyzerProps(
-        character_filters=[opensearchserverless.CharacterFilterType.ICU_NORMALIZER],
-        tokenizer=opensearchserverless.TokenizerType.KUROMOJI_TOKENIZER,
-        token_filters=[
-            opensearchserverless.TokenFilterType.KUROMOJI_BASEFORM,
-            opensearchserverless.TokenFilterType.JA_STOP,
-        ],
-    )
-)
+opensearch_vectorindex.NewVectorIndex(this, jsii.String("VectorIndex"), &VectorIndexProps{
+	Collection: vectorStore,
+	IndexName: jsii.String("bedrock-knowledge-base-default-index"),
+	VectorField: jsii.String("bedrock-knowledge-base-default-vector"),
+	VectorDimensions: jsii.Number(1536),
+	Precision: jsii.String("float"),
+	DistanceType: jsii.String("l2"),
+	Mappings: []MetadataManagementFieldProps{
+		&MetadataManagementFieldProps{
+			MappingField: jsii.String("AMAZON_BEDROCK_TEXT_CHUNK"),
+			DataType: jsii.String("text"),
+			Filterable: jsii.Boolean(true),
+		},
+		&MetadataManagementFieldProps{
+			MappingField: jsii.String("AMAZON_BEDROCK_METADATA"),
+			DataType: jsii.String("text"),
+			Filterable: jsii.Boolean(false),
+		},
+	},
+	Analyzer: &Analyzer{
+		CharacterFilters: []iCU_NORMALIZER{
+			opensearchserverless.CharacterFilterType_*iCU_NORMALIZER,
+		},
+		Tokenizer: opensearchserverless.TokenizerType_KUROMOJI_TOKENIZER,
+		TokenFilters: []TokenFilterType{
+			opensearchserverless.TokenFilterType_KUROMOJI_BASEFORM,
+			opensearchserverless.TokenFilterType_JA_STOP,
+		},
+	},
+})
 ```
 
 ## Default values

@@ -26,45 +26,20 @@ The `MongoDBAtlasVectorStore` construct allows you to define a MongoDB Atlas ins
 
 ### Usage
 
-#### TypeScript
-
 ```go
-import * as cdk from 'aws-cdk-lib';
-import { MongoDBAtlasVectorStore } from '@cdklabs/generative-ai-cdk-constructs';
-
-const vectorStore = new MongoDBAtlasVectorStore(stack, 'MyVectorStore', {
-  collectionName: 'embeddings',
-  credentialsSecretArn: 'arn:aws:secretsmanager:region:account:secret:secret-name',
-  databaseName: 'vectordb',
-  endpoint: 'https://your-mongodb-atlas-endpoint.mongodb.net',
-  endpointServiceName: 'mongodb-atlas',
-  fieldMapping: {
-    vectorField: 'embedding',
-    textField: 'text',
-    metadataField: 'metadata'
-  },
-  vectorIndexName: 'vector_index'
-});
-```
-
-#### Python
-
-```python
-from cdklabs.generative_ai_cdk_constructs import MongoDBAtlasVectorStore
-
-vector_store = MongoDBAtlasVectorStore(self, 'MyVectorStore',
-  collection_name='embeddings',
-  credentials_secret_arn='arn:aws:secretsmanager:region:account:secret:secret-name',
-  database_name='vectordb',
-  endpoint='https://your-mongodb-atlas-endpoint.mongodb.net',
-  endpoint_service_name='mongodb-atlas',
-  field_mapping=mongodb_atlas.MongoDbAtlasFieldMapping(
-        vector_field='embedding',
-        text_field='text',
-        metadata_field='metadata'
-    ),
-  vector_index_name='vector_index'
-)
+vectorStore := mongodbAtlas.NewMongoDBAtlasVectorStore(&MongoDBAtlasVectorStoreProps{
+	CollectionName: jsii.String("embeddings"),
+	CredentialsSecretArn: jsii.String("arn:aws:secretsmanager:region:account:secret:secret-name"),
+	DatabaseName: jsii.String("vectordb"),
+	Endpoint: jsii.String("https://your-mongodb-atlas-endpoint.mongodb.net"),
+	EndpointServiceName: jsii.String("mongodb-atlas"),
+	FieldMapping: &MongoDbAtlasFieldMapping{
+		VectorField: jsii.String("embedding"),
+		TextField: jsii.String("text"),
+		MetadataField: jsii.String("metadata"),
+	},
+	VectorIndexName: jsii.String("vector_index"),
+})
 ```
 
 ### Properties

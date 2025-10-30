@@ -24,10 +24,6 @@ type ConfluenceDataSource interface {
 	// Experimental.
 	ConfluenceUrl() *string
 	// The unique identifier of the data source.
-	//
-	// Example:
-	//   'JHUEVXUZMU'
-	//
 	// Experimental.
 	DataSourceId() *string
 	// The name of the data source.

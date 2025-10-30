@@ -21,7 +21,7 @@ type S3DataSource interface {
 	// The unique identifier of the data source.
 	//
 	// Example:
-	//   'JHUEVXUZMU'
+	//   "JHUEVXUZMU"
 	//
 	// Experimental.
 	DataSourceId() *string

@@ -18,18 +18,10 @@ import (
 type CrossRegionInferenceProfile interface {
 	IInferenceProfile
 	IInvokable
-	// The ARN of the application inference profile.
-	//
-	// Example:
-	//   'arn:aws:bedrock:us-east-1:123456789012:inference-profile/us.anthropic.claude-3-5-sonnet-20240620-v1:0'
-	//
+	// Inference profile ARN.
 	// Experimental.
 	InferenceProfileArn() *string
-	// The unique identifier of the inference profile.
-	//
-	// Example:
-	//   'us.anthropic.claude-3-5-sonnet-20240620-v1:0'
-	//
+	// Inference profile ID.
 	// Experimental.
 	InferenceProfileId() *string
 	// The underlying model supporting cross-region inference.
@@ -38,11 +30,7 @@ type CrossRegionInferenceProfile interface {
 	// This equals to the inferenceProfileArn property, useful just to implement IInvokable interface.
 	// Experimental.
 	InvokableArn() *string
-	// The type of inference profile.
-	//
-	// Example:
-	//   InferenceProfileType.SYSTEM_DEFINED
-	//
+	// Inference profile type.
 	// Experimental.
 	Type() InferenceProfileType
 	// Gives the appropriate policies to invoke and use the Foundation Model.

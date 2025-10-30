@@ -14,17 +14,9 @@ import (
 type IAgent interface {
 	awscdk.IResource
 	// The ARN of the agent.
-	//
-	// Example:
-	//   "arn:aws:bedrock:us-east-1:123456789012:agent/OKDSJOGKMO"@attributeundefined
-	//
 	// Experimental.
 	AgentArn() *string
 	// The ID of the Agent.
-	//
-	// Example:
-	//   "OKDSJOGKMO"@attributeundefined
-	//
 	// Experimental.
 	AgentId() *string
 	// Optional KMS encryption key associated with this agent.

@@ -57,10 +57,6 @@ type ConfluenceDataSourceProps struct {
 	// Experimental.
 	AuthSecret awssecretsmanager.ISecret `field:"required" json:"authSecret" yaml:"authSecret"`
 	// The Confluence host URL or instance URL.
-	//
-	// Example:
-	//   https://example.atlassian.net
-	//
 	// Experimental.
 	ConfluenceUrl *string `field:"required" json:"confluenceUrl" yaml:"confluenceUrl"`
 	// The supported authentication method to connect to the data source.

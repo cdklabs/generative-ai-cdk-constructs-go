@@ -36,35 +36,14 @@ See the [API documentation](../../../apidocs/namespaces/opensearchmanagedcluster
 TypeScript
 
 ```go
-import { opensearchmanagedcluster } from '@cdklabs/generative-ai-cdk-constructs';
-
-new opensearchmanagedcluster.OpenSearchManagedClusterVectorStore({
-  domainArn: 'arn:aws:es:region:account:domain/your-domain',
-  domainEndpoint: 'https://your-domain.region.es.amazonaws.com',
-  vectorIndexName: 'your-vector-index',
-  fieldMapping: {
-    metadataField: 'metadata',
-    textField: 'text',
-    vectorField: 'vector'
-  }
-});
-```
-
-Python
-
-```python
-from cdklabs.generative_ai_cdk_constructs import (
-    opensearchmanagedcluster
-)
-
-opensearchvs = opensearchmanagedcluster.OpenSearchManagedClusterVectorStore(
-    domain_arn='arn:aws:es:region:account:domain/your-domain',
-    domain_endpoint='https://your-domain.region.es.amazonaws.com',
-    vector_index_name='your-vector-index',
-    field_mapping={
-        'metadataField': 'metadata',
-        'textField': 'text',
-        'vectorField': 'vector'
-    }
-)
+opensearchmanagedcluster.NewOpenSearchManagedClusterVectorStore(&OpenSearchManagedClusterVectorStoreProps{
+	DomainArn: jsii.String("arn:aws:es:region:account:domain/your-domain"),
+	DomainEndpoint: jsii.String("https://your-domain.region.es.amazonaws.com"),
+	VectorIndexName: jsii.String("your-vector-index"),
+	FieldMapping: &OpenSearchFieldMapping{
+		MetadataField: jsii.String("metadata"),
+		TextField: jsii.String("text"),
+		VectorField: jsii.String("vector"),
+	},
+})
 ```

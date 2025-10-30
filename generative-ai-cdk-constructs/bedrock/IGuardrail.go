@@ -45,17 +45,9 @@ type IGuardrail interface {
 	// Experimental.
 	MetricTextUnitCount(props *awscloudwatch.MetricOptions) awscloudwatch.Metric
 	// The ARN of the guardrail.
-	//
-	// Example:
-	//   "arn:aws:bedrock:us-east-1:123456789012:guardrail/yympzo398ipq"@attributeundefined
-	//
 	// Experimental.
 	GuardrailArn() *string
 	// The ID of the guardrail.
-	//
-	// Example:
-	//   "yympzo398ipq"@attributeundefined
-	//
 	// Experimental.
 	GuardrailId() *string
 	// The version of the guardrail.

@@ -10,13 +10,6 @@ package bedrock
 // - For Blogs: Use the main blog title
 // - For Comments: Use "Re: Page/Blog Title"
 // - For Attachments: Use the filename with extension.
-//
-// Example:
-//   {
-//     objectType: ConfluenceObjectType.ATTACHMENT,
-//     excludePatterns: [".*private.*\\.pdf"]
-//   }
-//
 // Experimental.
 type ConfluenceCrawlingFilters struct {
 	// The type of Confluence object to apply the filters to.

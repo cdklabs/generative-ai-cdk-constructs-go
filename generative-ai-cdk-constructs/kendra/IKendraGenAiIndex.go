@@ -13,17 +13,9 @@ import (
 type IKendraGenAiIndex interface {
 	awscdk.IResource
 	// The Amazon Resource Name (ARN) of the index.
-	//
-	// Example:
-	//   'arn:aws:kendra:us-east-1:123456789012:index/af04c7ea-22bc-46b7-a65e-6c21e604fc11'
-	//
 	// Experimental.
 	IndexArn() *string
 	// The identifier of the index.
-	//
-	// Example:
-	//   'af04c7ea-22bc-46b7-a65e-6c21e604fc11'.
-	//
 	// Experimental.
 	IndexId() *string
 	// An IAM role that gives Amazon Kendra permissions to access your Amazon CloudWatch logs and metrics.
