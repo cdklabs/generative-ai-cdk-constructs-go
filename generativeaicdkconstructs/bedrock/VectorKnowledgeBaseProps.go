@@ -65,8 +65,9 @@ type VectorKnowledgeBaseProps struct {
 	// The vector store for the knowledge base.
 	//
 	// Must be either of
-	// type `VectorCollection`, `RedisEnterpriseVectorStore`,
-	// `PineconeVectorStore`, `AmazonAuroraVectorStore`, or `MongoDBAtlasVectorStore`.
+	// type `VectorCollection`, `PineconeVectorStore`, `AmazonAuroraVectorStore`,
+	// `MongoDBAtlasVectorStore`, `OpenSearchManagedClusterVectorStore`, or
+	// `VectorIndex` from s3vectors (for S3 Vectors).
 	// Default: - A new OpenSearch Serverless vector collection is created.
 	//
 	// Experimental.

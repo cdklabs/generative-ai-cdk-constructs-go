@@ -1884,6 +1884,7 @@ func init() {
 			"AMAZON_AURORA": VectorStoreType_AMAZON_AURORA,
 			"MONGO_DB_ATLAS": VectorStoreType_MONGO_DB_ATLAS,
 			"NEPTUNE_ANALYTICS": VectorStoreType_NEPTUNE_ANALYTICS,
+			"S3_VECTORS": VectorStoreType_S3_VECTORS,
 		},
 	)
 	_jsii_.RegisterEnum(

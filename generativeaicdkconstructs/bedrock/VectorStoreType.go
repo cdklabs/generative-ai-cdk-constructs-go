@@ -28,5 +28,8 @@ const (
 	// `NEPTUNE_ANALYTICS` is the vector store for Amazon Neptune Analytics.
 	// Experimental.
 	VectorStoreType_NEPTUNE_ANALYTICS VectorStoreType = "NEPTUNE_ANALYTICS"
+	// `S3_VECTORS` is the vector store for Amazon S3 Vectors.
+	// Experimental.
+	VectorStoreType_S3_VECTORS VectorStoreType = "S3_VECTORS"
 )
 
