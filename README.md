@@ -14,9 +14,9 @@ The [Generative AI CDK Constructs](https://github.com/awslabs/generative-ai-cdk-
 - Create or use an existing CDK application in Python
   - `cdk init app --language go`
 - Get the module:
-  - `go get github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs`
+  - `go get github.com/cdklabs/generative-ai-cdk-constructs-go/generativeaicdkconstructs`
 - Import the library:
-  - `import "github.com/cdklabs/generative-ai-cdk-constructs-go/generative-ai-cdk-constructs"`
+  - `import "github.com/cdklabs/generative-ai-cdk-constructs-go/generativeaicdkconstructs"`
 
 ## Security
 
